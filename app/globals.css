@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy: #1a2744;
+  --gold: #d4a843;
+  --white: #ffffff;
+}
+
+body {
+  color: var(--navy);
+  background: var(--white);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
