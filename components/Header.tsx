@@ -8,13 +8,10 @@ export default function Header() {
 
   return (
     <header className="bg-navy text-white sticky top-0 z-50 shadow-lg">
-      <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <div className="text-2xl font-bold">
-          <Link href="/" className="flex items-center gap-2">
-            <span className="text-gold">SOUTHERN CITIES</span>
-            <span>INVESTORS</span>
-          </Link>
-        </div>
+      <nav className="container mx-auto px-4 py-3 flex items-center justify-between">
+        <Link href="/" className="flex items-center gap-2">
+          <img src="/logos/sc-logo-horizontal.svg" alt="Southern Cities Enterprises" className="h-16 md:h-20 w-auto" />
+        </Link>
         
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">

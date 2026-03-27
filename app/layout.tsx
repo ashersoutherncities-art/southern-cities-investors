@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: "Southern Cities Investors | We Buy Properties Fast in Charlotte, NC",
   description: "Sell your house fast in Charlotte. Any condition. No repairs needed. Cash offers. Close in 7-30 days. Off-market acquisitions, distressed properties, creative deals.",
   keywords: "sell house fast Charlotte, cash home buyers Charlotte NC, sell distressed property, we buy houses Charlotte, fast home sale, sell house as-is Charlotte",
+  icons: {
+    icon: '/logos/sc-enterprises-01.svg',
+  },
 };
 
 export default function RootLayout({
