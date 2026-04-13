@@ -102,27 +102,31 @@ export default function Tier3Page() {
                 </div>
                 <div className="flex justify-between text-navy">
                   <span>Rehab Budget</span>
-                  <span className="font-bold">$75,000</span>
+                  <span className="font-bold">$85,000</span>
                 </div>
                 <div className="flex justify-between text-navy">
                   <span>Holding Costs</span>
-                  <span className="font-bold">$10,000</span>
+                  <span className="font-bold">$12,000</span>
+                </div>
+                <div className="flex justify-between text-navy">
+                  <span>Broker and closing costs</span>
+                  <span className="font-bold">$28,000</span>
                 </div>
                 <div className="flex justify-between text-navy font-bold border-t border-navy/20 pt-4">
-                  <span>Total Investment</span>
-                  <span>$265,000</span>
+                  <span>Total Basis and Fees</span>
+                  <span>$305,000</span>
                 </div>
               </div>
 
               <div className="bg-navy/5 rounded p-6 mb-8">
-                <p className="text-navy/60 text-sm mb-4">5-month project, 25% ARV appreciation</p>
+                <p className="text-navy/60 text-sm mb-4">5-month project with tighter margins and increased construction budget</p>
                 <div className="flex justify-between text-navy mb-2">
                   <span>Sale Price (ARV)</span>
                   <span className="font-bold">$400,000</span>
                 </div>
                 <div className="flex justify-between text-navy font-bold text-orange">
                   <span>Net Profit</span>
-                  <span>$135,000</span>
+                  <span>$95,000</span>
                 </div>
               </div>
 
@@ -133,26 +137,26 @@ export default function Tier3Page() {
                   <span className="font-bold">$15,000</span>
                 </div>
                 <div className="flex justify-between text-navy">
-                  <span>GC Markup (15% x $75k)</span>
-                  <span className="font-bold">$11,250</span>
+                  <span>GC Markup (15% x $85k)</span>
+                  <span className="font-bold">$12,750</span>
                 </div>
                 <div className="flex justify-between text-navy">
                   <span>Buyer Commission (3% x $400k)</span>
                   <span className="font-bold">$12,000</span>
                 </div>
                 <div className="flex justify-between text-navy">
-                  <span>Profit Share (20% x $135k)</span>
-                  <span className="font-bold">$27,000</span>
+                  <span>Profit Share (20% x $95k)</span>
+                  <span className="font-bold">$19,000</span>
                 </div>
                 <div className="flex justify-between text-navy font-bold text-orange border-t border-orange/20 pt-3 mt-3 text-lg">
                   <span>Total Per Deal</span>
-                  <span>$65,250</span>
+                  <span>$58,750</span>
                 </div>
               </div>
 
               <div className="bg-navy/5 rounded p-6 mt-6 text-sm text-navy/60">
-                <p className="mb-3">At 12 deals per year: $15,000 x 12 + deal fees = $180,000 + $600,000+ = $780,000+ annually</p>
-                <p>They keep $70,000+ per deal. You handle everything. Both win.</p>
+                <p className="mb-3">At 12 deals per year: the upside is still meaningful, but the illustration now accounts for a tighter margin structure and heavier construction load.</p>
+                <p>That keeps the example closer to real operating conditions instead of a best-case scenario.</p>
               </div>
             </div>
 

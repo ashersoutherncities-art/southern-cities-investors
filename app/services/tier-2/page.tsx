@@ -70,27 +70,31 @@ export default function Tier2Page() {
                 </div>
                 <div className="flex justify-between text-navy">
                   <span>Average Rehab</span>
-                  <span className="font-bold">$55,000</span>
+                  <span className="font-bold">$65,000</span>
                 </div>
                 <div className="flex justify-between text-navy">
                   <span>Holding Costs</span>
-                  <span className="font-bold">$6,500</span>
+                  <span className="font-bold">$8,000</span>
+                </div>
+                <div className="flex justify-between text-navy">
+                  <span>Broker and closing costs</span>
+                  <span className="font-bold">$22,500</span>
                 </div>
                 <div className="flex justify-between text-navy font-bold border-t border-navy/20 pt-4">
-                  <span>Total Investment</span>
-                  <span>$181,500</span>
+                  <span>Total Basis and Fees</span>
+                  <span>$215,500</span>
                 </div>
               </div>
 
               <div className="bg-navy/5 rounded p-6 mb-8">
-                <p className="text-navy/60 text-sm mb-4">Per deal projection</p>
+                <p className="text-navy/60 text-sm mb-4">Per deal projection with tighter margins and fee stack included</p>
                 <div className="flex justify-between text-navy mb-2">
                   <span>Sale Price (ARV)</span>
                   <span className="font-bold">$290,000</span>
                 </div>
                 <div className="flex justify-between text-navy font-bold text-orange">
                   <span>Net Profit</span>
-                  <span>$102,500</span>
+                  <span>$74,500</span>
                 </div>
               </div>
 
@@ -102,20 +106,20 @@ export default function Tier2Page() {
                 </div>
                 <div className="flex justify-between text-navy">
                   <span>Profit Share (30%)</span>
-                  <span className="font-bold">$30,750</span>
+                  <span className="font-bold">$22,350</span>
                 </div>
                 <div className="flex justify-between text-navy font-bold text-orange border-t border-orange/20 pt-3 mt-3">
                   <span>Total Per Deal</span>
-                  <span>$36,750</span>
+                  <span>$28,350</span>
                 </div>
                 <div className="flex justify-between text-navy font-bold text-orange pt-3 mt-3 text-lg">
                   <span>Annual (3 Deals)</span>
-                  <span>$18,000 + $92,250 = $110,250</span>
+                  <span>$18,000 + $67,050 = $85,050</span>
                 </div>
               </div>
 
               <div className="bg-navy/5 rounded p-6 text-sm text-navy/60">
-                <p>You provide capital. We source, analyze, coach you through process, handle all closing/GC/exit. You keep 80% of profit while learning our system.</p>
+                <p>You provide capital. We source, analyze, and coach through execution, but these example economics are intentionally tighter and include a more realistic fee stack.</p>
               </div>
             </div>
 
