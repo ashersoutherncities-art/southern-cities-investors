@@ -12,6 +12,8 @@ const inquiryTypes = [
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -23,13 +25,35 @@ export default function ContactPage() {
     message: "",
   });
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    console.log("Investor intake submission:", formData);
-    setSubmitted(true);
+    setSubmitting(true);
+    setError("");
+
+    try {
+      const response = await fetch('/api/investor-intake', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to submit investor intake');
+      }
+
+      setSubmitted(true);
+    } catch (err: any) {
+      setError(err.message || 'Failed to submit investor intake');
+    } finally {
+      setSubmitting(false);
+    }
   }
 
-  function handleChange(e: any) {
+  function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -197,11 +221,18 @@ export default function ContactPage() {
                     />
                   </div>
 
+                  {error && (
+                    <div className="p-4 bg-red-50 text-red-700 rounded-lg text-sm">
+                      {error}
+                    </div>
+                  )}
+
                   <button
                     type="submit"
-                    className="w-full sm:w-auto px-8 py-3.5 bg-orange hover:bg-orange-dark text-white font-semibold rounded-lg transition-colors"
+                    disabled={submitting}
+                    className="w-full sm:w-auto px-8 py-3.5 bg-orange hover:bg-orange-dark text-white font-semibold rounded-lg transition-colors disabled:opacity-50"
                   >
-                    Submit Investor Intake
+                    {submitting ? 'Submitting...' : 'Submit Investor Intake'}
                   </button>
                 </form>
               )}

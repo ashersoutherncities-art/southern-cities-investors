@@ -85,27 +85,31 @@ export default function Tier1Page() {
                 </div>
                 <div className="flex justify-between text-navy">
                   <span>Rehab Budget</span>
-                  <span className="font-bold">$65,000</span>
+                  <span className="font-bold">$75,000</span>
                 </div>
                 <div className="flex justify-between text-navy">
                   <span>Holding Costs</span>
-                  <span className="font-bold">$8,000</span>
+                  <span className="font-bold">$10,000</span>
+                </div>
+                <div className="flex justify-between text-navy">
+                  <span>Broker and closing costs</span>
+                  <span className="font-bold">$24,500</span>
                 </div>
                 <div className="flex justify-between text-navy font-bold border-t border-navy/20 pt-4">
-                  <span>Total Investment</span>
-                  <span>$223,000</span>
+                  <span>Total Basis and Fees</span>
+                  <span>$259,500</span>
                 </div>
               </div>
 
               <div className="bg-navy/5 rounded p-6 mb-8">
-                <p className="text-navy/60 text-sm mb-4">Assuming 4-month project, 20% ARV appreciation</p>
+                <p className="text-navy/60 text-sm mb-4">Assuming a 4-month project with a more conservative fee stack</p>
                 <div className="flex justify-between text-navy mb-2">
                   <span>Sale Price (ARV)</span>
                   <span className="font-bold">$350,000</span>
                 </div>
                 <div className="flex justify-between text-navy font-bold text-orange">
-                  <span>Gross Profit</span>
-                  <span>$127,000</span>
+                  <span>Net Profit</span>
+                  <span>$90,500</span>
                 </div>
               </div>
 
@@ -121,11 +125,11 @@ export default function Tier1Page() {
                 </div>
                 <div className="flex justify-between text-navy">
                   <span>GC Markup (15%)</span>
-                  <span className="font-bold">$9,750</span>
+                  <span className="font-bold">$11,250</span>
                 </div>
                 <div className="flex justify-between text-navy">
                   <span>Project Mgmt (7.5%)</span>
-                  <span className="font-bold">$4,875</span>
+                  <span className="font-bold">$5,625</span>
                 </div>
                 <div className="flex justify-between text-navy">
                   <span>Buyer Commission (3%)</span>
@@ -133,11 +137,11 @@ export default function Tier1Page() {
                 </div>
                 <div className="flex justify-between text-navy">
                   <span>Profit Share (35%)</span>
-                  <span className="font-bold">$44,450</span>
+                  <span className="font-bold">$31,675</span>
                 </div>
                 <div className="flex justify-between text-navy font-bold text-orange border-t border-orange/20 pt-3 mt-3">
                   <span>Total to You</span>
-                  <span>$80,121</span>
+                  <span>$69,596</span>
                 </div>
               </div>
             </div>
