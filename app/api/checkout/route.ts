@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import Stripe from 'stripe';
 import { CART_PRODUCTS, CartProduct, parseCartParam, sanitizeCartItems } from '@/lib/cart';
+import { captureLead } from '@/lib/fulfillment';
 
 function getBaseUrl() {
   return process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
@@ -49,6 +50,20 @@ export async function POST(request: NextRequest) {
         },
       });
       customerId = customer.id;
+    }
+
+    if (email) {
+      await captureLead({
+        email,
+        name,
+        phone,
+        source: 'checkout_start',
+        tags: ['buyer-intent', 'checkout-start'],
+        interestedIn: items.map((item) => item.key),
+        metadata: {
+          checkout_mode: mode,
+        },
+      });
     }
 
     const baseUrl = getBaseUrl();
