@@ -30,6 +30,8 @@ export default function PaymentForm() {
     setLoading(true);
 
     try {
+      const normalizedTier = tier.toLowerCase().replace(/ /g, "-");
+
       const response = await fetch("/api/checkout", {
         method: "POST",
         headers: {
@@ -37,7 +39,7 @@ export default function PaymentForm() {
         },
         body: JSON.stringify({
           ...formData,
-          tier: tier.toLowerCase().replace(/ /g, "-"),
+          tier: normalizedTier,
         }),
       });
 
@@ -123,7 +125,7 @@ export default function PaymentForm() {
       </button>
 
       <p className="text-xs text-navy/60 text-center">
-        Secured by Stripe & PayPal
+        Secured checkout powered by Stripe
       </p>
     </form>
   );
