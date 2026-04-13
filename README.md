@@ -1,5 +1,7 @@
 # Southern Cities Investors
 
+Note: this app must run as a normal Next.js deployment, not static export, because live Stripe checkout and Supabase deal submission depend on server API routes.
+
 Professional real estate acquisitions website for Southern Cities Investors - the acquisitions/investment division of Southern Cities Enterprises.
 
 ## 🏢 About
