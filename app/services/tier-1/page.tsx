@@ -2,6 +2,12 @@
 
 import Link from "next/link";
 
+function addTierToCart() {
+  if (typeof window !== 'undefined') {
+    window.localStorage.setItem('sci-cart-tier', 'tier-1');
+  }
+}
+
 export default function Tier1Page() {
   return (
     <>
@@ -246,6 +252,7 @@ export default function Tier1Page() {
             <div className="text-center">
               <Link
                 href="/cart?tier=tier-1"
+                onClick={addTierToCart}
                 className="inline-flex items-center justify-center px-8 py-4 bg-orange hover:bg-orange/90 text-white font-semibold rounded-lg transition-colors"
               >
                 Add to Cart

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import PaymentForm from "@/components/PaymentForm";
 
@@ -25,8 +25,17 @@ const TIERS: Record<string, { name: string; priceLabel: string; description: str
 
 export default function CartContent() {
   const searchParams = useSearchParams();
-  const tier = searchParams.get("tier") || "";
+  const [storedTier, setStoredTier] = useState('');
+  const queryTier = searchParams.get("tier") || "";
 
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const cartTier = window.localStorage.getItem('sci-cart-tier') || '';
+      if (cartTier) setStoredTier(cartTier);
+    }
+  }, []);
+
+  const tier = queryTier || storedTier;
   const selectedTier = useMemo(() => TIERS[tier], [tier]);
 
   if (!selectedTier) {
