@@ -82,7 +82,7 @@ export default function CartContent() {
                 <div key={product.key} className="rounded-xl border border-navy/10 bg-white p-5">
                   <div className="flex items-start justify-between gap-4">
                     <div>
-                      <p className="text-xs font-semibold uppercase tracking-wide text-orange">{product.category === 'core' ? 'Core engagement' : 'Starter offer'}</p>
+                      <p className="text-xs font-semibold uppercase tracking-wide text-orange">{product.category === 'core' ? 'Core engagement' : product.category === 'membership' ? 'Membership' : product.category === 'digital' ? 'Digital product' : 'Starter offer'}</p>
                       <h3 className="text-lg font-bold text-navy mt-1">{product.name}</h3>
                       <p className="text-sm text-navy/60 mt-2">{product.description}</p>
                     </div>
@@ -154,8 +154,8 @@ export default function CartContent() {
               <p className="text-sm font-semibold text-navy">Best next step</p>
               <p className="text-sm text-navy/65 mt-2">
                 {recurringProducts.length
-                  ? 'You are checking out a recurring engagement. After payment, follow up with a short intake call to confirm market, capital, and timelines.'
-                  : 'You are starting with a one-time offer. This is a strong low-friction path for colder traffic before moving into a monthly relationship.'}
+                  ? 'You are checking out a recurring offer. After payment, we can route you into onboarding for membership or the right operator tier.'
+                  : 'You are starting with a one-time offer. This is a strong low-friction path for colder traffic before moving into a review, call, or monthly relationship.'}
               </p>
             </div>
 

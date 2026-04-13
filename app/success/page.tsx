@@ -23,7 +23,7 @@ export default function SuccessPage() {
         </div>
         <h2 className="text-2xl font-bold text-navy mb-2">Payment Successful</h2>
         <p className="text-navy/60 mb-8">
-          Thank you for your subscription. We will be in touch shortly with next steps and your first deal opportunity.
+          Thank you. If you purchased a digital product or membership, we will follow up with access details. If you purchased a higher-touch service, we will reach out with next steps shortly.
         </p>
         <Link
           href="/"

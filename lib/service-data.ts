@@ -16,6 +16,25 @@ export type StarterOffer = {
   };
 };
 
+export type ProductOffer = {
+  key: string;
+  slug: string;
+  name: string;
+  price: string;
+  turnaround: string;
+  badge: string;
+  whoItsFor: string;
+  positioning: string;
+  description: string;
+  deliverables: string[];
+  outcomes: string[];
+  upsell: {
+    label: string;
+    description: string;
+    href: string;
+  };
+};
+
 export const starterOffers: StarterOffer[] = [
   {
     key: 'operator-call',
@@ -94,6 +113,116 @@ export const starterOffers: StarterOffer[] = [
   },
 ];
 
+export const digitalOffers: ProductOffer[] = [
+  {
+    key: 'buy-box-toolkit',
+    slug: 'buy-box-toolkit',
+    name: 'Buy Box Toolkit',
+    price: '$29',
+    turnaround: 'Instant digital delivery',
+    badge: 'Downloadable templates',
+    whoItsFor: 'Best for colder traffic, early-stage investors, and anyone who needs a clearer acquisition filter before paying for live help.',
+    positioning: 'A lightweight digital starter pack that helps you stop chasing random deals and define a cleaner box for what you should actually buy.',
+    description: 'This toolkit packages the core worksheets, prompts, and filters we use to help investors tighten criteria fast. It is built to create movement before a strategy call or buy-box review.',
+    deliverables: [
+      'Buy box worksheet for market, property, and budget guardrails',
+      'Lead screening checklist to qualify inbound opportunities faster',
+      'Acquisition scorecard to compare deals side by side',
+    ],
+    outcomes: [
+      'Create faster no-go decisions on weak leads',
+      'Clarify the market and deal type you should focus on',
+      'Warm yourself up for Buy Box Review or Tier 2',
+    ],
+    upsell: {
+      label: 'Best next step: Buy Box Review',
+      description: 'Use the toolkit first, then let us pressure test and sharpen the criteria with operator feedback.',
+      href: '/services/buy-box-review',
+    },
+  },
+  {
+    key: 'rehab-calculator',
+    slug: 'rehab-calculator',
+    name: 'Rehab Scope and Margin Calculator',
+    price: '$49',
+    turnaround: 'Instant digital delivery',
+    badge: 'Template + underwriting tool',
+    whoItsFor: 'Best for investors who can source leads, but need a cleaner way to budget scope, stress margins, and avoid skinny deals.',
+    positioning: 'A practical spreadsheet-based tool for quickly testing rehab assumptions before you spend money, lose earnest money, or overpay for speed.',
+    description: 'We turned the common underwriting checks into a usable calculator with room for rehab, holding costs, margin thresholds, and exit sensitivity.',
+    deliverables: [
+      'Rehab line-item calculator with margin summary',
+      'Holding and closing cost stress test tabs',
+      'Simple decision prompts for renegotiate, proceed, or walk',
+    ],
+    outcomes: [
+      'Catch thin-deal assumptions earlier',
+      'Underwrite faster with a repeatable structure',
+      'Bridge naturally into Deal Audit when a live deal appears',
+    ],
+    upsell: {
+      label: 'Best next step: Deal Audit',
+      description: 'When the deal gets real, add a human operator review on top of the calculator.',
+      href: '/services/deal-audit',
+    },
+  },
+  {
+    key: 'deal-breakdown-vault',
+    slug: 'deal-breakdown-vault',
+    name: 'Deal Breakdown Vault',
+    price: '$79',
+    turnaround: 'Instant access to current library',
+    badge: 'ElevenLabs educational videos',
+    whoItsFor: 'Best for people who learn well from examples and want short, premium-feeling operator education before jumping into higher-ticket support.',
+    positioning: 'An entry-level educational product built around narrated deal breakdowns, buy-box mistakes, and operator decision-making using polished ElevenLabs voice-led training.',
+    description: 'Instead of generic course fluff, this vault focuses on short lessons that help buyers think better about real estate decisions and move toward paid implementation faster.',
+    deliverables: [
+      'Short-form narrated deal breakdown videos',
+      'Lessons on buy-box mistakes, margin traps, and execution logic',
+      'Operator notes that point to the right next paid offer',
+    ],
+    outcomes: [
+      'Build trust before a call or review offer',
+      'Understand how we think through deals and risk',
+      'Create a natural path into Strategy Call, Deal Audit, or membership',
+    ],
+    upsell: {
+      label: 'Best next step: Investor Essentials Membership',
+      description: 'If you want fresh training and templates monthly, the membership is the clean upgrade.',
+      href: '/services/investor-essentials-membership',
+    },
+  },
+];
+
+export const membershipOffers: ProductOffer[] = [
+  {
+    key: 'investor-essentials-membership',
+    slug: 'investor-essentials-membership',
+    name: 'Investor Essentials Membership',
+    price: '$59/month',
+    turnaround: 'Monthly recurring access',
+    badge: 'Entry-level membership',
+    whoItsFor: 'Best for investors who are not ready for a full operator tier yet, but want consistent templates, training, and next-step guidance.',
+    positioning: 'A low-ticket recurring bridge between cold traffic and higher-touch services, built to keep leads engaged while they gain clarity and confidence.',
+    description: 'This membership turns education into a real front-end offer, combining templates, narrated deal lessons, and monthly implementation prompts that prepare buyers for strategy calls, audits, and Tier 2.',
+    deliverables: [
+      'Monthly ElevenLabs-powered educational breakdown video',
+      'Fresh template, scorecard, or worksheet drop each month',
+      'Member-only notes that point to the smartest next move',
+    ],
+    outcomes: [
+      'Stay engaged with a lower-friction paid relationship',
+      'Build confidence before moving into deeper services',
+      'Create a better upsell path into Strategy Call, Deal Audit, and Tier 2',
+    ],
+    upsell: {
+      label: 'Best next step: Tier 2 Learning Operator',
+      description: 'Once you are ready for live deal help and execution support, Tier 2 is the natural graduation point.',
+      href: '/services/tier-2',
+    },
+  },
+];
+
 export const tierSummaries = [
   {
     key: 'tier-1',
@@ -139,13 +268,14 @@ export const tierSummaries = [
   },
 ];
 
-export const upcomingVideoOffer = {
-  name: 'Deal Clarity Video Breakdowns',
-  status: 'Coming soon',
-  description:
-    'A lower-ticket educational offer built around short breakdowns of underwriting, buy-box mistakes, and operator decision-making. It is designed to warm colder traffic before a call, review, or monthly tier.',
-};
-
 export function getStarterOfferBySlug(slug: string) {
   return starterOffers.find((offer) => offer.slug === slug);
+}
+
+export function getDigitalOfferBySlug(slug: string) {
+  return digitalOffers.find((offer) => offer.slug === slug);
+}
+
+export function getMembershipOfferBySlug(slug: string) {
+  return membershipOffers.find((offer) => offer.slug === slug);
 }

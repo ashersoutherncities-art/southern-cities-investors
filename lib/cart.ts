@@ -11,7 +11,7 @@ export type CartProduct = {
   billingMode: BillingMode;
   interval?: 'month' | 'year';
   description: string;
-  category: 'core' | 'starter';
+  category: 'core' | 'starter' | 'digital' | 'membership';
   checkoutDescription: string;
 };
 
@@ -52,16 +52,16 @@ export const CART_PRODUCTS: Record<string, CartProduct> = {
     description: 'For active operators who need stronger infrastructure and leverage to scale.',
     checkoutDescription: 'Southern Cities Investors Tier 3 monthly subscription.',
   },
-  'deal-audit': {
-    key: 'deal-audit',
-    name: 'Deal Audit',
-    shortName: 'Deal Audit',
-    price: 29700,
-    priceLabel: '$297 one time',
+  'operator-call': {
+    key: 'operator-call',
+    name: 'Operator Strategy Call',
+    shortName: 'Strategy Call',
+    price: 9700,
+    priceLabel: '$97 one time',
     billingMode: 'payment',
     category: 'starter',
-    description: 'Fast underwriting review for a live deal before you commit capital.',
-    checkoutDescription: 'One-time deal audit and underwriting review.',
+    description: 'A focused call for investors who want clarity before stepping into a larger engagement.',
+    checkoutDescription: 'One-time operator strategy call.',
   },
   'buy-box-review': {
     key: 'buy-box-review',
@@ -74,16 +74,61 @@ export const CART_PRODUCTS: Record<string, CartProduct> = {
     description: 'A quick strategy review to tighten your market, criteria, and acquisition filters.',
     checkoutDescription: 'One-time buy box and acquisition criteria review.',
   },
-  'operator-call': {
-    key: 'operator-call',
-    name: 'Operator Strategy Call',
-    shortName: 'Strategy Call',
-    price: 9700,
-    priceLabel: '$97 one time',
+  'deal-audit': {
+    key: 'deal-audit',
+    name: 'Deal Audit',
+    shortName: 'Deal Audit',
+    price: 29700,
+    priceLabel: '$297 one time',
     billingMode: 'payment',
     category: 'starter',
-    description: 'A focused call for investors who want clarity before stepping into a larger engagement.',
-    checkoutDescription: 'One-time operator strategy call.',
+    description: 'Fast underwriting review for a live deal before you commit capital.',
+    checkoutDescription: 'One-time deal audit and underwriting review.',
+  },
+  'buy-box-toolkit': {
+    key: 'buy-box-toolkit',
+    name: 'Buy Box Toolkit',
+    shortName: 'Toolkit',
+    price: 2900,
+    priceLabel: '$29 one time',
+    billingMode: 'payment',
+    category: 'digital',
+    description: 'Downloadable buy box, lead screening, and acquisition scoring templates.',
+    checkoutDescription: 'Instant-access digital toolkit for acquisition criteria and lead screening.',
+  },
+  'rehab-calculator': {
+    key: 'rehab-calculator',
+    name: 'Rehab Scope and Margin Calculator',
+    shortName: 'Rehab Calculator',
+    price: 4900,
+    priceLabel: '$49 one time',
+    billingMode: 'payment',
+    category: 'digital',
+    description: 'Spreadsheet tool to stress rehab assumptions, holding costs, and margin.',
+    checkoutDescription: 'Instant-access rehab scope and margin calculator.',
+  },
+  'deal-breakdown-vault': {
+    key: 'deal-breakdown-vault',
+    name: 'Deal Breakdown Vault',
+    shortName: 'Video Vault',
+    price: 7900,
+    priceLabel: '$79 one time',
+    billingMode: 'payment',
+    category: 'digital',
+    description: 'ElevenLabs-powered educational deal breakdowns and operator lessons.',
+    checkoutDescription: 'Instant-access ElevenLabs educational video vault.',
+  },
+  'investor-essentials-membership': {
+    key: 'investor-essentials-membership',
+    name: 'Investor Essentials Membership',
+    shortName: 'Essentials Membership',
+    price: 5900,
+    priceLabel: '$59/month',
+    billingMode: 'subscription',
+    interval: 'month',
+    category: 'membership',
+    description: 'Entry-level membership with monthly templates, narrated lessons, and next-step guidance.',
+    checkoutDescription: 'Southern Cities Investors entry-level monthly membership.',
   },
 };
 
@@ -99,7 +144,7 @@ export function parseCartParam(value: string | null | undefined): string[] {
 
 export function sanitizeCartItems(items: string[]): string[] {
   const subscriptions = new Set<string>();
-  const starters: string[] = [];
+  const payments: string[] = [];
 
   for (const item of items) {
     const product = CART_PRODUCTS[item];
@@ -107,11 +152,11 @@ export function sanitizeCartItems(items: string[]): string[] {
     if (product.billingMode === 'subscription') {
       subscriptions.add(item);
     } else {
-      starters.push(item);
+      payments.push(item);
     }
   }
 
-  return [...Array.from(subscriptions), ...starters];
+  return [...Array.from(subscriptions), ...payments];
 }
 
 export function buildCartHref(items: string[]): string {
