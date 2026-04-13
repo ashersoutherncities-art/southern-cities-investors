@@ -21,8 +21,7 @@ export default function AddToCartButton({
       href={href}
       onClick={() => {
         const existing = getCartItemsFromCookie();
-        const next = Array.from(new Set([...existing, itemKey]));
-        setCartItemsCookie(next);
+        setCartItemsCookie([...existing, itemKey]);
       }}
       className={className}
     >

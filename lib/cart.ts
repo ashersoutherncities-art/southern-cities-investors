@@ -94,17 +94,34 @@ export function parseCartParam(value: string | null | undefined): string[] {
   return value
     .split(',')
     .map((v) => v.trim())
-    .filter((v, index, arr) => !!CART_PRODUCTS[v] && arr.indexOf(v) === index);
+    .filter((v) => !!CART_PRODUCTS[v]);
+}
+
+export function sanitizeCartItems(items: string[]): string[] {
+  const subscriptions = new Set<string>();
+  const starters: string[] = [];
+
+  for (const item of items) {
+    const product = CART_PRODUCTS[item];
+    if (!product) continue;
+    if (product.billingMode === 'subscription') {
+      subscriptions.add(item);
+    } else {
+      starters.push(item);
+    }
+  }
+
+  return [...Array.from(subscriptions), ...starters];
 }
 
 export function buildCartHref(items: string[]): string {
-  const valid = items.filter((item, index, arr) => !!CART_PRODUCTS[item] && arr.indexOf(item) === index);
+  const valid = sanitizeCartItems(items);
   if (!valid.length) return '/cart';
   return `/cart?${CART_QUERY_KEY}=${encodeURIComponent(valid.join(','))}`;
 }
 
 export function getCartProducts(items: string[]): CartProduct[] {
-  return items.map((item) => CART_PRODUCTS[item]).filter(Boolean);
+  return sanitizeCartItems(items).map((item) => CART_PRODUCTS[item]).filter(Boolean);
 }
 
 export function formatPrice(cents: number): string {

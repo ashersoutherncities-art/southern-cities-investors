@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import Stripe from 'stripe';
-import { CART_PRODUCTS, CartProduct, parseCartParam } from '@/lib/cart';
+import { CART_PRODUCTS, CartProduct, parseCartParam, sanitizeCartItems } from '@/lib/cart';
 
 function getBaseUrl() {
   return process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
@@ -24,7 +24,7 @@ export async function POST(request: NextRequest) {
       ? body.items
       : parseCartParam(body.tier ? String(body.tier) : '');
 
-    const items: CartProduct[] = requestedItems
+    const items: CartProduct[] = sanitizeCartItems(requestedItems)
       .map((item: string) => CART_PRODUCTS[item])
       .filter((item: CartProduct | undefined): item is CartProduct => Boolean(item));
 

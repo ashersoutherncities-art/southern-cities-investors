@@ -20,3 +20,9 @@ export function clearCartCookie() {
   if (typeof document === 'undefined') return;
   document.cookie = `${CART_COOKIE_KEY}=; path=/; max-age=0; samesite=lax`;
 }
+
+export function updateCartItemQuantity(items: string[], itemKey: string, quantity: number): string[] {
+  const withoutItem = items.filter((item) => item !== itemKey);
+  if (quantity <= 0) return withoutItem;
+  return [...withoutItem, ...Array.from({ length: quantity }, () => itemKey)];
+}
