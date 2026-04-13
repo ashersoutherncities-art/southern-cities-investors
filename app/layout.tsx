@@ -7,12 +7,11 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Southern Cities Investors | We Buy Properties Fast in Charlotte, NC",
-  description: "Sell your house fast in Charlotte. Any condition. No repairs needed. Cash offers. Close in 7-30 days. Off-market acquisitions, distressed properties, creative deals.",
-  keywords: "sell house fast Charlotte, cash home buyers Charlotte NC, sell distressed property, we buy houses Charlotte, fast home sale, sell house as-is Charlotte",
-  icons: {
-    icon: '/logos/sc-enterprises-01.svg',
-  },
+  title: "Southern Cities Investors | Deep Discount Real Estate Acquisitions",
+  description:
+    "Southern Cities Investors acquires properties at 30-50% below market value through off-market sourcing and creative finance. Charlotte, NC-based with 30+ market expertise.",
+  keywords:
+    "real estate acquisitions, off-market properties, deep discount real estate, Charlotte NC investors, private lending, JV partners, wholesale deals",
 };
 
 export default function RootLayout({
@@ -22,16 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <head>
-        <script 
-          src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places" 
-          async 
-          defer
-        />
-      </head>
       <body className={inter.className}>
         <Header />
-        {children}
+        <main className="min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>

@@ -3,14 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --navy: #1a2744;
-  --gold: #d4a843;
+  --navy: #132452;
+  --orange: #fa8c41;
   --white: #ffffff;
 }
 
 body {
   color: var(--navy);
   background: var(--white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @layer utilities {

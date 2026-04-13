@@ -1,54 +1,96 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import Link from 'next/link'
+import Link from "next/link";
+import Image from "next/image";
+import { useState } from "react";
+
+const navLinks = [
+  { href: "/", label: "Home" },
+  { href: "/services", label: "Services" },
+  { href: "/submit-deal", label: "Submit a Deal" },
+  { href: "/strategy", label: "Strategy" },
+  { href: "/portfolio", label: "Portfolio" },
+  { href: "/contact", label: "Apply" },
+];
 
 export default function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="bg-navy text-white sticky top-0 z-50 shadow-lg">
-      <nav className="container mx-auto px-4 py-3 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
-          <img src="/logos/sc-logo-horizontal.svg" alt="Southern Cities Enterprises" className="h-16 md:h-20 w-auto" />
-        </Link>
-        
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8">
-          <a href="#how-it-works" className="hover:text-gold transition">How It Works</a>
-          <a href="#what-we-buy" className="hover:text-gold transition">What We Buy</a>
-          <a href="#investors" className="hover:text-gold transition">For Investors</a>
-          <a href="#contact" className="hover:text-gold transition">Contact</a>
-          <a href="#submit-property" className="bg-gold text-navy px-6 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition">
-            Sell Your Property
-          </a>
+    <header className="bg-navy text-white sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 sm:h-20">
+          <Link href="/" className="flex items-center gap-2">
+            <Image
+              src="/logos/sc-investors-02.svg"
+              alt="Southern Cities Investors"
+              width={280}
+              height={80}
+              className="h-14 w-auto"
+              priority
+            />
+          </Link>
+
+          {/* Desktop nav */}
+          <nav className="hidden md:flex items-center gap-8">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-sm font-medium text-white/80 hover:text-orange transition-colors"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+
+          {/* Mobile toggle */}
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="md:hidden p-2 text-white"
+            aria-label="Toggle navigation"
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              {mobileOpen ? (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              ) : (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              )}
+            </svg>
+          </button>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button 
-          className="md:hidden text-white"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
-      </nav>
-
-      {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <div className="md:hidden bg-navy border-t border-gold">
-          <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
-            <a href="#how-it-works" className="hover:text-gold transition" onClick={() => setMobileMenuOpen(false)}>How It Works</a>
-            <a href="#what-we-buy" className="hover:text-gold transition" onClick={() => setMobileMenuOpen(false)}>What We Buy</a>
-            <a href="#investors" className="hover:text-gold transition" onClick={() => setMobileMenuOpen(false)}>For Investors</a>
-            <a href="#contact" className="hover:text-gold transition" onClick={() => setMobileMenuOpen(false)}>Contact</a>
-            <a href="#submit-property" className="bg-gold text-navy px-6 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition text-center" onClick={() => setMobileMenuOpen(false)}>
-              Sell Your Property
-            </a>
-          </div>
-        </div>
-      )}
+        {/* Mobile nav */}
+        {mobileOpen && (
+          <nav className="md:hidden pb-4 border-t border-white/10">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setMobileOpen(false)}
+                className="block py-2 px-0 text-sm font-medium text-white/80 hover:text-orange transition-colors"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+        )}
+      </div>
     </header>
-  )
+  );
 }

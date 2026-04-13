@@ -9,8 +9,19 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        navy: '#1a2744',
-        gold: '#d4a843',
+        navy: {
+          DEFAULT: '#132452',
+          light: '#1a3270',
+          dark: '#0d1a3d',
+        },
+        orange: {
+          DEFAULT: '#fa8c41',
+          light: '#fb9f5e',
+          dark: '#e87a2f',
+        },
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
       },
     },
   },
