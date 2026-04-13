@@ -1,42 +1,16 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo } from "react";
 import { useSearchParams } from "next/navigation";
 import PaymentForm from "@/components/PaymentForm";
-
-const TIERS: Record<string, { name: string; priceLabel: string; description: string }> = {
-  "tier-1": {
-    name: "Hands-Off Capital",
-    priceLabel: "$1,699/month",
-    description: "For investors who want execution without becoming the operator.",
-  },
-  "tier-2": {
-    name: "Learning Operator",
-    priceLabel: "$1,500/month",
-    description: "For investors who want deal flow, execution support, and real-world coaching.",
-  },
-  "tier-3": {
-    name: "Scaling Partner",
-    priceLabel: "$3,000/month",
-    description: "For active operators who need stronger infrastructure and leverage to scale.",
-  },
-};
+import { CART_QUERY_KEY, CART_TIERS, parseCartParam, buildCartHref } from "@/lib/cart";
 
 export default function CartContent() {
   const searchParams = useSearchParams();
-  const [storedTier, setStoredTier] = useState('');
-  const queryTier = searchParams.get("tier") || "";
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const cartTier = window.localStorage.getItem('sci-cart-tier') || '';
-      if (cartTier) setStoredTier(cartTier);
-    }
-  }, []);
-
-  const tier = queryTier || storedTier;
-  const selectedTier = useMemo(() => TIERS[tier], [tier]);
+  const cartItems = useMemo(() => parseCartParam(searchParams.get(CART_QUERY_KEY)), [searchParams]);
+  const selectedTierKey = cartItems[0] || searchParams.get("tier") || "";
+  const selectedTier = useMemo(() => CART_TIERS[selectedTierKey], [selectedTierKey]);
 
   if (!selectedTier) {
     return (
@@ -94,9 +68,12 @@ export default function CartContent() {
               </div>
             </div>
 
-            <div className="mt-8 pt-6 border-t border-navy/10">
+            <div className="mt-8 pt-6 border-t border-navy/10 flex items-center justify-between gap-4">
               <Link href="/services" className="text-sm font-medium text-navy hover:text-orange transition-colors">
                 Back to services
+              </Link>
+              <Link href={buildCartHref([])} className="text-sm font-medium text-navy/60 hover:text-orange transition-colors">
+                Clear cart
               </Link>
             </div>
           </div>

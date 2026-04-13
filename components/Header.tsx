@@ -2,13 +2,13 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { Suspense, useState } from "react";
+import CartNavLink from "@/components/CartNavLink";
 
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
   { href: "/submit-deal", label: "Submit a Deal" },
-  { href: "/cart", label: "Cart" },
   { href: "/strategy", label: "Strategy" },
   { href: "/portfolio", label: "Portfolio" },
   { href: "/contact", label: "Apply" },
@@ -43,6 +43,9 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
+            <Suspense fallback={<Link href="/cart" className="text-sm font-medium text-white/80 hover:text-orange transition-colors">Cart</Link>}>
+              <CartNavLink />
+            </Suspense>
           </nav>
 
           {/* Mobile toggle */}
@@ -89,6 +92,9 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
+            <Suspense fallback={<Link href="/cart" onClick={() => setMobileOpen(false)} className="block py-2 px-0 text-sm font-medium text-white/80 hover:text-orange transition-colors">Cart</Link>}>
+              <CartNavLink mobile onClick={() => setMobileOpen(false)} />
+            </Suspense>
           </nav>
         )}
       </div>
