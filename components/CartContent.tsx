@@ -1,14 +1,28 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import PaymentForm from "@/components/PaymentForm";
 import { CART_QUERY_KEY, CART_TIERS, parseCartParam, buildCartHref } from "@/lib/cart";
+import { getCartItemsFromCookie, setCartItemsCookie, clearCartCookie } from "@/lib/cart-client";
 
 export default function CartContent() {
   const searchParams = useSearchParams();
-  const cartItems = useMemo(() => parseCartParam(searchParams.get(CART_QUERY_KEY)), [searchParams]);
+  const queryCartItems = useMemo(() => parseCartParam(searchParams.get(CART_QUERY_KEY)), [searchParams]);
+  const [cookieCartItems, setCookieCartItems] = useState<string[]>([]);
+
+  useEffect(() => {
+    const fromCookie = getCartItemsFromCookie();
+    if (queryCartItems.length) {
+      setCartItemsCookie(queryCartItems);
+      setCookieCartItems(queryCartItems);
+    } else {
+      setCookieCartItems(fromCookie);
+    }
+  }, [queryCartItems]);
+
+  const cartItems = queryCartItems.length ? queryCartItems : cookieCartItems;
   const selectedTierKey = cartItems[0] || searchParams.get("tier") || "";
   const selectedTier = useMemo(() => CART_TIERS[selectedTierKey], [selectedTierKey]);
 
@@ -72,7 +86,7 @@ export default function CartContent() {
               <Link href="/services" className="text-sm font-medium text-navy hover:text-orange transition-colors">
                 Back to services
               </Link>
-              <Link href={buildCartHref([])} className="text-sm font-medium text-navy/60 hover:text-orange transition-colors">
+              <Link href={buildCartHref([])} onClick={() => clearCartCookie()} className="text-sm font-medium text-navy/60 hover:text-orange transition-colors">
                 Clear cart
               </Link>
             </div>

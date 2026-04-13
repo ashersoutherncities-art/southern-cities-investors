@@ -1,13 +1,21 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { CART_QUERY_KEY, parseCartParam, buildCartHref } from "@/lib/cart";
+import { getCartItemsFromCookie } from "@/lib/cart-client";
 
 export default function CartNavLink({ mobile = false, onClick }: { mobile?: boolean; onClick?: () => void }) {
   const searchParams = useSearchParams();
-  const cartItems = useMemo(() => parseCartParam(searchParams.get(CART_QUERY_KEY)), [searchParams]);
+  const queryCartItems = useMemo(() => parseCartParam(searchParams.get(CART_QUERY_KEY)), [searchParams]);
+  const [cookieCartItems, setCookieCartItems] = useState<string[]>([]);
+
+  useEffect(() => {
+    setCookieCartItems(getCartItemsFromCookie());
+  }, [searchParams]);
+
+  const cartItems = queryCartItems.length ? queryCartItems : cookieCartItems;
   const cartHref = buildCartHref(cartItems);
 
   if (mobile) {

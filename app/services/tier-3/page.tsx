@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { setCartItemsCookie } from "@/lib/cart-client";
 
 export default function Tier3Page() {
   return (
@@ -297,6 +298,7 @@ export default function Tier3Page() {
             <div className="text-center">
               <Link
                 href="/cart?cart=tier-3"
+                onClick={() => setCartItemsCookie(['tier-3'])}
                 className="inline-flex items-center justify-center px-8 py-4 bg-orange hover:bg-orange/90 text-white font-semibold rounded-lg transition-colors"
               >
                 Add to Cart
