@@ -1,9 +1,18 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getSupabaseAdmin } from '@/lib/supabase-admin';
 
+const REQUIRED_FIELDS = ['submitterName', 'submitterEmail', 'propertyAddress', 'city', 'state', 'assetType', 'askingPrice'];
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
+
+    for (const field of REQUIRED_FIELDS) {
+      if (!body[field]) {
+        return NextResponse.json({ error: `Missing required field: ${field}` }, { status: 400 });
+      }
+    }
+
     const supabase = getSupabaseAdmin();
 
     const payload = {
@@ -35,11 +44,7 @@ export async function POST(request: NextRequest) {
       submitted_at: new Date().toISOString(),
     };
 
-    const { data, error } = await supabase
-      .from('deal_submissions')
-      .insert(payload)
-      .select('id')
-      .single();
+    const { data, error } = await supabase.from('deal_submissions').insert(payload).select('id').single();
 
     if (error) {
       console.error('Supabase insert error:', error);
@@ -49,6 +54,6 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ success: true, id: data.id });
   } catch (error) {
     console.error('Deal submission error:', error);
-    return NextResponse.json({ error: 'Failed to process submission' }, { status: 500 });
+    return NextResponse.json({ error: error instanceof Error ? error.message : 'Failed to process submission' }, { status: 500 });
   }
 }

@@ -1,13 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
 
-export default function PaymentForm() {
-  const router = useRouter();
-  const searchParams = useSearchParams();
-  const tier = searchParams.get("tier") || "";
-
+export default function PaymentForm({ items }: { items: string[] }) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -30,8 +25,6 @@ export default function PaymentForm() {
     setLoading(true);
 
     try {
-      const normalizedTier = tier.toLowerCase().replace(/ /g, "-");
-
       const response = await fetch("/api/checkout", {
         method: "POST",
         headers: {
@@ -39,23 +32,22 @@ export default function PaymentForm() {
         },
         body: JSON.stringify({
           ...formData,
-          tier: normalizedTier,
+          items,
         }),
       });
 
       const data = await response.json();
 
-      if (data.error) {
-        setError(data.error);
+      if (!response.ok || data.error) {
+        setError(data.error || "Failed to process payment");
         setLoading(false);
         return;
       }
 
-      // Redirect to Stripe checkout
       if (data.url) {
         window.location.href = data.url;
       }
-    } catch (err) {
+    } catch {
       setError("Failed to process payment");
       setLoading(false);
     }
@@ -110,18 +102,14 @@ export default function PaymentForm() {
         />
       </div>
 
-      {error && (
-        <div className="p-4 bg-red-50 text-red-700 rounded-lg text-sm">
-          {error}
-        </div>
-      )}
+      {error && <div className="p-4 bg-red-50 text-red-700 rounded-lg text-sm">{error}</div>}
 
       <button
         type="submit"
-        disabled={loading}
+        disabled={loading || items.length === 0}
         className="w-full px-6 py-3 bg-orange hover:bg-orange/90 text-white font-semibold rounded-lg transition-colors disabled:opacity-50"
       >
-        {loading ? "Processing..." : `Continue to Payment`}
+        {loading ? "Processing..." : "Continue to Secure Checkout"}
       </button>
 
       <p className="text-xs text-navy/60 text-center">

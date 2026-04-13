@@ -1,100 +1,93 @@
 import { NextRequest, NextResponse } from 'next/server';
 import Stripe from 'stripe';
+import { CART_PRODUCTS, CartProduct, parseCartParam } from '@/lib/cart';
+
+function getBaseUrl() {
+  return process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+}
 
 export async function POST(request: NextRequest) {
   try {
     const stripeSecretKey = process.env.STRIPE_SECRET_KEY;
 
     if (!stripeSecretKey) {
-      return NextResponse.json(
-        { error: 'Stripe is not configured' },
-        { status: 500 }
-      );
+      return NextResponse.json({ error: 'Stripe is not configured' }, { status: 500 });
     }
 
     const stripe = new Stripe(stripeSecretKey, {
       apiVersion: '2026-03-25.dahlia',
     });
+
     const body = await request.json();
-    const { tier, email, name } = body;
+    const { email, name, phone } = body;
+    const requestedItems = Array.isArray(body.items)
+      ? body.items
+      : parseCartParam(body.tier ? String(body.tier) : '');
 
-    // Define pricing and product details
-    const tiers: { [key: string]: { price: number; name: string; interval: string } } = {
-      'tier-1': {
-        price: 169900, // $1,699 in cents
-        name: 'Hands-Off Capital - Monthly',
-        interval: 'month',
-      },
-      'tier-2': {
-        price: 150000, // $1,500 in cents
-        name: 'Learning Operator - Monthly',
-        interval: 'month',
-      },
-      'tier-3': {
-        price: 300000, // $3,000 in cents
-        name: 'Scaling Partner - Monthly',
-        interval: 'month',
-      },
-    };
+    const items: CartProduct[] = requestedItems
+      .map((item: string) => CART_PRODUCTS[item])
+      .filter((item: CartProduct | undefined): item is CartProduct => Boolean(item));
 
-    const tierData = tiers[tier];
-    if (!tierData) {
-      return NextResponse.json({ error: 'Invalid tier' }, { status: 400 });
+    if (!items.length) {
+      return NextResponse.json({ error: 'No valid cart items were provided' }, { status: 400 });
     }
 
-    // Create or get customer
-    const customers = await stripe.customers.list({
-      email: email,
-      limit: 1,
-    });
+    const mode = items.some((item) => item.billingMode === 'subscription') ? 'subscription' : 'payment';
+
+    const customers = email
+      ? await stripe.customers.list({ email, limit: 1 })
+      : { data: [] };
 
     let customerId = customers.data[0]?.id;
     if (!customerId) {
       const customer = await stripe.customers.create({
         email,
         name,
-        metadata: { tier },
+        phone,
+        metadata: {
+          cart_items: items.map((item) => item.key).join(','),
+        },
       });
       customerId = customer.id;
     }
 
-    // Create subscription session
+    const baseUrl = getBaseUrl();
     const session = await stripe.checkout.sessions.create({
       customer: customerId,
-      mode: 'subscription',
+      mode,
       payment_method_types: ['card'],
-      line_items: [
-        {
-          price_data: {
-            currency: 'usd',
-            product_data: {
-              name: tierData.name,
-              description: `Southern Cities Investors ${tier.toUpperCase()} subscription`,
-            },
-            unit_amount: tierData.price,
-            recurring: {
-              interval: tierData.interval as 'month' | 'year',
-              interval_count: 1,
-            },
+      line_items: items.map((item) => ({
+        price_data: {
+          currency: 'usd',
+          product_data: {
+            name: item.name,
+            description: item.checkoutDescription,
           },
-          quantity: 1,
+          unit_amount: item.price,
+          ...(item.billingMode === 'subscription'
+            ? {
+                recurring: {
+                  interval: item.interval || 'month',
+                  interval_count: 1,
+                },
+              }
+            : {}),
         },
-      ],
-      success_url: `${process.env.NEXT_PUBLIC_BASE_URL}/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL}/cancelled`,
+        quantity: 1,
+      })),
+      success_url: `${baseUrl}/success?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${baseUrl}/cancelled`,
       metadata: {
-        tier,
-        email,
-        name,
+        cart_items: items.map((item) => item.key).join(','),
+        customer_email: email || '',
+        customer_name: name || '',
+        checkout_mode: mode,
       },
     });
 
-    return NextResponse.json({ sessionId: session.id, url: session.url });
+    return NextResponse.json({ sessionId: session.id, url: session.url, mode });
   } catch (error) {
     console.error('Checkout error:', error);
-    return NextResponse.json(
-      { error: 'Failed to create checkout session' },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: 'Failed to create checkout session' }, { status: 500 });
   }
 }

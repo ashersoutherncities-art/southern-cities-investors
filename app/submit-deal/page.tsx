@@ -65,10 +65,35 @@ export default function SubmitDealPage() {
     notes: "",
   });
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState("");
+
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    console.log("Deal submission:", formData);
-    setSubmitted(true);
+    setSubmitting(true);
+    setError("");
+
+    try {
+      const response = await fetch('/api/deal-submissions', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to submit deal');
+      }
+
+      setSubmitted(true);
+    } catch (err: any) {
+      setError(err.message || 'Failed to submit deal');
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   function handleChange(e: any) {
@@ -312,8 +337,14 @@ export default function SubmitDealPage() {
                   </div>
                 </div>
 
-                <button type="submit" className="w-full sm:w-auto px-10 py-4 bg-orange hover:bg-orange-dark text-white font-semibold rounded-lg transition-colors text-lg">
-                  Submit Deal for Review
+                {error && (
+                  <div className="p-4 bg-red-50 text-red-700 rounded-lg text-sm">
+                    {error}
+                  </div>
+                )}
+
+                <button type="submit" disabled={submitting} className="w-full sm:w-auto px-10 py-4 bg-orange hover:bg-orange-dark text-white font-semibold rounded-lg transition-colors text-lg disabled:opacity-50">
+                  {submitting ? 'Submitting...' : 'Submit Deal for Review'}
                 </button>
               </form>
             )}

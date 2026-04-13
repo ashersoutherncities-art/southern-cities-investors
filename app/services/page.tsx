@@ -1,4 +1,26 @@
 import Link from "next/link";
+import AddToCartButton from "@/components/AddToCartButton";
+
+const starterOffers = [
+  {
+    key: "operator-call",
+    name: "Operator Strategy Call",
+    price: "$97",
+    description: "A quick decision-making call for investors who want clarity before entering a larger engagement.",
+  },
+  {
+    key: "buy-box-review",
+    name: "Buy Box Review",
+    price: "$147",
+    description: "A fast review of your market, criteria, and acquisition filters so you stop chasing weak deals.",
+  },
+  {
+    key: "deal-audit",
+    name: "Deal Audit",
+    price: "$297",
+    description: "A focused underwriting review for a live opportunity before you put capital at risk.",
+  },
+];
 
 export default function Services() {
   return (
@@ -33,6 +55,31 @@ export default function Services() {
               disciplined underwriting, and an operating team that understands sourcing,
               construction, and exit execution.
             </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-navy/5 border-b border-navy/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mb-12">
+            <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">Lower-ticket offers</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy">Start smaller if you are not ready for a monthly engagement.</h2>
+            <p className="mt-4 text-lg text-navy/60">These are built for colder traffic, newer investors, or prospects who need a lower-friction first step before committing to a larger relationship.</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {starterOffers.map((offer) => (
+              <div key={offer.key} className="bg-white border border-navy/10 rounded-2xl p-8 shadow-sm">
+                <p className="text-sm font-semibold uppercase tracking-wide text-orange">Starter offer</p>
+                <h3 className="text-2xl font-bold text-navy mt-3">{offer.name}</h3>
+                <p className="text-orange font-semibold text-lg mt-2">{offer.price} one time</p>
+                <p className="text-navy/60 mt-4 mb-8">{offer.description}</p>
+                <AddToCartButton
+                  itemKey={offer.key}
+                  className="inline-flex items-center justify-center w-full px-6 py-3 bg-navy hover:bg-navy/90 text-white font-semibold rounded-lg transition-colors"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>
