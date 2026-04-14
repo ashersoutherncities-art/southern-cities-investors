@@ -7,7 +7,7 @@ import CartNavLink from "@/components/CartNavLink";
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/services", label: "Services" },
+  { href: "/services", label: "Products & Services" },
   { href: "/submit-deal", label: "Submit a Deal" },
   { href: "/strategy", label: "Strategy" },
   { href: "/portfolio", label: "Portfolio" },
