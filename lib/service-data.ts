@@ -42,18 +42,18 @@ export const starterOffers: StarterOffer[] = [
     name: 'Operator Strategy Call',
     price: '$97',
     turnaround: '45-minute call + next-step recap',
-    whoItsFor: 'Best for newer investors, stuck buyers, and prospects who need fast clarity before paying for deeper help.',
-    positioning: 'A low-friction first step to pressure test your next move before you waste months in the wrong market, strategy, or deal type.',
-    description: 'Bring your current roadblock, market question, or deal plan. We will help you identify the cleanest next step and whether you should stay DIY, buy a deeper review, or move into an ongoing tier.',
+    whoItsFor: 'Best for newer investors, stuck buyers, and anyone who needs fast clarity before committing more time or capital.',
+    positioning: 'A focused first step to pressure test your next move before you lose momentum in the wrong market, strategy, or deal type.',
+    description: 'Bring your current roadblock, market question, or deal plan. We will help you identify the cleanest next step and whether you need a deeper review or ongoing support.',
     deliverables: [
-      '45-minute operator call focused on your current bottleneck',
+      '45-minute strategy call focused on your current bottleneck',
       'Clear recommendation on market, strategy, or next acquisition step',
       'Simple action recap you can use immediately after the call',
     ],
     outcomes: [
       'Stop second-guessing your next move',
       'Get a faster yes, no, or not yet decision',
-      'Create the right bridge into Buy Box Review or Tier 2',
+      'Identify whether Buy Box Review or Tier 2 is the right next move',
     ],
     upsell: {
       label: 'Most common next step: Buy Box Review',
@@ -73,7 +73,7 @@ export const starterOffers: StarterOffer[] = [
     deliverables: [
       'Review of your target market, price band, and strategy fit',
       'Refined acquisition criteria with clear guardrails',
-      'Operator notes on what to avoid, what to double down on, and what to track',
+      'Clear notes on what to avoid, what to double down on, and what to track',
     ],
     outcomes: [
       'Tighter filters and fewer wasted seller conversations',
@@ -92,7 +92,7 @@ export const starterOffers: StarterOffer[] = [
     name: 'Deal Audit',
     price: '$297',
     turnaround: 'Underwriting review within 48 hours',
-    whoItsFor: 'Best for investors with a live deal in front of them who want a second set of experienced operator eyes before committing capital.',
+    whoItsFor: 'Best for investors with a live deal in front of them who want an experienced second set of eyes before committing capital.',
     positioning: 'A fast underwriting sanity check for real deals, not theory. Use it before earnest money, before hard money, or before a bad buy becomes an expensive lesson.',
     description: 'We look at your numbers, assumptions, rehab scope, and margin story to help you decide whether the opportunity is viable, risky, or worth renegotiating.',
     deliverables: [
@@ -103,7 +103,7 @@ export const starterOffers: StarterOffer[] = [
     outcomes: [
       'Avoid thin deals disguised as opportunities',
       'Enter the deal with clearer numbers and better questions',
-      'Create a natural bridge into Tier 1 or Tier 3 if execution help is needed',
+      'See whether Tier 1 or Tier 3 makes sense if execution help is needed',
     ],
     upsell: {
       label: 'Natural upgrade: Tier 1 or Tier 3',
@@ -121,9 +121,9 @@ export const digitalOffers: ProductOffer[] = [
     price: '$29',
     turnaround: 'Instant digital delivery',
     badge: 'Downloadable templates',
-    whoItsFor: 'Best for colder traffic, early-stage investors, and anyone who needs a clearer acquisition filter before paying for live help.',
+    whoItsFor: 'Best for early-stage investors and anyone who needs a clearer acquisition filter before paying for live help.',
     positioning: 'A lightweight digital starter pack that helps you stop chasing random deals and define a cleaner box for what you should actually buy.',
-    description: 'This toolkit packages the core worksheets, prompts, and filters we use to help investors tighten criteria fast. It is built to create movement before a strategy call or buy-box review.',
+    description: 'This toolkit packages the core worksheets, prompts, and filters we use to help investors tighten criteria fast. It is a practical first step before a strategy call or buy box review.',
     deliverables: [
       'Buy box worksheet for market, property, and budget guardrails',
       'Lead screening checklist to qualify inbound opportunities faster',
@@ -132,11 +132,11 @@ export const digitalOffers: ProductOffer[] = [
     outcomes: [
       'Create faster no-go decisions on weak leads',
       'Clarify the market and deal type you should focus on',
-      'Warm yourself up for Buy Box Review or Tier 2',
+      'Prepare for Buy Box Review or Tier 2 with clearer criteria',
     ],
     upsell: {
       label: 'Best next step: Buy Box Review',
-      description: 'Use the toolkit first, then let us pressure test and sharpen the criteria with operator feedback.',
+      description: 'Use the toolkit first, then let us pressure test and sharpen the criteria with direct feedback.',
       href: '/services/buy-box-review',
     },
   },
@@ -162,7 +162,7 @@ export const digitalOffers: ProductOffer[] = [
     ],
     upsell: {
       label: 'Best next step: Deal Audit',
-      description: 'When the deal gets real, add a human operator review on top of the calculator.',
+      description: 'When the deal gets real, add an experienced human review on top of the calculator.',
       href: '/services/deal-audit',
     },
   },
@@ -173,17 +173,17 @@ export const digitalOffers: ProductOffer[] = [
     price: '$79',
     turnaround: 'Instant access to current library',
     badge: 'ElevenLabs educational videos',
-    whoItsFor: 'Best for people who learn well from examples and want short, premium-feeling operator education before jumping into higher-ticket support.',
-    positioning: 'An entry-level educational product built around narrated deal breakdowns, buy-box mistakes, and operator decision-making using polished ElevenLabs voice-led training.',
-    description: 'Instead of generic course fluff, this vault focuses on short lessons that help buyers think better about real estate decisions and move toward paid implementation faster.',
+    whoItsFor: 'Best for people who learn well from examples and want short, premium-feeling deal education before jumping into higher-touch support.',
+    positioning: 'An entry-level educational product built around narrated deal breakdowns, buy-box mistakes, and decision-making using polished ElevenLabs voice-led training.',
+    description: 'Instead of generic course fluff, this vault focuses on short lessons that help you think better about real estate decisions and move forward with more confidence.',
     deliverables: [
       'Short-form narrated deal breakdown videos',
       'Lessons on buy-box mistakes, margin traps, and execution logic',
-      'Operator notes that point to the right next paid offer',
+      'Practical notes that point to the right next offer',
     ],
     outcomes: [
-      'Build trust before a call or review offer',
-      'Understand how we think through deals and risk',
+      'Build confidence before a call or review offer',
+      'Understand how experienced investors think through deals and risk',
       'Create a natural path into Strategy Call, Deal Audit, or membership',
     ],
     upsell: {
@@ -202,9 +202,9 @@ export const membershipOffers: ProductOffer[] = [
     price: '$59/month',
     turnaround: 'Monthly recurring access',
     badge: 'Entry-level membership',
-    whoItsFor: 'Best for investors who are not ready for a full operator tier yet, but want consistent templates, training, and next-step guidance.',
-    positioning: 'A low-ticket recurring bridge between cold traffic and higher-touch services, built to keep leads engaged while they gain clarity and confidence.',
-    description: 'This membership turns education into a real front-end offer, combining templates, narrated deal lessons, and monthly implementation prompts that prepare buyers for strategy calls, audits, and Tier 2.',
+    whoItsFor: 'Best for investors who are not ready for a full recurring tier yet, but want consistent templates, training, and next-step guidance.',
+    positioning: 'A practical monthly membership for investors who want to stay sharp, build confidence, and keep momentum between deals.',
+    description: 'This membership combines templates, narrated deal lessons, and monthly implementation prompts that prepare you for strategy calls, audits, and Tier 2.',
     deliverables: [
       'Monthly ElevenLabs-powered educational breakdown video',
       'Fresh template, scorecard, or worksheet drop each month',
@@ -213,7 +213,7 @@ export const membershipOffers: ProductOffer[] = [
     outcomes: [
       'Stay engaged with a lower-friction paid relationship',
       'Build confidence before moving into deeper services',
-      'Create a better upsell path into Strategy Call, Deal Audit, and Tier 2',
+      'Create a smoother path into Strategy Call, Deal Audit, and Tier 2',
     ],
     upsell: {
       label: 'Best next step: Tier 2 Learning Operator',
@@ -229,10 +229,10 @@ export const tierSummaries = [
     name: 'Tier 1: Hands-Off Capital',
     price: '$1,699/month',
     tag: 'For passive but serious capital',
-    whoItsFor: 'You want off-market opportunities and operator-led execution without becoming the day-to-day builder of the machine.',
+    whoItsFor: 'You want off-market opportunities and execution support without becoming the day-to-day builder of the machine.',
     deliverables: [
       '2 to 3 screened opportunities per month',
-      'Operator-led underwriting, coordination, and execution oversight',
+      'Underwriting, coordination, and execution oversight from an experienced team',
       'A cleaner path from acquisition to exit without building the back office yourself',
     ],
     cta: 'See Tier 1 details',
@@ -243,7 +243,7 @@ export const tierSummaries = [
     name: 'Tier 2: Learning Operator',
     price: '$1,500/month',
     tag: 'Best fit for growth-stage investors',
-    whoItsFor: 'You want to learn in real deals while still having sourcing, underwriting, and operator guidance around you.',
+    whoItsFor: 'You want to learn in real deals while still having sourcing, underwriting, and experienced guidance around you.',
     deliverables: [
       'Deal flow plus underwriting support',
       'Hands-on guidance around execution and decision-making',
@@ -256,12 +256,12 @@ export const tierSummaries = [
     key: 'tier-3',
     name: 'Tier 3: Scaling Partner',
     price: '$3,000/month',
-    tag: 'For operators who need leverage',
-    whoItsFor: 'You already know the game, but need stronger systems, execution capacity, and operating leverage to scale volume.',
+    tag: 'For experienced investors who need leverage',
+    whoItsFor: 'You already know the game, but need stronger systems, execution capacity, and leverage to scale volume.',
     deliverables: [
       'Higher-touch coordination across sourcing, construction, and exits',
       'Operational leverage that helps move from opportunistic to repeatable',
-      'A premium support model for active operators and portfolio builders',
+      'A premium support model for active investors and portfolio builders',
     ],
     cta: 'See Tier 3 details',
     href: '/services/tier-3',

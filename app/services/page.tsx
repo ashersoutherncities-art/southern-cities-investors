@@ -10,11 +10,10 @@ export default function Services() {
           <div className="max-w-4xl">
             <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">Service Models</p>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
-              Start at the right price point, then move into the right operating tier.
+              Choose the right level of support for where you are now.
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-white/70 leading-relaxed max-w-3xl">
-              Southern Cities Investors is now structured as a real product ladder: downloadable tools for colder traffic,
-              educational media and membership for warming buyers, focused audits for live decisions, and monthly tiers for serious execution.
+              Southern Cities Investors offers digital tools, narrated training, focused reviews, and recurring support for investors who want clearer decisions and stronger execution.
             </p>
           </div>
         </div>
@@ -23,10 +22,9 @@ export default function Services() {
       <section className="py-16 bg-white border-b border-navy/10">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-navy/5 rounded-2xl p-8 text-center border border-navy/10">
-            <h2 className="text-2xl font-bold text-navy mb-4">Built to convert different buyer temperatures, not force everyone into one offer.</h2>
+            <h2 className="text-2xl font-bold text-navy mb-4">Not every investor needs the same kind of help.</h2>
             <p className="text-navy/65 leading-relaxed max-w-3xl mx-auto">
-              Cold traffic needs a useful first purchase. Warm traffic needs a credibility-building product. Hot traffic needs direct operator help.
-              This page gives each buyer a clean next move.
+              Some investors want a practical resource they can use immediately. Others need direct feedback on a live opportunity. This page helps you choose the cleanest next step.
             </p>
           </div>
         </div>
@@ -36,9 +34,9 @@ export default function Services() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-12">
             <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">Downloadables and educational media</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy">Lower-ticket products that create trust before a call.</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy">Tools and training designed to improve your next decision.</h2>
             <p className="mt-4 text-lg text-navy/60">
-              These products are built to turn colder visitors into buyers by solving one focused problem fast, while naturally pointing them toward the next paid step.
+              These products solve focused problems fast, so you can tighten your process before you spend more time or capital.
             </p>
           </div>
 
@@ -80,10 +78,9 @@ export default function Services() {
           <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-8 items-start">
             <div>
               <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">Entry-level recurring revenue</p>
-              <h2 className="text-3xl sm:text-4xl font-bold text-navy">Membership bridges education into higher-ticket services.</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold text-navy">Membership keeps serious investors close to the right resources.</h2>
               <p className="mt-4 text-lg text-navy/60 max-w-3xl">
-                Instead of relying only on one-time consults, this gives Southern Cities a lower-ticket recurring offer that keeps leads warm with templates,
-                ElevenLabs educational breakdowns, and operator-guided next steps.
+                Get recurring access to templates, narrated breakdowns, and practical guidance that help you stay sharp between deals and prepare for the next level of support.
               </p>
             </div>
 
@@ -122,9 +119,9 @@ export default function Services() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-12">
             <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">Starter offers</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy">Use a focused operator offer when the decision is real and time-sensitive.</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy">Choose a focused review when the decision is real and time-sensitive.</h2>
             <p className="mt-4 text-lg text-navy/60">
-              These are the next layer up from templates and media. Each one solves a more urgent buying problem and points to the right long-term tier.
+              These offers are built for real decisions, active deals, and investors who want experienced guidance before they commit.
             </p>
           </div>
 
@@ -171,7 +168,7 @@ export default function Services() {
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-navy">Tier 1, 2, and 3, matched to where you are now</h2>
             <p className="mt-4 text-lg text-navy/60">
-              Choose the operating relationship that fits your capital, experience level, and appetite for involvement.
+              Choose the working relationship that fits your capital, experience level, and appetite for involvement.
             </p>
           </div>
 
@@ -213,8 +210,8 @@ export default function Services() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-navy mb-6">Ready to see which path fits your goals?</h2>
           <p className="text-lg text-navy/60 mb-10 max-w-2xl mx-auto">
-            Start with a downloadable or membership if you need a lower-friction entry point, choose a starter offer if a decision is already on your desk,
-            or apply for investor intake if you are ready for a serious operating relationship.
+            Start with a downloadable or membership if you want a lower-friction entry point, choose a starter offer if a decision is already on your desk,
+            or apply for investor intake if you are ready for a deeper working relationship.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="inline-flex items-center justify-center px-10 py-4 bg-orange hover:bg-orange/90 text-white font-semibold rounded-lg transition-colors text-lg">

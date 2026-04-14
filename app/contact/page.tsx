@@ -72,9 +72,9 @@ export default function ContactPage() {
             Apply to work with Southern Cities Investors
           </h1>
           <p className="mt-6 text-lg text-white/70 max-w-3xl">
-            This intake is for serious investors, operators, and partners who want
-            disciplined deal flow, real execution support, and a team that understands
-            acquisitions, construction, and exits.
+            This intake is for serious investors and partners who want disciplined deal flow,
+            strong execution support, and a team that understands acquisitions, construction,
+            and exits.
           </p>
         </div>
       </section>
@@ -242,7 +242,7 @@ export default function ContactPage() {
               <div>
                 <h3 className="text-xl font-bold text-navy mb-4">Who this is for</h3>
                 <p className="text-navy/60 leading-relaxed">
-                  Investors and operators who want disciplined acquisitions, strong execution,
+                  Investors who want disciplined acquisitions, strong execution,
                   and a serious team behind the deal.
                 </p>
               </div>

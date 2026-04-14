@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 export default function LeadCaptureCard({
   title = 'Want the next drop or fulfillment updates?',
-  copy = 'Leave your email and we will route product updates, launch notes, and the right next-step offer.',
+  copy = 'Leave your email and we will send product updates, launch notes, and relevant next-step recommendations.',
   source,
   interestedIn,
 }: {
@@ -47,7 +47,7 @@ export default function LeadCaptureCard({
 
   return (
     <div className="rounded-2xl border border-navy/10 bg-white p-6 shadow-sm">
-      <p className="text-sm font-semibold uppercase tracking-wide text-orange">Lead capture</p>
+      <p className="text-sm font-semibold uppercase tracking-wide text-orange">Email updates</p>
       <h3 className="mt-3 text-2xl font-bold text-navy">{title}</h3>
       <p className="mt-3 text-navy/65">{copy}</p>
       <form onSubmit={handleSubmit} className="mt-6 space-y-4">
@@ -73,7 +73,7 @@ export default function LeadCaptureCard({
         >
           {status === 'saving' ? 'Saving...' : 'Get updates'}
         </button>
-        {status === 'done' ? <p className="text-sm text-green-700">You’re in. We’ll route updates to your inbox.</p> : null}
+        {status === 'done' ? <p className="text-sm text-green-700">You’re in. We’ll send updates to your inbox.</p> : null}
         {status === 'error' ? <p className="text-sm text-red-700">Something went wrong. Please try again.</p> : null}
       </form>
     </div>

@@ -63,8 +63,8 @@ export default function CartContent() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mb-12">
           <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">Cart and checkout</p>
-          <h1 className="text-4xl sm:text-5xl font-bold text-navy leading-tight">Review your selected services and complete checkout.</h1>
-          <p className="mt-4 text-lg text-navy/60">Use lower-ticket offers as a starting point, or move straight into a full monthly engagement.</p>
+          <h1 className="text-4xl sm:text-5xl font-bold text-navy leading-tight">Review your selected offers and complete checkout.</h1>
+          <p className="mt-4 text-lg text-navy/60">Start with the level of support that fits your needs now, from digital resources to recurring engagement.</p>
         </div>
 
         <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-start">
@@ -154,8 +154,8 @@ export default function CartContent() {
               <p className="text-sm font-semibold text-navy">Best next step</p>
               <p className="text-sm text-navy/65 mt-2">
                 {recurringProducts.length
-                  ? 'You are checking out a recurring offer. After payment, we can route you into onboarding for membership or the right operator tier.'
-                  : 'You are starting with a one-time offer. This is a strong low-friction path for colder traffic before moving into a review, call, or monthly relationship.'}
+                  ? 'You are checking out a recurring offer. After payment, we will route you into the right onboarding flow for your membership or tier.'
+                  : 'You are starting with a one-time offer. This is a practical first step before adding a review, call, or ongoing support if needed.'}
               </p>
             </div>
 
@@ -174,7 +174,7 @@ export default function CartContent() {
 
           <div className="bg-white border border-navy/10 rounded-2xl p-8 shadow-sm">
             <h2 className="text-2xl font-bold text-navy mb-3">Checkout</h2>
-            <p className="text-sm text-navy/60 mb-6">We will route your cart to the correct Stripe checkout flow automatically.</p>
+            <p className="text-sm text-navy/60 mb-6">We will send your cart to the correct Stripe checkout flow automatically.</p>
             <PaymentForm items={cartItems} />
           </div>
         </div>

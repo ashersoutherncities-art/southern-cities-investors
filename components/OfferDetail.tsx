@@ -73,9 +73,9 @@ export default function OfferDetail({ offer }: { offer: ProductOffer | StarterOf
       <section className="py-20 sm:py-24 bg-navy/5">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-8 lg:grid-cols-[1.15fr_0.85fr] items-start">
           <div className="text-center lg:text-left">
-            <p className="text-sm font-semibold uppercase tracking-wide text-orange">Low-friction next move</p>
-            <h2 className="mt-4 text-3xl sm:text-4xl font-bold text-navy">Start with one clear win, then graduate into the right tier.</h2>
-            <p className="mt-5 text-lg text-navy/65 max-w-2xl lg:max-w-none">This offer is meant to create traction fast. If you need ongoing sourcing, execution, or operator support after this, we will point you to the cleanest Tier 1, Tier 2, or Tier 3 path.</p>
+            <p className="text-sm font-semibold uppercase tracking-wide text-orange">Your next move</p>
+            <h2 className="mt-4 text-3xl sm:text-4xl font-bold text-navy">Start with one clear win, then step into deeper support if you need it.</h2>
+            <p className="mt-5 text-lg text-navy/65 max-w-2xl lg:max-w-none">This offer is designed to solve a specific problem quickly. If you want continued help with sourcing, underwriting, or execution after that, we will point you to the strongest next-fit option.</p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <AddToCartButton
                 itemKey={offer.key}

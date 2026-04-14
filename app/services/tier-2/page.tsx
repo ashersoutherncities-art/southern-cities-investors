@@ -17,7 +17,7 @@ export default function Tier2Page() {
               Learning Operator
             </h1>
             <p className="mt-6 text-xl text-white/70 max-w-2xl">
-              For investors and emerging operators who want to learn the business while deals are being sourced, underwritten, and executed with real support.
+              For investors who want to learn the business while deals are being sourced, underwritten, and executed with real support.
             </p>
           </div>
         </div>
@@ -31,7 +31,7 @@ export default function Tier2Page() {
               <p>• You want to stop learning only from YouTube and start learning inside real deals</p>
               <p>• You want guidance without having to build every system from scratch</p>
               <p>• You are serious about doing 3-5 quality deals per year</p>
-              <p>• You want coaching, execution support, and deal flow in one relationship</p>
+              <p>• You want guidance, execution support, and deal flow in one relationship</p>
             </div>
           </div>
         </div>
@@ -42,7 +42,7 @@ export default function Tier2Page() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <div className="bg-navy/5 rounded-lg p-8 mb-12">
-              <h2 className="text-3xl font-bold text-navy mb-8">Investment Structure</h2>
+                <h2 className="text-3xl font-bold text-navy mb-8">How Tier 2 is structured</h2>
               
               <div className="space-y-6">
                 <div className="border-b border-navy/20 pb-6 last:border-0">
@@ -54,14 +54,14 @@ export default function Tier2Page() {
                 <div>
                   <h3 className="text-xl font-bold text-navy mb-2">Profit Share on Backend</h3>
                   <p className="text-2xl font-bold text-orange mb-2">30% of Net Profit</p>
-                  <p className="text-navy/60">We execute, you learn. We split profits at sale.</p>
+                  <p className="text-navy/60">This keeps incentives aligned while you learn inside real deals.</p>
                 </div>
               </div>
             </div>
 
             {/* Deal Example */}
             <div className="bg-white border-2 border-navy/10 rounded-lg p-8 mb-12">
-              <h2 className="text-2xl font-bold text-navy mb-8">Sample Deal Breakdown (3 Deals/Year)</h2>
+              <h2 className="text-2xl font-bold text-navy mb-8">Sample deal economics (3 deals/year)</h2>
               
               <div className="space-y-4 mb-8">
                 <div className="flex justify-between text-navy">
@@ -99,7 +99,7 @@ export default function Tier2Page() {
               </div>
 
               <div className="space-y-3 bg-orange/5 rounded p-6 mb-8">
-                <h3 className="font-bold text-navy mb-4">Your Revenue (Per Deal)</h3>
+                <h3 className="font-bold text-navy mb-4">Estimated Southern Cities participation</h3>
                 <div className="flex justify-between text-navy">
                   <span>Monthly Retainer (4 months)</span>
                   <span className="font-bold">$6,000</span>
@@ -109,11 +109,11 @@ export default function Tier2Page() {
                   <span className="font-bold">$22,350</span>
                 </div>
                 <div className="flex justify-between text-navy font-bold text-orange border-t border-orange/20 pt-3 mt-3">
-                  <span>Total Per Deal</span>
+                  <span>Total estimated fees and participation</span>
                   <span>$28,350</span>
                 </div>
                 <div className="flex justify-between text-navy font-bold text-orange pt-3 mt-3 text-lg">
-                  <span>Annual (3 Deals)</span>
+                  <span>Annual illustration (3 deals)</span>
                   <span>$18,000 + $67,050 = $85,050</span>
                 </div>
               </div>
@@ -205,10 +205,10 @@ export default function Tier2Page() {
                   </li>
                   <li className="flex gap-3">
                     <span className="text-orange font-bold">•</span>
-                    <span className="text-navy">Learn our process for future scaling</span>
-                  </li>
-                </ul>
-              </div>
+                  <span className="text-navy">Build repeatable judgment for future scaling</span>
+                </li>
+              </ul>
+            </div>
             </div>
 
             {/* Perfect For */}

@@ -4,20 +4,20 @@ import { digitalOffers, membershipOffers, starterOffers, tierSummaries } from '@
 
 const buyerPaths = [
   {
-    title: 'Cold traffic',
-    description: 'Start with a template, tool, or narrated educational product that builds trust before a live call.',
+    title: 'Getting started',
+    description: 'Start with a template, tool, or narrated breakdown that sharpens your criteria before you need one-on-one help.',
     cta: 'Browse digital products',
     href: '/services',
   },
   {
-    title: 'Warm buyer',
-    description: 'Use a strategy call, buy-box review, or deal audit when you need help with a real decision fast.',
+    title: 'Active buyer',
+    description: 'Use a strategy call, buy box review, or deal audit when you need a confident second set of eyes on a real decision.',
     cta: 'See starter offers',
     href: '/services',
   },
   {
-    title: 'Ready operator',
-    description: 'Move into Tier 1, 2, or 3 when you want real sourcing, underwriting, and execution support.',
+    title: 'Ready to scale',
+    description: 'Move into Tier 1, 2, or 3 when you want sourcing, underwriting, and execution support around your next phase of growth.',
     cta: 'Apply for a fit call',
     href: '/contact',
   },
@@ -34,18 +34,18 @@ export default function Home() {
                 Southern Cities Investors
               </p>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
-                From first paid touch to full operator support, built for real estate investors who want traction.
+                Real estate guidance, tools, and execution support for investors who want to move with clarity.
               </h1>
               <p className="mt-6 text-lg sm:text-xl text-white/70 leading-relaxed max-w-3xl">
-                We help investors move from scattered interest to clearer criteria, better underwriting, and stronger execution.
-                Start with templates, tools, or ElevenLabs educational products, then graduate into live strategy, deal review, and ongoing operator-backed tiers.
+                Southern Cities helps investors tighten their buy box, underwrite with more confidence, and make better acquisition decisions.
+                Start with practical tools and training, or step straight into strategic review and ongoing support when the stakes are higher.
               </p>
               <div className="mt-10 flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/services"
                   className="inline-flex items-center justify-center px-8 py-3.5 bg-orange hover:bg-orange-dark text-white font-semibold rounded-lg transition-colors"
                 >
-                  Explore the product ladder
+                  Explore offers
                 </Link>
                 <Link
                   href="/contact"
@@ -57,12 +57,12 @@ export default function Home() {
             </div>
 
             <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
-              <p className="text-sm font-semibold uppercase tracking-wide text-orange">How the funnel now works</p>
+              <p className="text-sm font-semibold uppercase tracking-wide text-orange">How to work with us</p>
               <div className="mt-6 space-y-4">
                 {[
-                  'Step 1: lower-ticket templates, tools, and narrated educational media',
-                  'Step 2: focused starter offers for strategy, buy-box, and live-deal review',
-                  'Step 3: Tier 1, 2, or 3 for recurring operator support and execution',
+                  'Step 1: start with a toolkit, calculator, or narrated breakdown',
+                  'Step 2: choose a strategy call, buy box review, or deal audit when a decision is in front of you',
+                  'Step 3: move into the right recurring tier for sourcing, underwriting, and execution support',
                 ].map((item) => (
                   <div key={item} className="flex gap-3 text-white/80">
                     <span className="text-orange font-bold">✓</span>
@@ -71,8 +71,8 @@ export default function Home() {
                 ))}
               </div>
               <div className="mt-8 rounded-xl bg-white/5 border border-white/10 p-5">
-                <p className="text-sm font-semibold text-white">Best next move for most new visitors</p>
-                <p className="mt-2 text-sm text-white/65">Start with the Buy Box Toolkit or Deal Breakdown Vault, then move into a call or review when the decision becomes real.</p>
+                <p className="text-sm font-semibold text-white">A strong place to begin</p>
+                <p className="mt-2 text-sm text-white/65">Start with the Buy Box Toolkit or Deal Breakdown Vault, then add a call or review when you want direct feedback on your next move.</p>
               </div>
             </div>
           </div>
@@ -83,10 +83,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-navy">
-              Different buyer temperatures need different offers.
+              Different investors need different entry points.
             </h2>
             <p className="mt-4 text-lg text-navy/60">
-              This site is now positioned to convert colder, warmer, and ready-now investors instead of forcing every visitor into the same application CTA.
+              Whether you are refining your criteria, evaluating a live opportunity, or looking for ongoing support, there is a clear next step.
             </p>
           </div>
 
@@ -107,10 +107,10 @@ export default function Home() {
       <section className="py-20 sm:py-24 bg-navy/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-12">
-            <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">Lower-ticket productization</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy">Downloadables, tools, and ElevenLabs-powered education.</h2>
+            <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">Digital tools and education</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy">Downloadables, tools, and narrated training you can use right away.</h2>
             <p className="mt-4 text-lg text-navy/60">
-              These are the strongest practical front-end offers for this stage: simple to understand, easy to buy, and naturally connected to the higher-ticket services behind them.
+              These offers help you sharpen criteria, pressure test assumptions, and learn faster before you commit to a higher-touch engagement.
             </p>
           </div>
 
@@ -140,7 +140,7 @@ export default function Home() {
       <section className="py-20 sm:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-[1fr_1fr] gap-8 items-start">
           <div className="rounded-2xl border border-orange/20 bg-orange/5 p-8">
-            <p className="text-sm font-semibold uppercase tracking-wide text-orange">Entry-level membership</p>
+            <p className="text-sm font-semibold uppercase tracking-wide text-orange">Membership</p>
             {membershipOffers.map((offer) => (
               <div key={offer.key}>
                 <h2 className="mt-3 text-3xl font-bold text-navy">{offer.name}</h2>
@@ -169,17 +169,17 @@ export default function Home() {
           </div>
 
           <div className="rounded-2xl border border-navy/10 bg-white p-8 shadow-sm">
-            <p className="text-sm font-semibold uppercase tracking-wide text-orange">Why this matters</p>
-            <h2 className="mt-3 text-3xl font-bold text-navy">The positioning is tighter and the buying path is clearer.</h2>
+            <p className="text-sm font-semibold uppercase tracking-wide text-orange">Why investors choose this path</p>
+            <h2 className="mt-3 text-3xl font-bold text-navy">A clearer buying path leads to stronger decisions.</h2>
             <div className="mt-6 space-y-5 text-navy/65 leading-relaxed">
               <p>
-                Southern Cities is now framed less like a generic investor site and more like an operator-led ladder with specific offers for each stage of buyer readiness.
+                Southern Cities offers practical value at every stage, from self-serve tools to strategic review and recurring support.
               </p>
               <p>
-                Lower-ticket products build trust. Starter offers create momentum around live decisions. Monthly tiers capture the serious buyers who want execution, not more theory.
+                You can start small, solve a specific problem, and step into deeper support only when it makes sense for your goals and timeline.
               </p>
               <p>
-                That makes the site more useful to traffic now and gives Darius room to launch actual downloadable assets and ElevenLabs educational products without reworking the positioning again.
+                The result is a more direct, more useful experience for investors who want better guidance without the noise of a generic consulting pitch.
               </p>
             </div>
           </div>
@@ -194,34 +194,34 @@ export default function Home() {
                 About Southern Cities Investors
               </p>
               <h2 className="text-3xl sm:text-4xl font-bold text-navy leading-tight">
-                We do more than source deals. We build the bridge from education to execution.
+                We help investors move from education to action with more confidence.
               </h2>
               <p className="mt-6 text-lg text-navy/70 leading-relaxed">
                 Southern Cities Investors is the acquisitions and investment arm of Southern Cities Enterprises. We identify off-market opportunities,
                 underwrite them with strict buy criteria, structure the acquisition, oversee renovation or development execution, and position assets for profitable resale, rental, or long-term hold.
               </p>
               <p className="mt-4 text-lg text-navy/70 leading-relaxed">
-                Now the public offer stack reflects that depth, from lightweight digital products and narrated learning assets all the way up to recurring operator support.
+                Our offers are built to meet you where you are, from practical digital resources to high-touch support on acquisitions, execution, and growth.
               </p>
             </div>
 
             <div className="bg-white border border-navy/10 rounded-2xl p-8 shadow-sm">
               <h3 className="text-xl font-bold text-navy mb-6">
-                What the platform now provides
+                What you can access here
               </h3>
               <div className="space-y-5">
                 {[
                   {
                     title: 'Templates and tools',
-                    description: 'Downloadable assets that help newer buyers tighten criteria and underwrite cleaner before committing to live support.',
+                    description: 'Downloadable assets that help investors tighten criteria and underwrite with more discipline before committing to live support.',
                   },
                   {
                     title: 'Educational media',
-                    description: 'Short-form ElevenLabs-led breakdowns that warm traffic through clear operator thinking, not generic info products.',
+                    description: 'Short-form narrated breakdowns that make real deal analysis easier to understand and apply.',
                   },
                   {
-                    title: 'Focused operator reviews',
-                    description: 'Calls, buy-box work, and live-deal audits that solve immediate problems and create the right upsell path.',
+                    title: 'Focused strategic reviews',
+                    description: 'Calls, buy box work, and live deal audits that help you make better decisions under pressure.',
                   },
                   {
                     title: 'Full-cycle execution',
@@ -245,7 +245,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-navy">Focused help when the stakes get higher</h2>
-            <p className="mt-4 text-lg text-navy/60">Starter offers bridge cold education and full operator engagement.</p>
+            <p className="mt-4 text-lg text-navy/60">Starter offers give you direct help when a live decision needs experienced input.</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -263,9 +263,9 @@ export default function Home() {
       <section className="py-20 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy">Built for serious investors and operators</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy">Built for serious investors at every stage</h2>
             <p className="mt-4 text-lg text-navy/60">
-              When buyers are ready for more than education, the recurring tiers carry the execution.
+              When you are ready for more than education or one-off advice, the recurring tiers provide deeper support.
             </p>
           </div>
 
@@ -284,10 +284,10 @@ export default function Home() {
       <section className="py-20 sm:py-24 bg-navy text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold">
-            Start with the right first purchase, then grow into the right long-term relationship.
+            Start where you need help now, then grow into the right long-term relationship.
           </h2>
           <p className="mt-4 text-lg text-white/70 max-w-3xl mx-auto">
-            If you need a low-friction entry point, start with a toolkit, calculator, vault, or membership. If you already have a real decision on your desk, choose a starter offer or apply for investor intake.
+            If you want a low-friction starting point, begin with a toolkit, calculator, vault, or membership. If you already have a live opportunity or want deeper support, choose a starter offer or apply for investor intake.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <Link

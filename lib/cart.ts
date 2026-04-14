@@ -25,7 +25,7 @@ export const CART_PRODUCTS: Record<string, CartProduct> = {
     billingMode: 'subscription',
     interval: 'month',
     category: 'core',
-    description: 'For investors who want execution without becoming the operator.',
+    description: 'For investors who want execution support without building the full machine themselves.',
     checkoutDescription: 'Southern Cities Investors Tier 1 monthly subscription.',
   },
   'tier-2': {
@@ -49,7 +49,7 @@ export const CART_PRODUCTS: Record<string, CartProduct> = {
     billingMode: 'subscription',
     interval: 'month',
     category: 'core',
-    description: 'For active operators who need stronger infrastructure and leverage to scale.',
+    description: 'For active investors who need stronger infrastructure and leverage to scale.',
     checkoutDescription: 'Southern Cities Investors Tier 3 monthly subscription.',
   },
   'operator-call': {
@@ -61,7 +61,7 @@ export const CART_PRODUCTS: Record<string, CartProduct> = {
     billingMode: 'payment',
     category: 'starter',
     description: 'A focused call for investors who want clarity before stepping into a larger engagement.',
-    checkoutDescription: 'One-time operator strategy call.',
+    checkoutDescription: 'One-time strategy call.',
   },
   'buy-box-review': {
     key: 'buy-box-review',
@@ -115,7 +115,7 @@ export const CART_PRODUCTS: Record<string, CartProduct> = {
     priceLabel: '$79 one time',
     billingMode: 'payment',
     category: 'digital',
-    description: 'ElevenLabs-powered educational deal breakdowns and operator lessons.',
+    description: 'ElevenLabs-powered educational deal breakdowns and practical investing lessons.',
     checkoutDescription: 'Instant-access ElevenLabs educational video vault.',
   },
   'investor-essentials-membership': {

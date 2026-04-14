@@ -28,7 +28,7 @@ export default function Tier1Page() {
           <div className="bg-navy/5 rounded-2xl p-8">
             <h2 className="text-2xl font-bold text-navy mb-4">This is for you if...</h2>
             <div className="grid md:grid-cols-2 gap-4 text-navy/70">
-              <p>• You have capital but do not want to become a full-time operator</p>
+              <p>• You have capital but do not want to run the day-to-day operation yourself</p>
               <p>• You want vetted opportunities, not random deal flow</p>
               <p>• You value execution, speed, and clear accountability</p>
               <p>• You want a partner who can source, manage, and exit deals under one roof</p>
@@ -42,19 +42,19 @@ export default function Tier1Page() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <div className="bg-navy/5 rounded-lg p-8 mb-12">
-              <h2 className="text-3xl font-bold text-navy mb-8">Investment Structure</h2>
+                <h2 className="text-3xl font-bold text-navy mb-8">How Tier 1 is structured</h2>
               
               <div className="space-y-6">
                 <div className="border-b border-navy/20 pb-6 last:border-0">
                   <h3 className="text-xl font-bold text-navy mb-2">Platform Subscription</h3>
                   <p className="text-3xl font-bold text-orange mb-2">$1,699/month</p>
-                  <p className="text-navy/60">Access to 2-3 solid opportunities per month. Paid regardless of deal closure.</p>
+                  <p className="text-navy/60">Access to 2 to 3 screened opportunities per month. This keeps sourcing and pipeline work active even if a deal does not close.</p>
                 </div>
 
                 <div className="border-b border-navy/20 pb-6 last:border-0">
                   <h3 className="text-xl font-bold text-navy mb-2">Acquisition Fee</h3>
                   <p className="text-2xl font-bold text-orange mb-2">2-3% of Purchase Price</p>
-                  <p className="text-navy/60">Paid at closing. Covers sourcing and underwriting work.</p>
+                  <p className="text-navy/60">Paid at closing. Covers sourcing, underwriting, and acquisition support.</p>
                 </div>
 
                 <div className="border-b border-navy/20 pb-6 last:border-0">
@@ -67,16 +67,16 @@ export default function Tier1Page() {
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-bold text-navy mb-2">Equity on Backend</h3>
+                  <h3 className="text-xl font-bold text-navy mb-2">Profit Participation</h3>
                   <p className="text-2xl font-bold text-orange mb-2">35% of Net Profit (Minimum)</p>
-                  <p className="text-navy/60">Paid at sale. Example: $100k profit deal = $35-40k to us.</p>
+                  <p className="text-navy/60">Paid at sale and aligned to deal performance.</p>
                 </div>
               </div>
             </div>
 
             {/* Deal Example */}
             <div className="bg-white border-2 border-navy/10 rounded-lg p-8 mb-12">
-              <h2 className="text-2xl font-bold text-navy mb-8">Sample Deal Breakdown</h2>
+              <h2 className="text-2xl font-bold text-navy mb-8">Sample deal economics</h2>
               
               <div className="space-y-4 mb-8">
                 <div className="flex justify-between text-navy">
@@ -102,7 +102,7 @@ export default function Tier1Page() {
               </div>
 
               <div className="bg-navy/5 rounded p-6 mb-8">
-                <p className="text-navy/60 text-sm mb-4">Assuming a 4-month project with a more conservative fee stack</p>
+                <p className="text-navy/60 text-sm mb-4">Illustration based on a 4-month project with conservative assumptions</p>
                 <div className="flex justify-between text-navy mb-2">
                   <span>Sale Price (ARV)</span>
                   <span className="font-bold">$350,000</span>
@@ -114,7 +114,7 @@ export default function Tier1Page() {
               </div>
 
               <div className="space-y-3 bg-orange/5 rounded p-6">
-                <h3 className="font-bold text-navy mb-4">Your Revenue Per Deal</h3>
+                <h3 className="font-bold text-navy mb-4">Estimated Southern Cities participation</h3>
                 <div className="flex justify-between text-navy">
                   <span>Platform Sub (4 months)</span>
                   <span className="font-bold">$6,796</span>
@@ -140,7 +140,7 @@ export default function Tier1Page() {
                   <span className="font-bold">$31,675</span>
                 </div>
                 <div className="flex justify-between text-navy font-bold text-orange border-t border-orange/20 pt-3 mt-3">
-                  <span>Total to You</span>
+                  <span>Total estimated fees and participation</span>
                   <span>$69,596</span>
                 </div>
               </div>

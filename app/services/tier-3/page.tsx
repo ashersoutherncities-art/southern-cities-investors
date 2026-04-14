@@ -17,7 +17,7 @@ export default function Tier3Page() {
               Scaling Partner
             </h1>
             <p className="mt-6 text-xl text-white/70 max-w-2xl">
-              For active investors and operators who already know the business, but need stronger infrastructure, execution capacity, and operating leverage to scale.
+              For active investors who already know the business, but need stronger infrastructure, execution capacity, and leverage to scale.
             </p>
           </div>
         </div>
@@ -31,7 +31,7 @@ export default function Tier3Page() {
               <p>• You already do deals but know your current operation is too thin to scale</p>
               <p>• You need sourcing, construction, and execution support under one platform</p>
               <p>• You want to move from opportunistic deals to repeatable volume</p>
-              <p>• You are looking for a serious operating partner, not another consultant</p>
+              <p>• You are looking for a serious execution partner, not another consultant</p>
             </div>
           </div>
         </div>
@@ -42,7 +42,7 @@ export default function Tier3Page() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <div className="bg-navy/5 rounded-lg p-8 mb-12">
-              <h2 className="text-3xl font-bold text-navy mb-8">Two Service Models</h2>
+                <h2 className="text-3xl font-bold text-navy mb-8">Two ways to structure Tier 3</h2>
               
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="border-r border-navy/20 pr-8 last:border-0">
@@ -93,7 +93,7 @@ export default function Tier3Page() {
 
             {/* Deal Example */}
             <div className="bg-white border-2 border-navy/10 rounded-lg p-8 mb-12">
-              <h2 className="text-2xl font-bold text-navy mb-8">Sample Deal (Service Model)</h2>
+              <h2 className="text-2xl font-bold text-navy mb-8">Sample deal economics (service model)</h2>
               
               <div className="space-y-4 mb-8">
                 <div className="flex justify-between text-navy">
@@ -131,7 +131,7 @@ export default function Tier3Page() {
               </div>
 
               <div className="space-y-3 bg-orange/5 rounded p-6">
-                <h3 className="font-bold text-navy mb-4">Your Revenue Per Deal</h3>
+                <h3 className="font-bold text-navy mb-4">Estimated Southern Cities participation</h3>
                 <div className="flex justify-between text-navy">
                   <span>Monthly Retainer (5 months)</span>
                   <span className="font-bold">$15,000</span>
@@ -149,13 +149,13 @@ export default function Tier3Page() {
                   <span className="font-bold">$19,000</span>
                 </div>
                 <div className="flex justify-between text-navy font-bold text-orange border-t border-orange/20 pt-3 mt-3 text-lg">
-                  <span>Total Per Deal</span>
+                  <span>Total estimated fees and participation</span>
                   <span>$58,750</span>
                 </div>
               </div>
 
               <div className="bg-navy/5 rounded p-6 mt-6 text-sm text-navy/60">
-                <p className="mb-3">At 12 deals per year: the upside is still meaningful, but the illustration now accounts for a tighter margin structure and heavier construction load.</p>
+                <p className="mb-3">At 12 deals per year, the upside remains meaningful, but this illustration accounts for tighter margins and a heavier construction load.</p>
                 <p>That keeps the example closer to real operating conditions instead of a best-case scenario.</p>
               </div>
             </div>
@@ -238,7 +238,7 @@ export default function Tier3Page() {
             <div className="mb-12">
               <h2 className="text-2xl font-bold text-navy mb-8">Ideal For</h2>
               <div className="bg-white border-2 border-navy/10 rounded-lg p-8 space-y-4">
-                <p className="text-navy">Established operators who:</p>
+                <p className="text-navy">Established investors who:</p>
                 <ul className="space-y-2 text-navy/60">
                   <li>Are already doing 5-15 deals per year</li>
                   <li>Want to scale to 15-25+ without burning out</li>
