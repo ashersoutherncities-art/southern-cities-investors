@@ -23,6 +23,21 @@ const buyerPaths = [
   },
 ];
 
+const trustSignals = [
+  {
+    quote: 'I need a faster way to know whether a deal deserves more attention before I waste time underwriting the wrong thing.',
+    label: 'Common investor pain point',
+  },
+  {
+    quote: 'The right support is not generic coaching. It is sharper criteria, faster feedback, and help making real decisions under pressure.',
+    label: 'What buyers are actually looking for',
+  },
+  {
+    quote: 'A clear path from first step to execution builds more confidence than a vague consulting pitch.',
+    label: 'Why this buying path converts',
+  },
+];
+
 export default function Home() {
   return (
     <>
@@ -34,18 +49,17 @@ export default function Home() {
                 Southern Cities Investors
               </p>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
-                Real estate guidance, tools, and execution support for investors who want to move with clarity.
+                Start investing with clearer criteria, stronger deals, and real execution support.
               </h1>
               <p className="mt-6 text-lg sm:text-xl text-white/70 leading-relaxed max-w-3xl">
-                Southern Cities helps investors tighten their buy box, underwrite with more confidence, and make better acquisition decisions.
-                Start with practical tools and training, or step straight into strategic review and ongoing support when the stakes are higher.
+                Southern Cities Investors helps real estate investors find better opportunities, underwrite them with confidence, and get support from buy box through execution. Start with the right first step for where you are now.
               </p>
               <div className="mt-10 flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/services"
                   className="inline-flex items-center justify-center px-8 py-3.5 bg-orange hover:bg-orange-dark text-white font-semibold rounded-lg transition-colors"
                 >
-                  Explore offers
+                  Get started with investing
                 </Link>
                 <Link
                   href="/contact"
@@ -60,9 +74,9 @@ export default function Home() {
               <p className="text-sm font-semibold uppercase tracking-wide text-orange">How to work with us</p>
               <div className="mt-6 space-y-4">
                 {[
-                  'Step 1: start with a toolkit, calculator, or narrated breakdown',
-                  'Step 2: choose a strategy call, buy box review, or deal audit when a decision is in front of you',
-                  'Step 3: move into the right recurring tier for sourcing, underwriting, and execution support',
+                  'Who we are: Southern Cities Investors, the acquisitions and investor-support arm of Southern Cities Enterprises',
+                  'What we do: help investors tighten criteria, review deals, and execute with more confidence',
+                  'How to start: choose a toolkit, call, or review based on where you are today',
                 ].map((item) => (
                   <div key={item} className="flex gap-3 text-white/80">
                     <span className="text-orange font-bold">✓</span>
@@ -72,7 +86,7 @@ export default function Home() {
               </div>
               <div className="mt-8 rounded-xl bg-white/5 border border-white/10 p-5">
                 <p className="text-sm font-semibold text-white">A strong place to begin</p>
-                <p className="mt-2 text-sm text-white/65">Start with the Buy Box Toolkit or Deal Breakdown Vault, then add a call or review when you want direct feedback on your next move.</p>
+                <p className="mt-2 text-sm text-white/65">If you are just getting started, begin with a toolkit, buy box review, or strategy call and build from there.</p>
               </div>
             </div>
           </div>
@@ -81,25 +95,42 @@ export default function Home() {
 
       <section className="py-20 sm:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy">
-              Different investors need different entry points.
-            </h2>
-            <p className="mt-4 text-lg text-navy/60">
-              Whether you are refining your criteria, evaluating a live opportunity, or looking for ongoing support, there is a clear next step.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {buyerPaths.map((path) => (
-              <div key={path.title} className="bg-white border border-navy/10 rounded-xl p-8 hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-bold text-navy mb-3">{path.title}</h3>
-                <p className="text-navy/60 leading-relaxed">{path.description}</p>
-                <Link href={path.href} className="inline-flex mt-6 text-sm font-semibold text-orange hover:text-orange/80 transition-colors">
-                  {path.cta}
-                </Link>
+          <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] items-start">
+            <div>
+              <div className="max-w-3xl mb-12">
+                <h2 className="text-3xl sm:text-4xl font-bold text-navy">
+                  Different investors need different entry points.
+                </h2>
+                <p className="mt-4 text-lg text-navy/60">
+                  Whether you are refining your criteria, evaluating a live opportunity, or looking for ongoing support, there is a clear next step.
+                </p>
               </div>
-            ))}
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {buyerPaths.map((path) => (
+                  <div key={path.title} className="bg-white border border-navy/10 rounded-xl p-8 hover:shadow-lg transition-shadow">
+                    <h3 className="text-xl font-bold text-navy mb-3">{path.title}</h3>
+                    <p className="text-navy/60 leading-relaxed">{path.description}</p>
+                    <Link href={path.href} className="inline-flex mt-6 text-sm font-semibold text-orange hover:text-orange/80 transition-colors">
+                      {path.cta}
+                    </Link>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="rounded-2xl border border-navy/10 bg-navy/5 p-8">
+              <p className="text-sm font-semibold uppercase tracking-wide text-orange">Trust and fit</p>
+              <h3 className="mt-3 text-2xl font-bold text-navy">Built for real investor pain points, not generic motivation.</h3>
+              <div className="mt-6 space-y-4">
+                {trustSignals.map((item) => (
+                  <div key={item.quote} className="rounded-xl border border-navy/10 bg-white p-5">
+                    <p className="text-base leading-relaxed text-navy/75">“{item.quote}”</p>
+                    <p className="mt-3 text-xs font-semibold uppercase tracking-wide text-orange">{item.label}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
