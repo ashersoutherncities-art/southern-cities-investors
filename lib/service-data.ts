@@ -81,8 +81,8 @@ export const starterOffers: StarterOffer[] = [
       'A stronger setup before Deal Audit, Tier 1, or Tier 2',
     ],
     upsell: {
-      label: 'Best upgrade: Tier 2 Learning Operator',
-      description: 'Once the buy box is clear, Tier 2 helps you source and execute against it with real support.',
+      label: 'Best upgrade: Tier 2 Deal Analysis',
+      description: 'Once the buy box is clear, Tier 2 helps you pressure test live opportunities with stronger review support.',
       href: '/services/tier-2',
     },
   },
@@ -103,11 +103,11 @@ export const starterOffers: StarterOffer[] = [
     outcomes: [
       'Avoid thin deals disguised as opportunities',
       'Enter the deal with clearer numbers and better questions',
-      'See whether Tier 1 or Tier 3 makes sense if execution help is needed',
+      'See whether Tier 2 or Tier 3 makes sense if deeper review or deal-desk support is needed',
     ],
     upsell: {
-      label: 'Natural upgrade: Tier 1 or Tier 3',
-      description: 'If you want ongoing sourcing and execution help, we move from one deal review into the right long-term operating relationship.',
+      label: 'Natural upgrade: Tier 2 or Tier 3',
+      description: 'If you want ongoing review or faster deal support, we move from one live audit into the right long-term working relationship.',
       href: '/services#tiers',
     },
   },
@@ -216,8 +216,8 @@ export const membershipOffers: ProductOffer[] = [
       'Create a smoother path into Strategy Call, Deal Audit, and Tier 2',
     ],
     upsell: {
-      label: 'Best next step: Tier 2 Learning Operator',
-      description: 'Once you are ready for live deal help and execution support, Tier 2 is the natural graduation point.',
+      label: 'Best next step: Tier 2 Deal Analysis',
+      description: 'Once you are ready for live deal help, Tier 2 is the natural next step.',
       href: '/services/tier-2',
     },
   },

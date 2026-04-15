@@ -95,6 +95,12 @@ export default function ContactPage() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="rounded-2xl border border-orange/20 bg-orange/5 p-6">
+                    <p className="text-sm font-semibold uppercase tracking-wide text-orange">Private application</p>
+                    <p className="mt-2 text-sm text-navy/70 leading-relaxed">
+                      Tier 4 Operator, Tier 5 Inner Circle, and add-on requests are reviewed manually so we can match the right level of support before moving forward.
+                    </p>
+                  </div>
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-navy mb-2">
                       Full Name
@@ -144,7 +150,7 @@ export default function ContactPage() {
 
                   <div>
                     <label htmlFor="inquiry" className="block text-sm font-medium text-navy mb-2">
-                      Best Service Model
+                      Best Package or Add-On
                     </label>
                     <select
                       id="inquiry"

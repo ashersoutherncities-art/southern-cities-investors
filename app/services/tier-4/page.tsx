@@ -56,6 +56,12 @@ export default function Tier4Page() {
             <p className="mt-4 text-navy/65 leading-relaxed">
               Pricing depends on pace, operator involvement, support intensity, and how closely the working relationship needs to run.
             </p>
+            <div className="mt-8 rounded-xl border border-navy/10 bg-white p-5">
+              <p className="text-sm font-semibold text-navy">Application flow</p>
+              <p className="mt-2 text-sm text-navy/65 leading-relaxed">
+                Tier 4 starts with a private intake review so the support level, pace, and expectations are aligned before we move into a monthly relationship.
+              </p>
+            </div>
             <div className="mt-8 flex flex-col gap-3">
               <Link href="/contact" className="inline-flex items-center justify-center px-6 py-4 bg-orange hover:bg-orange/90 text-white font-semibold rounded-lg transition-colors">
                 Apply for Tier 4

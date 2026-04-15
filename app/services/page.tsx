@@ -178,18 +178,21 @@ export default function Services() {
               <h3 className="mt-3 text-xl font-bold text-navy">Construction Oversight</h3>
               <p className="mt-2 text-orange font-semibold">$1K-$3K/month</p>
               <p className="mt-3 text-sm text-navy/65">For active projects that need experienced eyes on scope, progress, budget, and contractor execution.</p>
+              <Link href="/contact" className="mt-5 inline-flex text-sm font-semibold text-orange hover:text-orange/80 transition-colors">Request this add-on</Link>
             </div>
             <div className="rounded-2xl border border-navy/10 bg-white p-6">
               <p className="text-sm font-semibold uppercase tracking-wide text-orange">Add-on</p>
               <h3 className="mt-3 text-xl font-bold text-navy">Full Deal Packaging</h3>
               <p className="mt-2 text-orange font-semibold">$2K-$5K per deal</p>
               <p className="mt-3 text-sm text-navy/65">For opportunities that need a cleaner package, tighter presentation, and clearer underwriting before they move forward.</p>
+              <Link href="/contact" className="mt-5 inline-flex text-sm font-semibold text-orange hover:text-orange/80 transition-colors">Request this add-on</Link>
             </div>
             <div className="rounded-2xl border border-navy/10 bg-white p-6">
               <p className="text-sm font-semibold uppercase tracking-wide text-orange">Add-on</p>
               <h3 className="mt-3 text-xl font-bold text-navy">Disposition Support</h3>
               <p className="mt-2 text-orange font-semibold">Flat fee or percentage</p>
               <p className="mt-3 text-sm text-navy/65">For sellers and operators who need support getting a deal packaged, positioned, and moved to the right buyer.</p>
+              <Link href="/contact" className="mt-5 inline-flex text-sm font-semibold text-orange hover:text-orange/80 transition-colors">Request this add-on</Link>
             </div>
           </div>
 

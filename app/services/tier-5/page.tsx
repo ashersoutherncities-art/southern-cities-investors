@@ -56,6 +56,12 @@ export default function Tier5Page() {
             <p className="mt-4 text-navy/65 leading-relaxed">
               Final structure depends on fit, relationship depth, opportunity profile, and the backend alignment being discussed.
             </p>
+            <div className="mt-8 rounded-xl border border-navy/10 bg-white p-5">
+              <p className="text-sm font-semibold text-navy">Private review process</p>
+              <p className="mt-2 text-sm text-navy/65 leading-relaxed">
+                Inner Circle is selective by design. We start with a private intake so fit, relationship goals, and backend alignment can be reviewed before moving forward.
+              </p>
+            </div>
             <div className="mt-8 flex flex-col gap-3">
               <Link href="/contact" className="inline-flex items-center justify-center px-6 py-4 bg-orange hover:bg-orange/90 text-white font-semibold rounded-lg transition-colors">
                 Apply for Inner Circle
