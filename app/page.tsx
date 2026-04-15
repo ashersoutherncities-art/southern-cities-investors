@@ -300,7 +300,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 xl:grid-cols-5 gap-8">
             {tierSummaries.map((tier) => (
               <div key={tier.key} className="bg-white border border-navy/10 rounded-xl p-8">
                 <h3 className="text-xl font-bold text-navy mb-3">{tier.name}</h3>
