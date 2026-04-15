@@ -200,7 +200,7 @@ export default function Services() {
             {tierSummaries.map((tier, index) => (
               <div
                 key={tier.key}
-                className={`bg-white rounded-lg p-8 border-2 transition-colors ${
+                className={`bg-white rounded-lg p-8 border-2 transition-colors h-full flex flex-col ${
                   index === 1 ? 'border-orange shadow-lg md:scale-105' : 'border-navy/10 hover:border-orange/50'
                 }`}
               >
@@ -213,7 +213,7 @@ export default function Services() {
                 <h3 className="text-2xl font-bold text-navy mt-3">{tier.name}</h3>
                 <p className="text-orange font-semibold text-lg mt-2">{tier.price}</p>
                 <p className="text-navy/60 mt-4 mb-6">{tier.whoItsFor}</p>
-                <div className="space-y-3 mb-8">
+                <div className="space-y-3 mb-8 flex-1">
                   {tier.deliverables.map((item) => (
                     <div key={item} className="flex items-start gap-3">
                       <span className="text-orange font-bold mt-0.5">✓</span>
