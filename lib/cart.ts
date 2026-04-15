@@ -115,8 +115,8 @@ export const CART_PRODUCTS: Record<string, CartProduct> = {
     priceLabel: '$79 one time',
     billingMode: 'payment',
     category: 'digital',
-    description: 'ElevenLabs-powered educational deal breakdowns and practical investing lessons.',
-    checkoutDescription: 'Instant-access ElevenLabs educational video vault.',
+    description: 'Narrated educational deal breakdowns and practical investing lessons.',
+    checkoutDescription: 'Instant-access narrated deal breakdown vault.',
   },
   'investor-essentials-membership': {
     key: 'investor-essentials-membership',

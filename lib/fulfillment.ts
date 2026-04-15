@@ -34,7 +34,7 @@ export const FULFILLMENT_PRODUCTS: Record<string, FulfillmentProduct> = {
     title: 'Deal Breakdown Vault',
     accessType: 'digital',
     emailSubject: 'Your Deal Breakdown Vault access is ready',
-    intro: 'Your narrated deal breakdown library is now available. This hub gives you access to concise ElevenLabs-led lessons designed to sharpen how you evaluate real opportunities.',
+    intro: 'Your narrated deal breakdown library is now available. This hub gives you access to concise lessons designed to sharpen how you evaluate real opportunities.',
     accessNote: 'Start with the featured lesson flow, then choose the next level of support when you want direct feedback on a real deal or decision.',
     bullets: [
       'Voice-led breakdown lessons with practical investing guidance',

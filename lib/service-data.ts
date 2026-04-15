@@ -172,9 +172,9 @@ export const digitalOffers: ProductOffer[] = [
     name: 'Deal Breakdown Vault',
     price: '$79',
     turnaround: 'Instant access to current library',
-    badge: 'ElevenLabs educational videos',
+    badge: 'Narrated deal lessons',
     whoItsFor: 'Best for people who learn well from examples and want short, premium-feeling deal education before jumping into higher-touch support.',
-    positioning: 'An entry-level educational product built around narrated deal breakdowns, buy-box mistakes, and decision-making using polished ElevenLabs voice-led training.',
+    positioning: 'An entry-level educational product built around narrated deal breakdowns, buy-box mistakes, and clearer decision-making for real investors.',
     description: 'Instead of generic course fluff, this vault focuses on short lessons that help you think better about real estate decisions and move forward with more confidence.',
     deliverables: [
       'Short-form narrated deal breakdown videos',
@@ -206,7 +206,7 @@ export const membershipOffers: ProductOffer[] = [
     positioning: 'A practical monthly membership for investors who want to stay sharp, build confidence, and keep momentum between deals.',
     description: 'This membership combines templates, narrated deal lessons, and monthly implementation prompts that prepare you for strategy calls, audits, and Tier 2.',
     deliverables: [
-      'Monthly ElevenLabs-powered educational breakdown video',
+      'Monthly narrated educational deal breakdown',
       'Fresh template, scorecard, or worksheet drop each month',
       'Member-only notes that point to the smartest next move',
     ],

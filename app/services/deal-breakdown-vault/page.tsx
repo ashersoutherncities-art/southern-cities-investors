@@ -8,7 +8,7 @@ const proofBlocks = [
     description: 'Each lesson is structured around the filters, margin checks, and execution decisions that shape whether a deal deserves more attention.',
   },
   {
-    title: 'Premium-feeling ElevenLabs delivery',
+    title: 'Premium-feeling narrated delivery',
     description: 'The format is voice-led and concise, so you can learn on the move without sitting through bloated course modules.',
   },
   {
@@ -48,7 +48,7 @@ export default function DealBreakdownVaultPage() {
       <section className="bg-navy py-24 text-white sm:py-32">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
           <div className="max-w-4xl">
-            <p className="mb-4 text-sm font-semibold uppercase tracking-wider text-orange">ElevenLabs educational media offer</p>
+            <p className="mb-4 text-sm font-semibold uppercase tracking-wider text-orange">Narrated educational media offer</p>
             <h1 className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
               Learn how experienced investors evaluate deals, risk, and next steps in plain English.
             </h1>
@@ -58,7 +58,7 @@ export default function DealBreakdownVaultPage() {
             <div className="mt-8 flex flex-wrap gap-3 text-sm">
               <span className="rounded-full border border-white/15 bg-white/5 px-4 py-2">$79 one time</span>
               <span className="rounded-full border border-white/15 bg-white/5 px-4 py-2">Instant access</span>
-              <span className="rounded-full border border-white/15 bg-white/5 px-4 py-2">ElevenLabs voice-led lessons</span>
+              <span className="rounded-full border border-white/15 bg-white/5 px-4 py-2">Voice-led lessons</span>
             </div>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <AddToCartButton itemKey="deal-breakdown-vault" label="Get instant vault access" className="inline-flex items-center justify-center rounded-lg bg-orange px-8 py-4 font-semibold text-white transition-colors hover:bg-orange/90" />
