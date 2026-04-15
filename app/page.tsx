@@ -304,7 +304,6 @@ export default function Home() {
             {tierSummaries.map((tier) => (
               <div key={tier.key} className="bg-white border border-navy/10 rounded-xl p-8">
                 <h3 className="text-xl font-bold text-navy mb-3">{tier.name}</h3>
-                <p className="text-orange font-semibold mb-3">{tier.price}</p>
                 <p className="text-navy/60 leading-relaxed">{tier.whoItsFor}</p>
               </div>
             ))}
