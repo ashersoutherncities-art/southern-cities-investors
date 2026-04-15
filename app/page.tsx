@@ -38,6 +38,25 @@ const trustSignals = [
   },
 ];
 
+const freeLibraryCategories = [
+  {
+    title: 'Real estate definitions',
+    description: 'Plain-English explanations of the terms investors hear constantly, so newer buyers can understand deals faster without getting lost in jargon.',
+  },
+  {
+    title: 'Free tools and templates',
+    description: 'Public starter resources like checklists, simple worksheets, and contract-oriented tools that help investors take the next practical step.',
+  },
+  {
+    title: 'CRM and workflow guidance',
+    description: 'Beginner-friendly direction on the systems investors use to track leads, follow up, organize opportunities, and stay consistent.',
+  },
+  {
+    title: 'Investor basics',
+    description: 'Foundational guides around criteria, deal flow, underwriting habits, and what to pay attention to before a real decision is on the table.',
+  },
+];
+
 export default function Home() {
   return (
     <>
@@ -273,6 +292,45 @@ export default function Home() {
       </section>
 
       <section className="py-20 sm:py-24 bg-white">
+        <div className="site-shell">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">Free resource library</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy">Free education for investors who want a better foundation before they pay for deeper help.</h2>
+            <p className="mt-4 text-lg text-navy/60">
+              Build your base with clear definitions, practical tools, CRM guidance, and beginner-friendly investor education. The free library helps people get oriented. The paid library goes deeper with stronger breakdowns, tighter judgment, and more advanced decision support.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8 mb-12">
+            {freeLibraryCategories.map((item) => (
+              <div key={item.title} className="bg-white border border-navy/10 rounded-xl p-8 hover:shadow-lg transition-shadow">
+                <h3 className="text-xl font-bold text-navy mb-3">{item.title}</h3>
+                <p className="text-navy/60 leading-relaxed">{item.description}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="rounded-2xl border border-orange/20 bg-orange/5 p-8 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+            <div className="max-w-3xl">
+              <p className="text-sm font-semibold uppercase tracking-wide text-orange">Value ladder</p>
+              <h3 className="mt-3 text-2xl font-bold text-navy">Free gets people oriented. Paid access helps them think better when real money is on the line.</h3>
+              <p className="mt-3 text-navy/65 leading-relaxed">
+                The public library should feel generous and useful. The premium library should feel deeper, more applied, and much harder to replace.
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Link href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-navy/15 text-navy hover:border-orange/50 hover:text-orange font-semibold rounded-lg transition-colors">
+                Request a topic
+              </Link>
+              <Link href="/services/deal-breakdown-vault" className="inline-flex items-center justify-center px-6 py-3 bg-navy hover:bg-navy/90 text-white font-semibold rounded-lg transition-colors">
+                See premium library
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 sm:py-24 bg-white border-t border-navy/10">
         <div className="site-shell">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-navy">Focused help when the stakes get higher</h2>
