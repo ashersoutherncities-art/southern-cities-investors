@@ -22,9 +22,9 @@ export default function Services() {
       <section className="py-16 bg-white border-b border-navy/10">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-navy/5 rounded-2xl p-8 text-center border border-navy/10">
-            <h2 className="text-2xl font-bold text-navy mb-4">Not every investor needs the same kind of help.</h2>
+            <h2 className="text-2xl font-bold text-navy mb-4">Different moments call for different levels of support.</h2>
             <p className="text-navy/65 leading-relaxed max-w-3xl mx-auto">
-              Some investors want a practical resource they can use immediately. Others need direct feedback on a live opportunity. This page helps you choose the cleanest next step.
+              Some buyers need a useful tool they can put to work today. Others need experienced eyes on a live opportunity. This page is organized so you can move directly to the right level.
             </p>
           </div>
         </div>
@@ -77,7 +77,7 @@ export default function Services() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-8 items-start">
             <div>
-              <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">Entry-level recurring revenue</p>
+              <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">Ongoing access</p>
               <h2 className="text-3xl sm:text-4xl font-bold text-navy">Membership keeps serious investors close to the right resources.</h2>
               <p className="mt-4 text-lg text-navy/60 max-w-3xl">
                 Get recurring access to templates, narrated breakdowns, and practical guidance that help you stay sharp between deals and prepare for the next level of support.
@@ -166,13 +166,34 @@ export default function Services() {
       <section id="tiers" className="py-20 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy">Tier 1, 2, and 3, matched to where you are now</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy">Subscription packages matched to how involved you want to be</h2>
             <p className="mt-4 text-lg text-navy/60">
-              Choose the working relationship that fits your capital, experience level, and appetite for involvement.
+              Start with access, step into analysis, move into deal-desk support, or apply for a deeper operator or Inner Circle relationship.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="mb-12 grid md:grid-cols-3 gap-6">
+            <div className="rounded-2xl border border-navy/10 bg-white p-6">
+              <p className="text-sm font-semibold uppercase tracking-wide text-orange">Add-on</p>
+              <h3 className="mt-3 text-xl font-bold text-navy">Construction Oversight</h3>
+              <p className="mt-2 text-orange font-semibold">$1K-$3K/month</p>
+              <p className="mt-3 text-sm text-navy/65">For active projects that need experienced eyes on scope, progress, budget, and contractor execution.</p>
+            </div>
+            <div className="rounded-2xl border border-navy/10 bg-white p-6">
+              <p className="text-sm font-semibold uppercase tracking-wide text-orange">Add-on</p>
+              <h3 className="mt-3 text-xl font-bold text-navy">Full Deal Packaging</h3>
+              <p className="mt-2 text-orange font-semibold">$2K-$5K per deal</p>
+              <p className="mt-3 text-sm text-navy/65">For opportunities that need a cleaner package, tighter presentation, and clearer underwriting before they move forward.</p>
+            </div>
+            <div className="rounded-2xl border border-navy/10 bg-white p-6">
+              <p className="text-sm font-semibold uppercase tracking-wide text-orange">Add-on</p>
+              <h3 className="mt-3 text-xl font-bold text-navy">Disposition Support</h3>
+              <p className="mt-2 text-orange font-semibold">Flat fee or percentage</p>
+              <p className="mt-3 text-sm text-navy/65">For sellers and operators who need support getting a deal packaged, positioned, and moved to the right buyer.</p>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 xl:grid-cols-5 gap-8">
             {tierSummaries.map((tier, index) => (
               <div
                 key={tier.key}
@@ -180,9 +201,9 @@ export default function Services() {
                   index === 1 ? 'border-orange shadow-lg md:scale-105' : 'border-navy/10 hover:border-orange/50'
                 }`}
               >
-                {index === 1 ? (
+                {index === 2 ? (
                   <div className="inline-block bg-orange text-white px-3 py-1 rounded text-sm font-semibold mb-3">
-                    Recommended upgrade path
+                    Popular operating tier
                   </div>
                 ) : null}
                 <p className="text-sm font-semibold uppercase tracking-wide text-orange">{tier.tag}</p>
@@ -197,7 +218,7 @@ export default function Services() {
                     </div>
                   ))}
                 </div>
-                <Link href={tier.href} className={`inline-flex items-center justify-center w-full px-6 py-3 font-semibold rounded-lg transition-colors ${index === 1 ? 'bg-orange hover:bg-orange/90 text-white' : 'bg-navy hover:bg-navy/90 text-white'}`}>
+                <Link href={tier.href} className={`inline-flex items-center justify-center w-full px-6 py-3 font-semibold rounded-lg transition-colors ${index === 2 ? 'bg-orange hover:bg-orange/90 text-white' : 'bg-navy hover:bg-navy/90 text-white'}`}>
                   {tier.cta}
                 </Link>
               </div>
@@ -208,10 +229,10 @@ export default function Services() {
 
       <section className="py-20 sm:py-24 bg-navy/5">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-navy mb-6">Ready to see which path fits your goals?</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-navy mb-6">Choose the path that matches where you are right now.</h2>
           <p className="text-lg text-navy/60 mb-10 max-w-2xl mx-auto">
-            Start with a downloadable or membership if you want a lower-friction entry point, choose a starter offer if a decision is already on your desk,
-            or apply for investor intake if you are ready for a deeper working relationship.
+            Start with a focused tool or review if you want a low-friction first step, choose the subscription tier that matches your current pace,
+            or apply directly if you are looking for a deeper operator or Inner Circle relationship.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="inline-flex items-center justify-center px-10 py-4 bg-orange hover:bg-orange/90 text-white font-semibold rounded-lg transition-colors text-lg">
