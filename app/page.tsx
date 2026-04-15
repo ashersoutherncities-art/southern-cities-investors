@@ -16,9 +16,9 @@ const buyerPaths = [
     href: '/services',
   },
   {
-    title: 'Ready to scale',
-    description: 'Move into Tier 1, 2, or 3 when you want sourcing, underwriting, and execution support around your next phase of growth.',
-    cta: 'Apply for a fit call',
+    title: 'Ready for a deeper relationship',
+    description: 'Move from Deal Flow Access into Deal Analysis, Deal Desk, Operator support, or Inner Circle as your pace and needs increase.',
+    cta: 'Apply for investor intake',
     href: '/contact',
   },
 ];
@@ -26,15 +26,15 @@ const buyerPaths = [
 const trustSignals = [
   {
     quote: 'I need a faster way to know whether a deal deserves more attention before I waste time underwriting the wrong thing.',
-    label: 'Common investor pain point',
+    label: 'Real acquisition pressure',
   },
   {
-    quote: 'The right support is not generic coaching. It is sharper criteria, faster feedback, and help making real decisions under pressure.',
-    label: 'What buyers are actually looking for',
+    quote: 'Better support means sharper criteria, faster feedback, and clearer decisions when money is actually at risk.',
+    label: 'What separates useful help from noise',
   },
   {
-    quote: 'A clear path from first step to execution builds more confidence than a vague consulting pitch.',
-    label: 'Why this buying path converts',
+    quote: 'The strongest investor relationships usually start with one clear win, then compound from there.',
+    label: 'How momentum gets built',
   },
 ];
 
@@ -52,7 +52,7 @@ export default function Home() {
                 Start investing with clearer criteria, stronger deals, and real execution support.
               </h1>
               <p className="mt-6 text-lg sm:text-xl text-white/70 leading-relaxed max-w-3xl">
-                Southern Cities Investors helps real estate investors find better opportunities, underwrite them with confidence, and get support from buy box through execution. Start with the right first step for where you are now.
+                Southern Cities Investors helps real estate investors get closer to better opportunities, make stronger deal decisions, and step into the right level of support as they grow. Start with the clearest next move for where you are now.
               </p>
               <div className="mt-10 flex flex-col sm:flex-row gap-4">
                 <Link
@@ -71,11 +71,11 @@ export default function Home() {
             </div>
 
             <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
-              <p className="text-sm font-semibold uppercase tracking-wide text-orange">How to work with us</p>
+              <p className="text-sm font-semibold uppercase tracking-wide text-orange">Start here</p>
               <div className="mt-6 space-y-4">
                 {[
                   'Who we are: Southern Cities Investors, the acquisitions and investor-support arm of Southern Cities Enterprises',
-                  'What we do: help investors tighten criteria, review deals, and execute with more confidence',
+                  'What we do: help investors access opportunities, review deals, and move into deeper support with more confidence',
                   'How to start: choose a toolkit, call, or review based on where you are today',
                 ].map((item) => (
                   <div key={item} className="flex gap-3 text-white/80">
@@ -85,7 +85,7 @@ export default function Home() {
                 ))}
               </div>
               <div className="mt-8 rounded-xl bg-white/5 border border-white/10 p-5">
-                <p className="text-sm font-semibold text-white">A strong place to begin</p>
+                <p className="text-sm font-semibold text-white">Start with the clearest next move</p>
                 <p className="mt-2 text-sm text-white/65">If you are just getting started, begin with a toolkit, buy box review, or strategy call and build from there.</p>
               </div>
             </div>
@@ -99,10 +99,10 @@ export default function Home() {
             <div>
               <div className="max-w-3xl mb-12">
                 <h2 className="text-3xl sm:text-4xl font-bold text-navy">
-                  Different investors need different entry points.
+                  A better first move depends on where you are now.
                 </h2>
                 <p className="mt-4 text-lg text-navy/60">
-                  Whether you are refining your criteria, evaluating a live opportunity, or looking for ongoing support, there is a clear next step.
+                  Whether you are tightening your criteria, reviewing a live opportunity, or stepping into ongoing support, the right first move is different.
                 </p>
               </div>
 
@@ -120,8 +120,8 @@ export default function Home() {
             </div>
 
             <div className="rounded-2xl border border-navy/10 bg-navy/5 p-8">
-              <p className="text-sm font-semibold uppercase tracking-wide text-orange">Trust and fit</p>
-              <h3 className="mt-3 text-2xl font-bold text-navy">Built for real investor pain points, not generic motivation.</h3>
+              <p className="text-sm font-semibold uppercase tracking-wide text-orange">Closer to the deal</p>
+              <h3 className="mt-3 text-2xl font-bold text-navy">Built around the decisions that matter when a real opportunity is on the table.</h3>
               <div className="mt-6 space-y-4">
                 {trustSignals.map((item) => (
                   <div key={item.quote} className="rounded-xl border border-navy/10 bg-white p-5">
@@ -204,7 +204,7 @@ export default function Home() {
             <h2 className="mt-3 text-3xl font-bold text-navy">A clearer buying path leads to stronger decisions.</h2>
             <div className="mt-6 space-y-5 text-navy/65 leading-relaxed">
               <p>
-                Southern Cities offers practical value at every stage, from self-serve tools to strategic review and recurring support.
+                Southern Cities offers practical value at every stage, from self-serve tools to recurring subscription packages and private higher-touch relationships.
               </p>
               <p>
                 You can start small, solve a specific problem, and step into deeper support only when it makes sense for your goals and timeline.
@@ -255,8 +255,8 @@ export default function Home() {
                     description: 'Calls, buy box work, and live deal audits that help you make better decisions under pressure.',
                   },
                   {
-                    title: 'Full-cycle execution',
-                    description: 'Monthly tiers for sourcing, underwriting, construction oversight, and exit planning under one roof.',
+                    title: 'Subscription packages',
+                    description: 'Progress from deal flow access and analysis into deal-desk support, operator guidance, and deeper private relationships.',
                   },
                 ].map((item) => (
                   <div key={item.title}>
@@ -318,7 +318,7 @@ export default function Home() {
             Start where you need help now, then grow into the right long-term relationship.
           </h2>
           <p className="mt-4 text-lg text-white/70 max-w-3xl mx-auto">
-            If you want a low-friction starting point, begin with a toolkit, calculator, vault, or membership. If you already have a live opportunity or want deeper support, choose a starter offer or apply for investor intake.
+            If you want a low-friction starting point, begin with a toolkit, calculator, vault, membership, or Tier 1. If you already have a live opportunity or want deeper support, choose a starter offer, subscription package, or apply for investor intake.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <Link

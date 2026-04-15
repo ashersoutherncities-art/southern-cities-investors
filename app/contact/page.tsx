@@ -3,10 +3,14 @@
 import { useState, FormEvent } from "react";
 
 const inquiryTypes = [
-  "Tier 1 - Hands-Off Capital",
-  "Tier 2 - Learning Operator",
-  "Tier 3 - Scaling Partner",
-  "JV Partnership",
+  "Tier 1 - Deal Flow Access",
+  "Tier 2 - Deal Analysis",
+  "Tier 3 - Deal Desk",
+  "Tier 4 - Operator",
+  "Tier 5 - Inner Circle",
+  "Construction Oversight Add-On",
+  "Full Deal Packaging Add-On",
+  "Disposition Support Add-On",
   "General Inquiry",
 ];
 
@@ -72,9 +76,7 @@ export default function ContactPage() {
             Apply to work with Southern Cities Investors
           </h1>
           <p className="mt-6 text-lg text-white/70 max-w-3xl">
-            This intake is for serious investors and partners who want disciplined deal flow,
-            strong execution support, and a team that understands acquisitions, construction,
-            and exits.
+            This intake is for investors and operators who want the right level of support, from deal flow access and analysis to deal-desk help, operator support, and private Inner Circle conversations.
           </p>
         </div>
       </section>
@@ -87,7 +89,7 @@ export default function ContactPage() {
                 <div className="bg-navy/[0.03] rounded-xl p-12 text-center">
                   <h2 className="text-2xl font-bold text-navy mb-4">Application Received</h2>
                   <p className="text-navy/60 leading-relaxed">
-                    We review every intake for fit. If it looks aligned, we will reach out
+                    We review every intake carefully. If it looks aligned, we will reach out
                     to continue the conversation.
                   </p>
                 </div>
@@ -142,7 +144,7 @@ export default function ContactPage() {
 
                   <div>
                     <label htmlFor="inquiry" className="block text-sm font-medium text-navy mb-2">
-                      Best Fit Service Model
+                      Best Service Model
                     </label>
                     <select
                       id="inquiry"
@@ -152,7 +154,7 @@ export default function ContactPage() {
                       required
                       className="w-full px-4 py-3 border border-navy/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange/50 focus:border-orange transition-colors bg-white"
                     >
-                      <option value="">Select a service model</option>
+                      <option value="">Select the package or add-on you are interested in</option>
                       {inquiryTypes.map((type) => (
                         <option key={type} value={type}>
                           {type}
@@ -250,14 +252,14 @@ export default function ContactPage() {
               <div className="bg-navy/[0.03] rounded-xl p-6 space-y-4">
                 <h4 className="font-bold text-navy">What happens next</h4>
                 <div className="space-y-3 text-sm text-navy/65">
-                  <p>1. We review your intake for fit and seriousness.</p>
+                  <p>1. We review your intake, goals, and timeline.</p>
                   <p>2. If aligned, we reach out to schedule a conversation.</p>
                   <p>3. We point you toward the right service model or partnership structure.</p>
                 </div>
               </div>
 
               <div className="bg-white border border-navy/10 rounded-xl p-6 space-y-4">
-                <h4 className="font-bold text-navy">Best fit candidates usually have:</h4>
+                <h4 className="font-bold text-navy">Strong candidates usually have:</h4>
                 <div className="space-y-3 text-sm text-navy/65">
                   <p>• Capital ready to deploy or a clear JV structure in mind</p>
                   <p>• Interest in off-market acquisitions and value-add opportunities</p>
