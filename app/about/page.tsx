@@ -12,7 +12,7 @@ export default function AboutPage() {
     <>
       {/* Hero */}
       <section className="bg-navy text-white py-20 sm:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">
             About Us
           </p>
@@ -28,7 +28,7 @@ export default function AboutPage() {
 
       {/* Principal */}
       <section className="py-20 sm:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
               <h2 className="text-3xl font-bold text-navy mb-6">
@@ -100,7 +100,7 @@ export default function AboutPage() {
 
       {/* Philosophy */}
       <section className="py-20 sm:py-24 bg-navy/[0.03]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <h2 className="text-3xl font-bold text-navy mb-12 text-center">
             Our Operating Philosophy
           </h2>
@@ -137,7 +137,7 @@ export default function AboutPage() {
 
       {/* CTA */}
       <section className="py-20 sm:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="site-shell text-center">
           <h2 className="text-3xl font-bold text-navy">
             Interested in Working Together?
           </h2>

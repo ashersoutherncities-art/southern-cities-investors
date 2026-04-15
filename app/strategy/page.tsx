@@ -12,7 +12,7 @@ export default function StrategyPage() {
     <>
       {/* Hero */}
       <section className="bg-navy text-white py-20 sm:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">
             Acquisition Strategy
           </p>
@@ -28,7 +28,7 @@ export default function StrategyPage() {
 
       {/* Buy Criteria */}
       <section className="py-20 sm:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <h2 className="text-3xl font-bold text-navy mb-12">Buy Criteria</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="border border-navy/10 rounded-xl p-8">
@@ -71,7 +71,7 @@ export default function StrategyPage() {
 
       {/* Deal Types */}
       <section className="py-20 sm:py-24 bg-navy/[0.03]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <h2 className="text-3xl font-bold text-navy mb-12">
             Asset Classes
           </h2>
@@ -140,7 +140,7 @@ export default function StrategyPage() {
 
       {/* Sourcing */}
       <section className="py-20 sm:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <h2 className="text-3xl font-bold text-navy mb-12">
             Off-Market Sourcing
           </h2>
@@ -177,7 +177,7 @@ export default function StrategyPage() {
 
       {/* CTA */}
       <section className="py-20 sm:py-24 bg-navy text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="site-shell text-center">
           <h2 className="text-3xl font-bold">Have a Deal That Fits?</h2>
           <p className="mt-4 text-lg text-white/70 max-w-2xl mx-auto">
             If you have a property or portfolio that meets our criteria, we want

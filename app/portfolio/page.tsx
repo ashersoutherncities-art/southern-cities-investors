@@ -12,7 +12,7 @@ export default function PortfolioPage() {
     <>
       {/* Hero */}
       <section className="bg-navy text-white py-20 sm:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">
             Portfolio
           </p>
@@ -28,7 +28,7 @@ export default function PortfolioPage() {
 
       {/* Private Portfolio */}
       <section className="py-24 sm:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <div className="max-w-2xl mx-auto text-center">
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-navy/[0.05] mb-8">
               <svg

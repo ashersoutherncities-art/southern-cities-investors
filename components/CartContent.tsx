@@ -64,7 +64,7 @@ export default function CartContent() {
         <div className="max-w-3xl mb-12">
           <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">Cart and checkout</p>
           <h1 className="text-4xl sm:text-5xl font-bold text-navy leading-tight">Review your selected offers and complete checkout.</h1>
-          <p className="mt-4 text-lg text-navy/60">Start with the level of support that fits your needs now, from digital resources to recurring engagement.</p>
+          <p className="mt-4 text-lg text-navy/60">Choose the level of support you want now, from practical resources to recurring engagement.</p>
         </div>
 
         <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-start">
@@ -151,7 +151,7 @@ export default function CartContent() {
             </div>
 
             <div className="mt-8 rounded-xl bg-orange/5 border border-orange/20 p-5">
-              <p className="text-sm font-semibold text-navy">Best next step</p>
+              <p className="text-sm font-semibold text-navy">What happens after checkout</p>
               <p className="text-sm text-navy/65 mt-2">
                 {recurringProducts.length
                   ? 'You are checking out a recurring offer. After payment, we will route you into the right onboarding flow for your membership or tier.'

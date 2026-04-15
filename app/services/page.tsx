@@ -6,7 +6,7 @@ export default function Services() {
   return (
     <>
       <section className="bg-navy text-white py-24 sm:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <div className="max-w-4xl">
             <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">Service Models</p>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
@@ -31,7 +31,7 @@ export default function Services() {
       </section>
 
       <section className="py-20 bg-navy/5 border-b border-navy/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <div className="max-w-3xl mb-12">
             <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">Downloadables and educational media</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy">Tools and training designed to improve your next decision.</h2>
@@ -74,7 +74,7 @@ export default function Services() {
       </section>
 
       <section className="py-20 bg-white border-b border-navy/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-8 items-start">
             <div>
               <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">Ongoing access</p>
@@ -116,7 +116,7 @@ export default function Services() {
       </section>
 
       <section className="py-20 bg-navy/5 border-b border-navy/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <div className="max-w-3xl mb-12">
             <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">Starter offers</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy">Choose a focused review when the decision is real and time-sensitive.</h2>
@@ -164,7 +164,7 @@ export default function Services() {
       </section>
 
       <section id="tiers" className="py-20 sm:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-navy">Subscription packages matched to how involved you want to be</h2>
             <p className="mt-4 text-lg text-navy/60">

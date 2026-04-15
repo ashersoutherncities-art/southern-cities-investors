@@ -6,7 +6,7 @@ export default function Tier4Page() {
   return (
     <>
       <section className="bg-navy text-white py-24 sm:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <div className="max-w-4xl">
             <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">Tier 4</p>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">Operator</h1>
@@ -32,7 +32,7 @@ export default function Tier4Page() {
       </section>
 
       <section className="py-20 sm:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-start">
+        <div className="site-shell grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-start">
           <div>
             <h2 className="text-3xl font-bold text-navy mb-8">What Tier 4 includes</h2>
             <div className="grid gap-4">

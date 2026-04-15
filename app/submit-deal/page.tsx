@@ -107,7 +107,7 @@ export default function SubmitDealPage() {
   return (
     <>
       <section className="bg-navy text-white py-20 sm:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">
             Deal Submission Portal
           </p>
@@ -123,7 +123,7 @@ export default function SubmitDealPage() {
 
       {/* Buy Box */}
       <section className="py-16 bg-white border-b border-navy/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-2xl font-bold text-navy mb-8 text-center">Our Buy Box</h2>
             <div className="grid md:grid-cols-2 gap-8">
@@ -188,7 +188,7 @@ export default function SubmitDealPage() {
 
       {/* Deal Submission Form */}
       <section className="py-20 sm:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <div className="max-w-4xl mx-auto">
             {submitted ? (
               <div className="bg-navy/[0.03] rounded-xl p-12 text-center">

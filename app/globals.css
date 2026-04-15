@@ -15,6 +15,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@layer components {
+  .site-shell {
+    @apply mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-5 xl:px-6;
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

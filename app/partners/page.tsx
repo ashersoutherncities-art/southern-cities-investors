@@ -12,7 +12,7 @@ export default function PartnersPage() {
     <>
       {/* Hero */}
       <section className="bg-navy text-white py-20 sm:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">
             Partners
           </p>
@@ -28,7 +28,7 @@ export default function PartnersPage() {
 
       {/* Partner Types */}
       <section className="py-20 sm:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+        <div className="site-shell space-y-16">
           {/* Lenders */}
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
             <div className="lg:col-span-2">
@@ -143,7 +143,7 @@ export default function PartnersPage() {
 
       {/* CTA */}
       <section className="py-20 sm:py-24 bg-navy text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="site-shell text-center">
           <h2 className="text-3xl font-bold">Let&apos;s Work Together</h2>
           <p className="mt-4 text-lg text-white/70 max-w-2xl mx-auto">
             Tell us about yourself and how you would like to partner. We respond

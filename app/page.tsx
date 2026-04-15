@@ -42,7 +42,7 @@ export default function Home() {
   return (
     <>
       <section className="bg-navy text-white py-24 sm:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-start">
             <div className="max-w-4xl">
               <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">
@@ -94,7 +94,7 @@ export default function Home() {
       </section>
 
       <section className="py-20 sm:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] items-start">
             <div>
               <div className="max-w-3xl mb-12">
@@ -136,7 +136,7 @@ export default function Home() {
       </section>
 
       <section className="py-20 sm:py-24 bg-navy/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <div className="max-w-3xl mb-12">
             <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">Digital tools and education</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy">Downloadables, tools, and narrated training you can use right away.</h2>
@@ -169,7 +169,7 @@ export default function Home() {
       </section>
 
       <section className="py-20 sm:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-[1fr_1fr] gap-8 items-start">
+        <div className="site-shell grid lg:grid-cols-[1fr_1fr] gap-8 items-start">
           <div className="rounded-2xl border border-orange/20 bg-orange/5 p-8">
             <p className="text-sm font-semibold uppercase tracking-wide text-orange">Membership</p>
             {membershipOffers.map((offer) => (
@@ -218,7 +218,7 @@ export default function Home() {
       </section>
 
       <section className="py-20 sm:py-24 bg-navy/[0.03]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
               <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">
@@ -273,7 +273,7 @@ export default function Home() {
       </section>
 
       <section className="py-20 sm:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-navy">Focused help when the stakes get higher</h2>
             <p className="mt-4 text-lg text-navy/60">Starter offers give you direct help when a live decision needs experienced input.</p>
@@ -292,7 +292,7 @@ export default function Home() {
       </section>
 
       <section className="py-20 sm:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-shell">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-navy">Built for serious investors at every stage</h2>
             <p className="mt-4 text-lg text-navy/60">
@@ -313,7 +313,7 @@ export default function Home() {
       </section>
 
       <section className="py-20 sm:py-24 bg-navy text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="site-shell text-center">
           <h2 className="text-3xl sm:text-4xl font-bold">
             Start where you need help now, then grow into the right long-term relationship.
           </h2>
