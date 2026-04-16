@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { captureLead } from '@/lib/fulfillment';
 
 const REQUIRED_FIELDS = ['name', 'email', 'inquiry'];
 
@@ -11,6 +12,21 @@ export async function POST(request: NextRequest) {
         return NextResponse.json({ error: `Missing required field: ${field}` }, { status: 400 });
       }
     }
+
+    await captureLead({
+      email: body.email,
+      name: body.name,
+      phone: body.phone,
+      source: 'investor_intake',
+      tags: ['investor-intake', 'contact'],
+      interestedIn: [body.inquiry].filter(Boolean),
+      metadata: {
+        capital: body.capital || null,
+        timeline: body.timeline || null,
+        experience: body.experience || null,
+        message: body.message || null,
+      },
+    });
 
     return NextResponse.json({
       success: true,
