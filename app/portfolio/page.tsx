@@ -9,9 +9,9 @@ export const metadata: Metadata = {
 
 const caseStudies = [
   {
-    title: "Single-Family Value-Add",
+    title: "Case Study 01: Single-Family Value-Add",
     market: "North Carolina infill market",
-    badge: "Representative case profile",
+    badge: "Representative case study",
     dealType: "SFR",
     motif: "Linear scope",
     accent: "from-orange/30 via-orange/10 to-transparent",
@@ -26,9 +26,9 @@ const caseStudies = [
     marginNote: "Strong deals in this category are filtered through basis, scope, and resale discipline before they ever feel exciting.",
   },
   {
-    title: "Small Multifamily Repositioning",
+    title: "Case Study 02: Small Multifamily Repositioning",
     market: "Neighborhood-scale multifamily",
-    badge: "Representative case profile",
+    badge: "Representative case study",
     dealType: "Multifamily",
     motif: "Layered unit economics",
     accent: "from-navy/30 via-orange/10 to-transparent",
@@ -43,9 +43,9 @@ const caseStudies = [
     marginNote: "The right multifamily opportunity survives slower lease-up, real friction, and more conservative operating assumptions.",
   },
   {
-    title: "Land or Transitional Asset Review",
+    title: "Case Study 03: Land or Transitional Asset Review",
     market: "Growth corridor / secondary market",
-    badge: "Representative case profile",
+    badge: "Representative case study",
     dealType: "Land",
     motif: "Exit path discipline",
     accent: "from-orange/25 via-navy/10 to-transparent",
@@ -118,10 +118,10 @@ export default function PortfolioPage() {
       <section className="py-20 sm:py-24 bg-navy/5 border-b border-navy/10">
         <div className="site-shell">
           <div className="max-w-3xl mb-12">
-            <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">Representative case studies</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy">Concrete deal snapshots that show how opportunities are judged.</h2>
+            <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">Case studies</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy">Representative case studies that show how opportunities are judged.</h2>
             <p className="mt-4 text-lg text-navy/60">
-              These representative cases are here to make the platform more tangible for serious buyers. The point is not hype. The point is deal logic, margin discipline, and fit.
+              These case studies are designed to make the platform more tangible for serious buyers. The point is not hype. The point is deal logic, margin discipline, and fit.
             </p>
           </div>
 
@@ -141,7 +141,7 @@ export default function PortfolioPage() {
                       <p className="mt-2 text-sm font-medium text-navy/55 uppercase tracking-wide">{study.market}</p>
                     </div>
                     <div className="shrink-0 rounded-2xl border border-white/60 bg-white/70 px-4 py-3 text-right backdrop-blur-sm">
-                      <p className="text-[11px] uppercase tracking-[0.22em] text-navy/45">Deal type</p>
+                      <p className="text-[11px] uppercase tracking-[0.22em] text-navy/45">Case study focus</p>
                       <p className="mt-1 text-lg font-bold text-navy">{study.dealType}</p>
                       <p className="text-xs text-navy/55 mt-1">{study.motif}</p>
                     </div>
@@ -151,15 +151,19 @@ export default function PortfolioPage() {
                 <div className="p-8">
                   <div className="grid xl:grid-cols-[0.95fr_1.05fr] gap-8 items-start">
                     <div>
-                      <p className="text-sm text-navy/65 leading-relaxed">{study.summary}</p>
+                      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-orange">Scenario</p>
+                      <p className="mt-3 text-sm text-navy/65 leading-relaxed">{study.summary}</p>
 
-                      <div className="mt-6 space-y-3 text-sm text-navy/72">
-                        {study.focus.map((item) => (
-                          <div key={item} className="flex gap-3">
-                            <span className="text-orange font-bold">✓</span>
-                            <span>{item}</span>
-                          </div>
-                        ))}
+                      <div className="mt-6 rounded-2xl border border-navy/10 bg-navy/5 p-5">
+                        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-orange">What had to be true</p>
+                        <div className="mt-4 space-y-3 text-sm text-navy/72">
+                          {study.focus.map((item) => (
+                            <div key={item} className="flex gap-3">
+                              <span className="text-orange font-bold">✓</span>
+                              <span>{item}</span>
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     </div>
 
