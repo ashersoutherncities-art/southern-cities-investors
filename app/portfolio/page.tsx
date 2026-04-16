@@ -11,8 +11,14 @@ const caseStudies = [
   {
     title: "Single-Family Value-Add",
     market: "North Carolina infill market",
+    badge: "Representative case profile",
+    purchase: "$118,000",
+    rehab: "$52,000",
+    totalBasis: "$186,000",
+    projectedExit: "$255,000",
+    projectedMargin: "$69,000 before financing and selling friction",
     summary:
-      "Representative profile for a cosmetic-to-moderate rehab acquisition where the spread only works if acquisition discipline, rehab scope, and resale assumptions stay grounded.",
+      "Representative profile for a cosmetic-to-moderate rehab acquisition where the deal only works if basis discipline, scope control, and resale assumptions stay realistic.",
     focus: [
       "Buy at a meaningful discount to repaired value",
       "Stress rehab, holding, and fee stack before greenlighting",
@@ -22,8 +28,14 @@ const caseStudies = [
   {
     title: "Small Multifamily Repositioning",
     market: "Neighborhood-scale multifamily",
+    badge: "Representative case profile",
+    purchase: "$410,000",
+    rehab: "$95,000",
+    totalBasis: "$538,000",
+    projectedExit: "$690,000",
+    projectedMargin: "$152,000 before financing drag and lease-up friction",
     summary:
-      "Representative profile for a smaller multifamily opportunity where the real edge is not excitement, but better entry basis, tighter renovation sequencing, and cleaner operating assumptions.",
+      "Representative profile for a smaller multifamily opportunity where the edge comes from stronger basis, tighter renovation sequencing, and cleaner operating assumptions, not excitement.",
     focus: [
       "Prioritize basis discipline over story-driven upside",
       "Look at rent lift, turnover friction, and execution drag honestly",
@@ -33,8 +45,14 @@ const caseStudies = [
   {
     title: "Land or Transitional Asset Review",
     market: "Growth corridor / secondary market",
+    badge: "Representative case profile",
+    purchase: "$145,000",
+    rehab: "$35,000 in pre-development, clearing, and hold costs",
+    totalBasis: "$192,000",
+    projectedExit: "$310,000",
+    projectedMargin: "$118,000 before entitlement and timing risk",
     summary:
-      "Representative profile for land or transitional opportunities where the value is created by saying no to weak entitlement stories and filtering hard for realistic exit paths.",
+      "Representative profile for land or transitional opportunities where value gets created by saying no to weak entitlement stories and filtering hard for realistic exit paths.",
     focus: [
       "Pressure test entitlement and exit assumptions early",
       "Stay conservative on timeline and basis",
@@ -48,6 +66,12 @@ const operatingStandards = [
   "Review for basis, rehab pressure, holding drag, and margin durability.",
   "Use products for self-serve prep, services for live decisions, and recurring support only when deal flow justifies it.",
   "Keep positioning grounded in disciplined buying and execution, not inflated promises.",
+];
+
+const notes = [
+  "These are representative case profiles built to show the underwriting lens and decision standard applied to opportunities that fit the model.",
+  "They are included to make the site more concrete for serious buyers, not to imply every deal performs the same way.",
+  "Actual outcomes always depend on basis, scope, financing, timeline, market conditions, and execution quality.",
 ];
 
 export default function PortfolioPage() {
@@ -91,29 +115,62 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      <section className="py-20 sm:py-24 bg-navy/5">
+      <section className="py-20 sm:py-24 bg-navy/5 border-b border-navy/10">
         <div className="site-shell">
           <div className="max-w-3xl mb-12">
-            <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">Representative opportunity profiles</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy">The kind of deals this platform is meant to help buyers think through.</h2>
+            <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">Representative case studies</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy">Concrete deal snapshots that show how opportunities are judged.</h2>
             <p className="mt-4 text-lg text-navy/60">
-              These are representative profiles that show the lens, not inflated claims. The point is to clarify fit, standards, and decision logic.
+              These representative cases are here to make the platform more tangible for serious buyers. The point is not hype. The point is deal logic, margin discipline, and fit.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid gap-8">
             {caseStudies.map((study) => (
-              <div key={study.title} className="rounded-2xl border border-navy/10 bg-white p-8 shadow-sm flex flex-col">
-                <p className="text-sm font-semibold uppercase tracking-wide text-orange">{study.market}</p>
-                <h3 className="mt-3 text-2xl font-bold text-navy">{study.title}</h3>
-                <p className="mt-4 text-sm text-navy/65 leading-relaxed">{study.summary}</p>
-                <div className="mt-6 space-y-3 text-sm text-navy/70">
-                  {study.focus.map((item) => (
-                    <div key={item} className="flex gap-3">
-                      <span className="text-orange font-bold">✓</span>
-                      <span>{item}</span>
+              <div key={study.title} className="rounded-3xl border border-navy/10 bg-white p-8 shadow-sm">
+                <div className="grid xl:grid-cols-[0.95fr_1.05fr] gap-8 items-start">
+                  <div>
+                    <p className="text-sm font-semibold uppercase tracking-wide text-orange">{study.badge}</p>
+                    <h3 className="mt-3 text-3xl font-bold text-navy">{study.title}</h3>
+                    <p className="mt-2 text-sm font-medium text-navy/50 uppercase tracking-wide">{study.market}</p>
+                    <p className="mt-5 text-sm text-navy/65 leading-relaxed">{study.summary}</p>
+
+                    <div className="mt-6 space-y-3 text-sm text-navy/70">
+                      {study.focus.map((item) => (
+                        <div key={item} className="flex gap-3">
+                          <span className="text-orange font-bold">✓</span>
+                          <span>{item}</span>
+                        </div>
+                      ))}
                     </div>
-                  ))}
+                  </div>
+
+                  <div className="rounded-2xl border border-navy/10 bg-navy text-white p-6">
+                    <p className="text-sm font-semibold uppercase tracking-wide text-orange">Representative numbers</p>
+                    <div className="mt-6 grid sm:grid-cols-2 gap-4">
+                      <div className="rounded-xl border border-white/10 bg-white/5 p-4">
+                        <p className="text-xs uppercase tracking-wide text-white/50">Purchase</p>
+                        <p className="mt-2 text-2xl font-bold">{study.purchase}</p>
+                      </div>
+                      <div className="rounded-xl border border-white/10 bg-white/5 p-4">
+                        <p className="text-xs uppercase tracking-wide text-white/50">Rehab / project costs</p>
+                        <p className="mt-2 text-2xl font-bold">{study.rehab}</p>
+                      </div>
+                      <div className="rounded-xl border border-white/10 bg-white/5 p-4">
+                        <p className="text-xs uppercase tracking-wide text-white/50">Total basis</p>
+                        <p className="mt-2 text-2xl font-bold">{study.totalBasis}</p>
+                      </div>
+                      <div className="rounded-xl border border-white/10 bg-white/5 p-4">
+                        <p className="text-xs uppercase tracking-wide text-white/50">Projected exit value</p>
+                        <p className="mt-2 text-2xl font-bold">{study.projectedExit}</p>
+                      </div>
+                    </div>
+
+                    <div className="mt-5 rounded-xl border border-orange/20 bg-orange/10 p-5">
+                      <p className="text-xs uppercase tracking-wide text-orange">Margin lens</p>
+                      <p className="mt-2 text-sm text-white/80 leading-relaxed">{study.projectedMargin}</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}
@@ -124,9 +181,21 @@ export default function PortfolioPage() {
       <section className="py-20 sm:py-24 bg-white">
         <div className="site-shell grid lg:grid-cols-[0.95fr_1.05fr] gap-8 items-start">
           <div className="rounded-2xl border border-navy/10 bg-white p-8 shadow-sm">
+            <p className="text-sm font-semibold uppercase tracking-wide text-orange">Notes on interpretation</p>
+            <div className="mt-5 space-y-4 text-sm text-navy/70 leading-relaxed">
+              {notes.map((note) => (
+                <div key={note} className="flex gap-3">
+                  <span className="text-orange font-bold">•</span>
+                  <span>{note}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="rounded-2xl border border-navy/10 bg-navy text-white p-8">
             <p className="text-sm font-semibold uppercase tracking-wide text-orange">For qualified conversations</p>
-            <h2 className="mt-3 text-3xl font-bold text-navy">Need a more detailed conversation?</h2>
-            <p className="mt-4 text-navy/65 leading-relaxed">
+            <h2 className="mt-3 text-3xl font-bold">Need a more detailed conversation?</h2>
+            <p className="mt-4 text-white/70 leading-relaxed">
               Buyers, partners, and operators who want to discuss fit, deal profile, or working structure can use the investor intake to start the right conversation.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
@@ -138,19 +207,11 @@ export default function PortfolioPage() {
               </Link>
               <Link
                 href="/services"
-                className="inline-flex items-center justify-center px-6 py-3 border border-navy/15 text-navy hover:border-orange/50 hover:text-orange font-semibold rounded-lg transition-colors"
+                className="inline-flex items-center justify-center px-6 py-3 border border-white/15 text-white hover:border-white/30 font-semibold rounded-lg transition-colors"
               >
                 Review products and services
               </Link>
             </div>
-          </div>
-
-          <div className="rounded-2xl border border-navy/10 bg-navy text-white p-8">
-            <p className="text-sm font-semibold uppercase tracking-wide text-orange">Important note</p>
-            <h2 className="mt-3 text-3xl font-bold">Not every buyer needs the same thing.</h2>
-            <p className="mt-4 text-white/70 leading-relaxed">
-              Some visitors need a lower-cost tool. Some need a focused service for a live opportunity. Some need deeper support because they are actively operating. The goal of the site is to help the right buyer take the right next step without pretending every visitor needs the highest-ticket option first.
-            </p>
           </div>
         </div>
       </section>
