@@ -166,9 +166,9 @@ export default function Services() {
       <section id="tiers" className="py-20 sm:py-24">
         <div className="site-shell">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy">Recurring support tiers matched to how involved you want to be</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy">Recurring support tiers</h2>
             <p className="mt-4 text-lg text-navy/60">
-              Start with access, step into analysis, move into deal-desk support, or apply for a deeper operator or Inner Circle relationship when the volume and stakes justify it.
+              Pick the level of access and involvement that matches your current deal flow.
             </p>
           </div>
 
@@ -196,11 +196,11 @@ export default function Services() {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 xl:grid-cols-5 gap-8">
+          <div className="grid md:grid-cols-2 xl:grid-cols-5 gap-6">
             {tierSummaries.map((tier, index) => (
               <div
                 key={tier.key}
-                className={`bg-white rounded-lg p-8 border-2 transition-colors h-full flex flex-col ${
+                className={`bg-white rounded-lg p-6 border-2 transition-colors h-full flex flex-col ${
                   index === 1 ? 'border-orange shadow-lg md:scale-105' : 'border-navy/10 hover:border-orange/50'
                 }`}
               >
@@ -209,19 +209,19 @@ export default function Services() {
                     Popular operating tier
                   </div>
                 ) : null}
-                <p className="text-sm font-semibold uppercase tracking-wide text-orange">{tier.tag}</p>
-                <h3 className="text-2xl font-bold text-navy mt-3">{tier.name}</h3>
-                <p className="text-orange font-semibold text-lg mt-2">{tier.price}</p>
-                <p className="text-navy/60 mt-4 mb-6">{tier.whoItsFor}</p>
-                <div className="space-y-3 mb-8 flex-1">
-                  {tier.deliverables.map((item) => (
+                <p className="text-xs font-semibold uppercase tracking-wide text-orange">{tier.tag}</p>
+                <h3 className="text-xl font-bold text-navy mt-2">{tier.name}</h3>
+                <p className="text-orange font-semibold text-base mt-2">{tier.price}</p>
+                <p className="text-sm text-navy/60 mt-3">{tier.whoItsFor}</p>
+                <div className="space-y-2 mt-5 mb-6 flex-1 text-sm">
+                  {tier.deliverables.slice(0, 2).map((item) => (
                     <div key={item} className="flex items-start gap-3">
                       <span className="text-orange font-bold mt-0.5">✓</span>
                       <span className="text-navy">{item}</span>
                     </div>
                   ))}
                 </div>
-                <Link href={tier.href} className={`inline-flex items-center justify-center w-full px-6 py-3 font-semibold rounded-lg transition-colors ${index === 2 ? 'bg-orange hover:bg-orange/90 text-white' : 'bg-navy hover:bg-navy/90 text-white'}`}>
+                <Link href={tier.href} className={`inline-flex items-center justify-center w-full px-5 py-3 font-semibold rounded-lg transition-colors ${index === 2 ? 'bg-orange hover:bg-orange/90 text-white' : 'bg-navy hover:bg-navy/90 text-white'}`}>
                   {tier.cta}
                 </Link>
               </div>
