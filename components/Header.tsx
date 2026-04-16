@@ -14,12 +14,31 @@ const navLinks = [
 ];
 
 const servicesDropdownLinks = [
-  { href: "/services", label: "All Products & Services" },
-  { href: "/services#products", label: "Products" },
-  { href: "/services#membership", label: "Membership" },
-  { href: "/services#services-list", label: "Services" },
-  { href: "/services#ongoing-support", label: "Ongoing Support" },
-  { href: "/services#addons", label: "Add-ons" },
+  {
+    href: "/services#products",
+    label: "Products",
+    description: "Templates, tools, and digital resources you can buy and use right away.",
+  },
+  {
+    href: "/services#membership",
+    label: "Membership",
+    description: "Recurring educational access for investors who want consistent reps and resources.",
+  },
+  {
+    href: "/services#services-list",
+    label: "Services",
+    description: "Focused help for live deals, reviews, and decision support.",
+  },
+  {
+    href: "/services#ongoing-support",
+    label: "Ongoing Support",
+    description: "Recurring support options for buyers and operators who need more involvement.",
+  },
+  {
+    href: "/services#addons",
+    label: "Add-ons",
+    description: "Extra support layers for packaging, oversight, and disposition help.",
+  },
 ];
 
 export default function Header() {
@@ -59,17 +78,27 @@ export default function Header() {
                 </svg>
               </button>
               {servicesOpen && (
-                <div className="absolute left-0 top-full mt-3 w-64 rounded-xl border border-white/10 bg-navy shadow-2xl overflow-hidden z-50">
-                  {servicesDropdownLinks.map((link) => (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      className="block px-4 py-3 text-sm text-white/80 hover:bg-white/5 hover:text-orange transition-colors"
-                      onClick={() => setServicesOpen(false)}
-                    >
-                      {link.label}
-                    </Link>
-                  ))}
+                <div className="absolute left-0 top-full mt-3 w-[22rem] rounded-xl border border-white/10 bg-navy shadow-2xl overflow-hidden z-50 p-3">
+                  <Link
+                    href="/services"
+                    className="block rounded-lg px-4 py-3 text-sm font-semibold text-white hover:bg-white/5 hover:text-orange transition-colors"
+                    onClick={() => setServicesOpen(false)}
+                  >
+                    All Products & Services
+                  </Link>
+                  <div className="mt-2 space-y-2">
+                    {servicesDropdownLinks.map((link) => (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        className="block rounded-lg px-4 py-3 hover:bg-white/5 transition-colors"
+                        onClick={() => setServicesOpen(false)}
+                      >
+                        <div className="text-sm font-semibold text-white hover:text-orange transition-colors">{link.label}</div>
+                        <div className="mt-1 text-xs leading-relaxed text-white/55">{link.description}</div>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>
@@ -123,6 +152,13 @@ export default function Header() {
           <nav className="md:hidden pb-4 border-t border-white/10">
             <div className="py-2">
               <p className="text-xs font-semibold uppercase tracking-wide text-white/40 mb-2">Products & Services</p>
+              <Link
+                href="/services"
+                onClick={() => setMobileOpen(false)}
+                className="block py-2 px-0 text-sm font-medium text-white/80 hover:text-orange transition-colors"
+              >
+                All Products & Services
+              </Link>
               {servicesDropdownLinks.map((link) => (
                 <Link
                   key={link.href}
