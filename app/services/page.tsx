@@ -228,7 +228,6 @@ export default function Services() {
                 ) : null}
                 <h3 className="text-xl font-bold text-navy mt-2">{tier.name}</h3>
                 <p className="text-orange font-semibold text-base mt-2">{tier.price}</p>
-                <p className="text-sm text-navy/60 mt-3">{tier.whoItsFor}</p>
                 <div className="space-y-2 mt-5 mb-6 flex-1 text-sm">
                   {tier.deliverables.slice(0, 2).map((item) => (
                     <div key={item} className="flex items-start gap-3">
