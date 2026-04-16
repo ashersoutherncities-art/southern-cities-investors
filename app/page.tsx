@@ -44,6 +44,18 @@ const processSteps = [
   'Move into higher-touch support only when the live deal flow or operating complexity warrants it.',
 ];
 
+const credibilityPoints = [
+  'Built around acquisition discipline, underwriting judgment, and operator-focused decision support.',
+  'Structured to help buyers pressure test criteria, deal quality, and next steps before overcommitting capital.',
+  'Connected to Southern Cities Enterprises, with a broader operating context beyond a one-page marketing shell.',
+];
+
+const buyerFit = [
+  'Investors who want clearer buy, pass, and renegotiate decisions',
+  'Operators who need sharper criteria, review support, and cleaner next steps',
+  'Buyers who value disciplined execution over hype and random deal chasing',
+];
+
 export default function Home() {
   return (
     <>
@@ -157,12 +169,26 @@ export default function Home() {
 
       <section className="py-20 sm:py-24 bg-navy/5">
         <div className="site-shell">
-          <div className="max-w-3xl mb-12">
-            <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">Products</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy">Practical investor products you can buy and use right away.</h2>
-            <p className="mt-4 text-lg text-navy/60">
-              These are self-serve digital products built to help you tighten criteria, underwrite faster, and learn from real examples before you step into a higher-touch service.
-            </p>
+          <div className="grid lg:grid-cols-[1fr_0.9fr] gap-8 items-start mb-12">
+            <div className="max-w-3xl">
+              <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">Products</p>
+              <h2 className="text-3xl sm:text-4xl font-bold text-navy">Practical investor products you can buy and use right away.</h2>
+              <p className="mt-4 text-lg text-navy/60">
+                These are self-serve digital products built to help you tighten criteria, underwrite faster, and learn from real examples before you step into a higher-touch service.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-navy/10 bg-white p-8 shadow-sm">
+              <p className="text-sm font-semibold uppercase tracking-wide text-orange">Why this platform feels different</p>
+              <div className="mt-5 space-y-4 text-sm text-navy/70 leading-relaxed">
+                {credibilityPoints.map((point) => (
+                  <div key={point} className="flex gap-3">
+                    <span className="text-orange font-bold">✓</span>
+                    <span>{point}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -267,27 +293,43 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 sm:py-24 bg-navy text-white">
-        <div className="site-shell text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold">
-            Start with the right format for the problem in front of you.
-          </h2>
-          <p className="mt-4 text-lg text-white/70 max-w-2xl mx-auto">
-            Buy a product if you want a self-serve first step, choose a service if you need help on a real decision, or apply if you want a deeper relationship.
-          </p>
-          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/services"
-              className="inline-flex items-center justify-center px-8 py-3.5 bg-orange hover:bg-orange-dark text-white font-semibold rounded-lg transition-colors"
-            >
-              View all offers
-            </Link>
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center px-8 py-3.5 border border-white/20 hover:border-white/40 text-white font-semibold rounded-lg transition-colors"
-            >
-              Apply to partner
-            </Link>
+      <section className="py-20 sm:py-24 bg-white border-t border-navy/10">
+        <div className="site-shell grid lg:grid-cols-[0.95fr_1.05fr] gap-8 items-start">
+          <div className="rounded-2xl border border-orange/20 bg-orange/5 p-8">
+            <p className="text-sm font-semibold uppercase tracking-wide text-orange">Who tends to fit best</p>
+            <h2 className="mt-3 text-3xl font-bold text-navy">This is built for buyers who want disciplined help, not noise.</h2>
+            <div className="mt-6 space-y-4 text-sm text-navy/75 leading-relaxed">
+              {buyerFit.map((item) => (
+                <div key={item} className="flex gap-3">
+                  <span className="text-orange font-bold">✓</span>
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="rounded-2xl border border-navy/10 bg-navy text-white p-8">
+            <p className="text-sm font-semibold uppercase tracking-wide text-orange">Next step</p>
+            <h2 className="mt-3 text-3xl font-bold">
+              Start with the right format for the problem in front of you.
+            </h2>
+            <p className="mt-4 text-lg text-white/70 max-w-2xl">
+              Buy a product if you want a self-serve first step, choose a service if you need help on a real decision, or apply if you want a deeper relationship.
+            </p>
+            <div className="mt-8 flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/services"
+                className="inline-flex items-center justify-center px-8 py-3.5 bg-orange hover:bg-orange-dark text-white font-semibold rounded-lg transition-colors"
+              >
+                View all offers
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center px-8 py-3.5 border border-white/20 hover:border-white/40 text-white font-semibold rounded-lg transition-colors"
+              >
+                Apply to partner
+              </Link>
+            </div>
           </div>
         </div>
       </section>

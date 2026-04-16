@@ -78,6 +78,20 @@ export default function ContactPage() {
           <p className="mt-6 text-lg text-white/70 max-w-3xl">
             This intake is for investors and operators who want the right level of support, from deal flow access and analysis to deal-desk help, operator support, and private Inner Circle conversations.
           </p>
+          <div className="mt-8 grid sm:grid-cols-3 gap-4 max-w-4xl">
+            <div className="rounded-xl border border-white/10 bg-white/5 p-4">
+              <p className="text-xs font-semibold uppercase tracking-wide text-orange">Structured review</p>
+              <p className="mt-2 text-sm text-white/75">Every intake is reviewed against fit, timing, and the kind of support actually needed.</p>
+            </div>
+            <div className="rounded-xl border border-white/10 bg-white/5 p-4">
+              <p className="text-xs font-semibold uppercase tracking-wide text-orange">Serious buyers only</p>
+              <p className="mt-2 text-sm text-white/75">This is designed for investors and operators making real acquisition and execution decisions.</p>
+            </div>
+            <div className="rounded-xl border border-white/10 bg-white/5 p-4">
+              <p className="text-xs font-semibold uppercase tracking-wide text-orange">Connected operating context</p>
+              <p className="mt-2 text-sm text-white/75">Southern Cities Investors sits within a broader Southern Cities operating environment, not a one-page standalone shell.</p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -247,11 +261,14 @@ export default function ContactPage() {
             </div>
 
             <div className="lg:col-span-2 space-y-8">
-              <div>
-                <h3 className="text-xl font-bold text-navy mb-4">Who this is for</h3>
+              <div className="bg-white border border-navy/10 rounded-xl p-6 space-y-4">
+                <h3 className="text-xl font-bold text-navy">Who this is for</h3>
                 <p className="text-navy/60 leading-relaxed">
                   Investors who want disciplined acquisitions, strong execution,
                   and a serious team behind the deal.
+                </p>
+                <p className="text-sm text-navy/55 leading-relaxed">
+                  The goal of this intake is to sort serious opportunities from casual interest quickly, then match the right next step without forcing every buyer into the same path.
                 </p>
               </div>
 
