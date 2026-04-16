@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo } from "react";
+import { MouseEvent } from "react";
 import { buildCartHref } from "@/lib/cart";
 import { getCartItemsFromCookie, setCartItemsCookie } from "@/lib/cart-client";
 
@@ -14,17 +14,15 @@ export default function AddToCartButton({
   label?: string;
   className?: string;
 }) {
-  const href = useMemo(() => buildCartHref([itemKey]), [itemKey]);
+  const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    const existing = getCartItemsFromCookie();
+    const next = [...existing, itemKey];
+    setCartItemsCookie(next);
+    event.currentTarget.href = buildCartHref(next);
+  };
 
   return (
-    <Link
-      href={href}
-      onClick={() => {
-        const existing = getCartItemsFromCookie();
-        setCartItemsCookie([...existing, itemKey]);
-      }}
-      className={className}
-    >
+    <Link href={buildCartHref([itemKey])} onClick={handleClick} className={className}>
       {label}
     </Link>
   );
