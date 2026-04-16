@@ -15,11 +15,6 @@ const caseStudies = [
     dealType: "SFR",
     motif: "Linear scope",
     accent: "from-orange/30 via-orange/10 to-transparent",
-    purchase: "$118,000",
-    rehab: "$52,000",
-    totalBasis: "$186,000",
-    projectedExit: "$255,000",
-    projectedMargin: "$69,000 before financing and selling friction",
     summary:
       "Representative profile for a cosmetic-to-moderate rehab acquisition where the deal only works if basis discipline, scope control, and resale assumptions stay realistic.",
     focus: [
@@ -27,6 +22,8 @@ const caseStudies = [
       "Stress rehab, holding, and fee stack before greenlighting",
       "Avoid deals that only work on optimistic resale assumptions",
     ],
+    lenses: ["Basis discipline", "Scope control", "Exit realism", "Margin durability"],
+    marginNote: "Strong deals in this category are filtered through basis, scope, and resale discipline before they ever feel exciting.",
   },
   {
     title: "Small Multifamily Repositioning",
@@ -35,11 +32,6 @@ const caseStudies = [
     dealType: "Multifamily",
     motif: "Layered unit economics",
     accent: "from-navy/30 via-orange/10 to-transparent",
-    purchase: "$410,000",
-    rehab: "$95,000",
-    totalBasis: "$538,000",
-    projectedExit: "$690,000",
-    projectedMargin: "$152,000 before financing drag and lease-up friction",
     summary:
       "Representative profile for a smaller multifamily opportunity where the edge comes from stronger basis, tighter renovation sequencing, and cleaner operating assumptions, not excitement.",
     focus: [
@@ -47,6 +39,8 @@ const caseStudies = [
       "Look at rent lift, turnover friction, and execution drag honestly",
       "Use underwriting to separate workable deals from attractive distractions",
     ],
+    lenses: ["Rent lift realism", "Turnover friction", "Renovation sequence", "Execution drag"],
+    marginNote: "The right multifamily opportunity survives slower lease-up, real friction, and more conservative operating assumptions.",
   },
   {
     title: "Land or Transitional Asset Review",
@@ -55,11 +49,6 @@ const caseStudies = [
     dealType: "Land",
     motif: "Exit path discipline",
     accent: "from-orange/25 via-navy/10 to-transparent",
-    purchase: "$145,000",
-    rehab: "$35,000 in pre-development, clearing, and hold costs",
-    totalBasis: "$192,000",
-    projectedExit: "$310,000",
-    projectedMargin: "$118,000 before entitlement and timing risk",
     summary:
       "Representative profile for land or transitional opportunities where value gets created by saying no to weak entitlement stories and filtering hard for realistic exit paths.",
     focus: [
@@ -67,6 +56,8 @@ const caseStudies = [
       "Stay conservative on timeline and basis",
       "Focus on what a real buyer will pay, not theoretical upside",
     ],
+    lenses: ["Timeline realism", "Entitlement risk", "Buyer depth", "Exit clarity"],
+    marginNote: "The goal is not theoretical upside. It is a believable path from acquisition to exit with enough room for risk.",
   },
 ];
 
@@ -174,34 +165,24 @@ export default function PortfolioPage() {
 
                     <div className="rounded-3xl border border-navy/10 bg-navy text-white p-6 shadow-inner">
                       <div className="flex items-center justify-between gap-4">
-                        <p className="text-sm font-semibold uppercase tracking-wide text-orange">Representative numbers</p>
+                        <p className="text-sm font-semibold uppercase tracking-wide text-orange">Underwriting lens</p>
                         <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] uppercase tracking-[0.2em] text-white/55">
-                          Underwriting lens
+                          What matters most
                         </span>
                       </div>
 
                       <div className="mt-6 grid sm:grid-cols-2 gap-4">
-                        <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                          <p className="text-xs uppercase tracking-wide text-white/50">Purchase</p>
-                          <p className="mt-2 text-2xl font-bold">{study.purchase}</p>
-                        </div>
-                        <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                          <p className="text-xs uppercase tracking-wide text-white/50">Rehab / project costs</p>
-                          <p className="mt-2 text-2xl font-bold">{study.rehab}</p>
-                        </div>
-                        <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                          <p className="text-xs uppercase tracking-wide text-white/50">Total basis</p>
-                          <p className="mt-2 text-2xl font-bold">{study.totalBasis}</p>
-                        </div>
-                        <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                          <p className="text-xs uppercase tracking-wide text-white/50">Projected exit value</p>
-                          <p className="mt-2 text-2xl font-bold">{study.projectedExit}</p>
-                        </div>
+                        {study.lenses.map((lens) => (
+                          <div key={lens} className="rounded-2xl border border-white/10 bg-white/5 p-4">
+                            <p className="text-xs uppercase tracking-wide text-white/50">Key filter</p>
+                            <p className="mt-2 text-xl font-bold">{lens}</p>
+                          </div>
+                        ))}
                       </div>
 
                       <div className="mt-5 rounded-2xl border border-orange/20 bg-orange/10 p-5">
                         <p className="text-xs uppercase tracking-wide text-orange">Margin lens</p>
-                        <p className="mt-2 text-sm text-white/82 leading-relaxed">{study.projectedMargin}</p>
+                        <p className="mt-2 text-sm text-white/82 leading-relaxed">{study.marginNote}</p>
                       </div>
                     </div>
                   </div>
