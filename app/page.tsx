@@ -149,6 +149,29 @@ export default function Home() {
                     </div>
                   ))}
                 </div>
+
+                <div className="mt-8 rounded-xl border border-navy/10 bg-white p-5">
+                  <p className="text-sm font-semibold uppercase tracking-wide text-orange">Best for</p>
+                  <p className="mt-2 text-sm text-navy/70 leading-relaxed">
+                    Investors who want steady deal-thinking reps between live opportunities, without jumping straight into higher-ticket support.
+                  </p>
+                </div>
+
+                <div className="mt-4 grid gap-4 sm:grid-cols-2">
+                  <div className="rounded-xl border border-navy/10 bg-white p-5">
+                    <p className="text-sm font-semibold text-navy">What you get</p>
+                    <p className="mt-2 text-sm text-navy/65 leading-relaxed">
+                      A monthly resource drop, narrated breakdown, and practical prompts that keep your criteria tighter and your judgment sharper.
+                    </p>
+                  </div>
+                  <div className="rounded-xl border border-navy/10 bg-white p-5">
+                    <p className="text-sm font-semibold text-navy">Why it works</p>
+                    <p className="mt-2 text-sm text-navy/65 leading-relaxed">
+                      It gives newer and growing investors a lower-friction way to stay engaged, improve pattern recognition, and be more prepared when a real deal shows up.
+                    </p>
+                  </div>
+                </div>
+
                 <div className="mt-8 flex flex-col sm:flex-row gap-3">
                   <Link href={`/services/${offer.slug}`} className="inline-flex items-center justify-center px-6 py-3 border border-navy/15 text-navy hover:border-orange/50 hover:text-orange font-semibold rounded-lg transition-colors">
                     View membership
