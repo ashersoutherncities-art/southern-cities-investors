@@ -12,6 +12,9 @@ const caseStudies = [
     title: "Single-Family Value-Add",
     market: "North Carolina infill market",
     badge: "Representative case profile",
+    dealType: "SFR",
+    motif: "Linear scope",
+    accent: "from-orange/30 via-orange/10 to-transparent",
     purchase: "$118,000",
     rehab: "$52,000",
     totalBasis: "$186,000",
@@ -29,6 +32,9 @@ const caseStudies = [
     title: "Small Multifamily Repositioning",
     market: "Neighborhood-scale multifamily",
     badge: "Representative case profile",
+    dealType: "Multifamily",
+    motif: "Layered unit economics",
+    accent: "from-navy/30 via-orange/10 to-transparent",
     purchase: "$410,000",
     rehab: "$95,000",
     totalBasis: "$538,000",
@@ -46,6 +52,9 @@ const caseStudies = [
     title: "Land or Transitional Asset Review",
     market: "Growth corridor / secondary market",
     badge: "Representative case profile",
+    dealType: "Land",
+    motif: "Exit path discipline",
+    accent: "from-orange/25 via-navy/10 to-transparent",
     purchase: "$145,000",
     rehab: "$35,000 in pre-development, clearing, and hold costs",
     totalBasis: "$192,000",
@@ -127,48 +136,73 @@ export default function PortfolioPage() {
 
           <div className="grid gap-8">
             {caseStudies.map((study) => (
-              <div key={study.title} className="rounded-3xl border border-navy/10 bg-white p-8 shadow-sm">
-                <div className="grid xl:grid-cols-[0.95fr_1.05fr] gap-8 items-start">
-                  <div>
-                    <p className="text-sm font-semibold uppercase tracking-wide text-orange">{study.badge}</p>
-                    <h3 className="mt-3 text-3xl font-bold text-navy">{study.title}</h3>
-                    <p className="mt-2 text-sm font-medium text-navy/50 uppercase tracking-wide">{study.market}</p>
-                    <p className="mt-5 text-sm text-navy/65 leading-relaxed">{study.summary}</p>
-
-                    <div className="mt-6 space-y-3 text-sm text-navy/70">
-                      {study.focus.map((item) => (
-                        <div key={item} className="flex gap-3">
-                          <span className="text-orange font-bold">✓</span>
-                          <span>{item}</span>
-                        </div>
-                      ))}
+              <div key={study.title} className="rounded-[2rem] border border-navy/10 bg-white shadow-sm overflow-hidden">
+                <div className={`h-40 bg-gradient-to-br ${study.accent} border-b border-navy/10 relative`}>
+                  <div className="absolute inset-0 opacity-70">
+                    <div className="absolute top-6 left-8 h-20 w-20 rounded-3xl border border-navy/10 bg-white/40 backdrop-blur-sm" />
+                    <div className="absolute top-10 left-16 h-20 w-28 rounded-[2rem] border border-white/40 bg-navy/10" />
+                    <div className="absolute bottom-6 right-10 h-16 w-36 rounded-full border border-orange/30 bg-orange/10" />
+                  </div>
+                  <div className="relative z-10 h-full flex items-end justify-between gap-6 px-8 pb-7">
+                    <div>
+                      <p className="text-xs font-semibold uppercase tracking-[0.24em] text-navy/50">{study.badge}</p>
+                      <h3 className="mt-3 text-3xl font-bold text-navy">{study.title}</h3>
+                      <p className="mt-2 text-sm font-medium text-navy/55 uppercase tracking-wide">{study.market}</p>
+                    </div>
+                    <div className="shrink-0 rounded-2xl border border-white/60 bg-white/70 px-4 py-3 text-right backdrop-blur-sm">
+                      <p className="text-[11px] uppercase tracking-[0.22em] text-navy/45">Deal type</p>
+                      <p className="mt-1 text-lg font-bold text-navy">{study.dealType}</p>
+                      <p className="text-xs text-navy/55 mt-1">{study.motif}</p>
                     </div>
                   </div>
+                </div>
 
-                  <div className="rounded-2xl border border-navy/10 bg-navy text-white p-6">
-                    <p className="text-sm font-semibold uppercase tracking-wide text-orange">Representative numbers</p>
-                    <div className="mt-6 grid sm:grid-cols-2 gap-4">
-                      <div className="rounded-xl border border-white/10 bg-white/5 p-4">
-                        <p className="text-xs uppercase tracking-wide text-white/50">Purchase</p>
-                        <p className="mt-2 text-2xl font-bold">{study.purchase}</p>
-                      </div>
-                      <div className="rounded-xl border border-white/10 bg-white/5 p-4">
-                        <p className="text-xs uppercase tracking-wide text-white/50">Rehab / project costs</p>
-                        <p className="mt-2 text-2xl font-bold">{study.rehab}</p>
-                      </div>
-                      <div className="rounded-xl border border-white/10 bg-white/5 p-4">
-                        <p className="text-xs uppercase tracking-wide text-white/50">Total basis</p>
-                        <p className="mt-2 text-2xl font-bold">{study.totalBasis}</p>
-                      </div>
-                      <div className="rounded-xl border border-white/10 bg-white/5 p-4">
-                        <p className="text-xs uppercase tracking-wide text-white/50">Projected exit value</p>
-                        <p className="mt-2 text-2xl font-bold">{study.projectedExit}</p>
+                <div className="p-8">
+                  <div className="grid xl:grid-cols-[0.95fr_1.05fr] gap-8 items-start">
+                    <div>
+                      <p className="text-sm text-navy/65 leading-relaxed">{study.summary}</p>
+
+                      <div className="mt-6 space-y-3 text-sm text-navy/72">
+                        {study.focus.map((item) => (
+                          <div key={item} className="flex gap-3">
+                            <span className="text-orange font-bold">✓</span>
+                            <span>{item}</span>
+                          </div>
+                        ))}
                       </div>
                     </div>
 
-                    <div className="mt-5 rounded-xl border border-orange/20 bg-orange/10 p-5">
-                      <p className="text-xs uppercase tracking-wide text-orange">Margin lens</p>
-                      <p className="mt-2 text-sm text-white/80 leading-relaxed">{study.projectedMargin}</p>
+                    <div className="rounded-3xl border border-navy/10 bg-navy text-white p-6 shadow-inner">
+                      <div className="flex items-center justify-between gap-4">
+                        <p className="text-sm font-semibold uppercase tracking-wide text-orange">Representative numbers</p>
+                        <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] uppercase tracking-[0.2em] text-white/55">
+                          Underwriting lens
+                        </span>
+                      </div>
+
+                      <div className="mt-6 grid sm:grid-cols-2 gap-4">
+                        <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+                          <p className="text-xs uppercase tracking-wide text-white/50">Purchase</p>
+                          <p className="mt-2 text-2xl font-bold">{study.purchase}</p>
+                        </div>
+                        <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+                          <p className="text-xs uppercase tracking-wide text-white/50">Rehab / project costs</p>
+                          <p className="mt-2 text-2xl font-bold">{study.rehab}</p>
+                        </div>
+                        <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+                          <p className="text-xs uppercase tracking-wide text-white/50">Total basis</p>
+                          <p className="mt-2 text-2xl font-bold">{study.totalBasis}</p>
+                        </div>
+                        <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+                          <p className="text-xs uppercase tracking-wide text-white/50">Projected exit value</p>
+                          <p className="mt-2 text-2xl font-bold">{study.projectedExit}</p>
+                        </div>
+                      </div>
+
+                      <div className="mt-5 rounded-2xl border border-orange/20 bg-orange/10 p-5">
+                        <p className="text-xs uppercase tracking-wide text-orange">Margin lens</p>
+                        <p className="mt-2 text-sm text-white/82 leading-relaxed">{study.projectedMargin}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
