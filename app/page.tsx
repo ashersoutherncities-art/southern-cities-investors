@@ -56,6 +56,24 @@ const buyerFit = [
   'Buyers who value disciplined execution over hype and random deal chasing',
 ];
 
+const testimonials = [
+  {
+    quote:
+      'I did not need more theory. I needed a cleaner decision process. The biggest value was getting clearer on what to pass on before I wasted more time and money.',
+    role: 'Active investor',
+  },
+  {
+    quote:
+      'What stood out was the structure. It was easier to see where a product made sense, where a live review made sense, and where ongoing support would actually be worth it.',
+    role: 'Operator-level buyer',
+  },
+  {
+    quote:
+      'The positioning felt serious. It did not read like generic real estate marketing. It felt built for people who are actually trying to buy better and move with more discipline.',
+    role: 'Investor intake prospect',
+  },
+];
+
 export default function Home() {
   return (
     <>
@@ -207,6 +225,29 @@ export default function Home() {
                     itemKey={offer.key}
                     className="inline-flex items-center justify-center w-full px-6 py-3 bg-navy hover:bg-navy/90 text-white font-semibold rounded-lg transition-colors"
                   />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 sm:py-24 bg-white border-t border-navy/10">
+        <div className="site-shell">
+          <div className="max-w-3xl mb-12">
+            <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">Testimonials</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy">What serious buyers want is clearer judgment, not more noise.</h2>
+            <p className="mt-4 text-lg text-navy/60">
+              This section should ultimately hold approved real client feedback. For now, it gives the page the right proof structure and tone.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {testimonials.map((item) => (
+              <div key={item.quote} className="rounded-2xl border border-navy/10 bg-white p-8 shadow-sm">
+                <p className="text-2xl leading-relaxed text-navy font-medium">“{item.quote}”</p>
+                <div className="mt-6 pt-6 border-t border-navy/10">
+                  <p className="text-sm font-semibold uppercase tracking-wide text-orange">{item.role}</p>
                 </div>
               </div>
             ))}
