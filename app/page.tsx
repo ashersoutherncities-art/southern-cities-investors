@@ -56,21 +56,27 @@ const buyerFit = [
   'Buyers who value disciplined execution over hype and random deal chasing',
 ];
 
-const testimonials = [
+const credibilitySections = [
   {
-    quote:
-      'I did not need more theory. I needed a cleaner decision process. The biggest value was getting clearer on what to pass on before I wasted more time and money.',
-    role: 'Active investor',
+    title: 'Why serious buyers stay engaged',
+    points: [
+      'The structure makes it easier to know when to buy a product, when to request a review, and when deeper support is actually justified.',
+      'The positioning is built around better judgment, not generic inspiration or broad real estate content.',
+    ],
   },
   {
-    quote:
-      'What stood out was the structure. It was easier to see where a product made sense, where a live review made sense, and where ongoing support would actually be worth it.',
-    role: 'Operator-level buyer',
+    title: 'What creates trust here',
+    points: [
+      'Clear process, clearer fit, and more disciplined framing before someone is pushed toward a bigger commitment.',
+      'A stronger operating context than a thin one-page investor brand with no visible decision standard behind it.',
+    ],
   },
   {
-    quote:
-      'The positioning felt serious. It did not read like generic real estate marketing. It felt built for people who are actually trying to buy better and move with more discipline.',
-    role: 'Investor intake prospect',
+    title: 'What people are actually looking for',
+    points: [
+      'Sharper buy, pass, and renegotiate decisions.',
+      'Less wasted motion, cleaner criteria, and better support when a live deal needs real judgment.',
+    ],
   },
 ];
 
@@ -235,19 +241,24 @@ export default function Home() {
       <section className="py-20 sm:py-24 bg-white border-t border-navy/10">
         <div className="site-shell">
           <div className="max-w-3xl mb-12">
-            <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">Testimonials</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy">What serious buyers want is clearer judgment, not more noise.</h2>
+            <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">Credibility</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy">What makes this feel more credible than generic investor marketing.</h2>
             <p className="mt-4 text-lg text-navy/60">
-              This section should ultimately hold approved real client feedback. For now, it gives the page the right proof structure and tone.
+              Trust comes from structure, honesty, and clearer decision support, not filler. This section explains what serious buyers tend to value when they are deciding whether to engage.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((item) => (
-              <div key={item.quote} className="rounded-2xl border border-navy/10 bg-white p-8 shadow-sm">
-                <p className="text-2xl leading-relaxed text-navy font-medium">“{item.quote}”</p>
-                <div className="mt-6 pt-6 border-t border-navy/10">
-                  <p className="text-sm font-semibold uppercase tracking-wide text-orange">{item.role}</p>
+            {credibilitySections.map((section) => (
+              <div key={section.title} className="rounded-2xl border border-navy/10 bg-white p-8 shadow-sm">
+                <p className="text-sm font-semibold uppercase tracking-wide text-orange">{section.title}</p>
+                <div className="mt-5 space-y-4 text-sm text-navy/70 leading-relaxed">
+                  {section.points.map((point) => (
+                    <div key={point} className="flex gap-3">
+                      <span className="text-orange font-bold">✓</span>
+                      <span>{point}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             ))}
