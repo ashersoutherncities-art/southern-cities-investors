@@ -4,20 +4,20 @@ import { digitalOffers, membershipOffers, starterOffers } from '@/lib/service-da
 
 const buyerPaths = [
   {
-    title: 'Just getting started',
-    description: 'Start with a tool, template, or narrated breakdown that helps you sharpen your criteria fast.',
-    cta: 'Browse digital products',
+    title: 'Need a product first',
+    description: 'Start with a tool, template, or narrated breakdown if you want a lower-cost first step you can use immediately.',
+    cta: 'Browse products',
     href: '/services',
   },
   {
-    title: 'Working a real deal',
-    description: 'Use a strategy call, buy box review, or deal audit when you need experienced eyes on a live decision.',
-    cta: 'See starter offers',
+    title: 'Need a service for a real deal',
+    description: 'Use a strategy call, buy box review, or deal audit when a live decision needs experienced eyes, not more guessing.',
+    cta: 'See services',
     href: '/services',
   },
   {
-    title: 'Ready for deeper support',
-    description: 'Step into recurring support when you want more than one-off guidance.',
+    title: 'Need ongoing support',
+    description: 'Apply for deeper recurring support when you want more than a one-time product or review.',
     cta: 'Apply for investor intake',
     href: '/contact',
   },
@@ -78,10 +78,10 @@ export default function Home() {
         <div className="site-shell">
           <div className="max-w-3xl mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-navy">
-              Choose the right entry point for where you are now.
+              Choose between products, services, or ongoing support.
             </h2>
             <p className="mt-4 text-lg text-navy/60">
-              The best first move depends on whether you are learning, evaluating, or scaling.
+              The cleanest next move depends on whether you need a self-serve product, a real-deal service, or a longer working relationship.
             </p>
           </div>
 
@@ -102,10 +102,10 @@ export default function Home() {
       <section className="py-20 sm:py-24 bg-navy/5">
         <div className="site-shell">
           <div className="max-w-3xl mb-12">
-            <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">Digital tools and education</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy">Practical tools and training you can use right away.</h2>
+            <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">Products</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy">Practical investor products you can buy and use right away.</h2>
             <p className="mt-4 text-lg text-navy/60">
-              Start with the products that help you tighten criteria, review opportunities faster, and think more clearly before you commit to deeper support.
+              These are self-serve digital products built to help you tighten criteria, underwrite faster, and learn from real examples before you step into a higher-touch service.
             </p>
           </div>
 
@@ -135,7 +135,7 @@ export default function Home() {
       <section className="py-20 sm:py-24 bg-white">
         <div className="site-shell grid lg:grid-cols-[1fr_1fr] gap-8 items-start">
           <div className="rounded-2xl border border-orange/20 bg-orange/5 p-8">
-            <p className="text-sm font-semibold uppercase tracking-wide text-orange">Membership</p>
+            <p className="text-sm font-semibold uppercase tracking-wide text-orange">Membership product</p>
             {membershipOffers.map((offer) => (
               <div key={offer.key}>
                 <h2 className="mt-3 text-3xl font-bold text-navy">{offer.name}</h2>
@@ -187,14 +187,14 @@ export default function Home() {
           </div>
 
           <div className="rounded-2xl border border-navy/10 bg-white p-8 shadow-sm">
-            <p className="text-sm font-semibold uppercase tracking-wide text-orange">When the stakes get higher</p>
-            <h2 className="mt-3 text-3xl font-bold text-navy">Get focused help on real decisions.</h2>
+            <p className="text-sm font-semibold uppercase tracking-wide text-orange">Services</p>
+            <h2 className="mt-3 text-3xl font-bold text-navy">Get focused help when the decision is real.</h2>
             <div className="mt-6 space-y-5 text-navy/65 leading-relaxed">
               <p>
-                Start with a defined problem, solve it well, and move deeper only when it makes sense.
+                These services are for live decisions, active deals, and investors who want experienced judgment layered onto the numbers.
               </p>
               <p>
-                That keeps the path cleaner for investors who want practical help, not a generic consulting pitch.
+                Start with one defined need, solve it well, and move deeper only when the deal flow justifies it.
               </p>
             </div>
 
@@ -214,10 +214,10 @@ export default function Home() {
       <section className="py-20 sm:py-24 bg-navy text-white">
         <div className="site-shell text-center">
           <h2 className="text-3xl sm:text-4xl font-bold">
-            Start where you need help now.
+            Start with the right format for the problem in front of you.
           </h2>
           <p className="mt-4 text-lg text-white/70 max-w-2xl mx-auto">
-            Use a tool, review, membership, or intake path based on what is in front of you right now.
+            Buy a product if you want a self-serve first step, choose a service if you need help on a real decision, or apply if you want a deeper relationship.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <Link

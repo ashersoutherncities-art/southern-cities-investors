@@ -8,12 +8,12 @@ export default function Services() {
       <section className="bg-navy text-white py-24 sm:py-32">
         <div className="site-shell">
           <div className="max-w-4xl">
-            <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">Service Models</p>
+            <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">Products and Services</p>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
-              Choose the right level of support for where you are now.
+              Choose the right product or service for where you are now.
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-white/70 leading-relaxed max-w-3xl">
-              Southern Cities Investors offers digital tools, narrated training, focused reviews, and recurring support for investors who want clearer decisions and stronger execution.
+              Southern Cities Investors offers self-serve digital products, focused investor services, and recurring support for buyers who want clearer decisions and stronger execution.
             </p>
           </div>
         </div>
@@ -22,9 +22,9 @@ export default function Services() {
       <section className="py-16 bg-white border-b border-navy/10">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-navy/5 rounded-2xl p-8 text-center border border-navy/10">
-            <h2 className="text-2xl font-bold text-navy mb-4">Different moments call for different levels of support.</h2>
+            <h2 className="text-2xl font-bold text-navy mb-4">Different moments call for different formats.</h2>
             <p className="text-navy/65 leading-relaxed max-w-3xl mx-auto">
-              Some buyers need a useful tool they can put to work today. Others need experienced eyes on a live opportunity. This page is organized so you can move directly to the right level.
+              Some buyers need a product they can use today. Others need a service built around a live opportunity. This page is organized so you can move directly to the right fit.
             </p>
           </div>
         </div>
@@ -33,10 +33,10 @@ export default function Services() {
       <section className="py-20 bg-navy/5 border-b border-navy/10">
         <div className="site-shell">
           <div className="max-w-3xl mb-12">
-            <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">Downloadables and educational media</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy">Tools and training designed to improve your next decision.</h2>
+            <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">Products</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy">Self-serve products designed to improve your next decision.</h2>
             <p className="mt-4 text-lg text-navy/60">
-              These products solve focused problems fast, so you can tighten your process before you spend more time or capital.
+              These products solve focused problems fast, so you can tighten your process before you spend more time or capital on the wrong deal.
             </p>
           </div>
 
@@ -77,7 +77,7 @@ export default function Services() {
         <div className="site-shell">
           <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-8 items-start">
             <div>
-              <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">Ongoing access</p>
+              <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">Membership product</p>
               <h2 className="text-3xl sm:text-4xl font-bold text-navy">Membership keeps serious investors close to the right resources.</h2>
               <p className="mt-4 text-lg text-navy/60 max-w-3xl">
                 Get recurring access to templates, narrated breakdowns, and practical guidance that help you stay sharp between deals and prepare for the next level of support.
@@ -118,17 +118,17 @@ export default function Services() {
       <section className="py-20 bg-navy/5 border-b border-navy/10">
         <div className="site-shell">
           <div className="max-w-3xl mb-12">
-            <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">Starter offers</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy">Choose a focused review when the decision is real and time-sensitive.</h2>
+            <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">Services</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy">Choose a focused service when the decision is real and time-sensitive.</h2>
             <p className="mt-4 text-lg text-navy/60">
-              These offers are built for real decisions, active deals, and investors who want experienced guidance before they commit.
+              These services are built for real decisions, active deals, and investors who want experienced guidance before they commit.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {starterOffers.map((offer) => (
               <div key={offer.key} className="bg-white border border-navy/10 rounded-2xl p-8 shadow-sm flex flex-col">
-                <p className="text-sm font-semibold uppercase tracking-wide text-orange">Starter offer</p>
+                <p className="text-sm font-semibold uppercase tracking-wide text-orange">Service</p>
                 <h3 className="text-2xl font-bold text-navy mt-3">{offer.name}</h3>
                 <p className="text-orange font-semibold text-lg mt-2">{offer.price} one time</p>
                 <p className="text-sm text-navy/50 mt-2">{offer.turnaround}</p>
@@ -166,9 +166,9 @@ export default function Services() {
       <section id="tiers" className="py-20 sm:py-24">
         <div className="site-shell">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy">Subscription packages matched to how involved you want to be</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy">Recurring support tiers matched to how involved you want to be</h2>
             <p className="mt-4 text-lg text-navy/60">
-              Start with access, step into analysis, move into deal-desk support, or apply for a deeper operator or Inner Circle relationship.
+              Start with access, step into analysis, move into deal-desk support, or apply for a deeper operator or Inner Circle relationship when the volume and stakes justify it.
             </p>
           </div>
 
@@ -232,9 +232,9 @@ export default function Services() {
 
       <section className="py-20 sm:py-24 bg-navy/5">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-navy mb-6">Choose the path that matches where you are right now.</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-navy mb-6">Choose the path that matches the kind of help you need right now.</h2>
           <p className="text-lg text-navy/60 mb-10 max-w-2xl mx-auto">
-            Start with a focused tool or review if you want a low-friction first step, choose the subscription tier that matches your current pace,
+            Start with a product if you want a self-serve first step, choose a service for a live decision, pick a recurring tier for ongoing deal support,
             or apply directly if you are looking for a deeper operator or Inner Circle relationship.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
