@@ -141,10 +141,6 @@ export default function CartContent() {
                 <span>One-time items</span>
                 <span className="font-semibold text-navy">{oneTimeProducts.reduce((sum, entry) => sum + entry.quantity, 0)}</span>
               </div>
-              <div className="flex justify-between gap-6">
-                <span>Checkout provider</span>
-                <span className="font-semibold text-navy">Stripe</span>
-              </div>
               <div className="flex justify-between gap-6 border-t border-navy/10 pt-4 text-base">
                 <span className="font-semibold text-navy">Estimated due today</span>
                 <span className="font-bold text-orange">{formatPrice(dueToday)}</span>
