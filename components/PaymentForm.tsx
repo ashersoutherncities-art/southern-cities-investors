@@ -109,11 +109,11 @@ export default function PaymentForm({ items }: { items: string[] }) {
         disabled={loading || items.length === 0}
         className="w-full px-6 py-3 bg-orange hover:bg-orange/90 text-white font-semibold rounded-lg transition-colors disabled:opacity-50"
       >
-        {loading ? "Processing..." : "Continue to Secure Checkout"}
+        {loading ? "Processing..." : "Continue to Checkout"}
       </button>
 
       <p className="text-xs text-navy/60 text-center">
-        Secured checkout powered by Stripe
+        Secure checkout
       </p>
     </form>
   );
