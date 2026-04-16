@@ -9,9 +9,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Southern Cities Investors | Deep Discount Real Estate Acquisitions",
   description:
-    "Southern Cities Investors acquires properties at 30-50% below market value through off-market sourcing and creative finance. Charlotte, NC-based with 30+ market expertise.",
+    "Southern Cities Investors acquires properties at deep discounts across North Carolina through off-market sourcing and creative finance.",
   keywords:
-    "real estate acquisitions, off-market properties, deep discount real estate, Charlotte NC investors, private lending, JV partners, wholesale deals",
+    "real estate acquisitions, off-market properties, deep discount real estate, North Carolina investors, private lending, JV partners, wholesale deals",
 };
 
 export default function RootLayout({

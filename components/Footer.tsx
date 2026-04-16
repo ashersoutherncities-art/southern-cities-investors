@@ -47,7 +47,7 @@ export default function Footer() {
             <h4 className="text-sm font-semibold uppercase tracking-wider text-white/40 mb-4">
               Contact
             </h4>
-            <p className="text-sm text-white/60">Charlotte, NC</p>
+            <p className="text-sm text-white/60">Serving North Carolina statewide</p>
             <Link
               href="/contact"
               className="inline-block mt-4 text-sm font-medium text-orange hover:text-orange-light transition-colors"
