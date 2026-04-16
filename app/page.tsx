@@ -23,6 +23,27 @@ const buyerPaths = [
   },
 ];
 
+const trustSignals = [
+  {
+    title: 'Built for active buyers',
+    description: 'The site is organized for investors making real buy, pass, renegotiate, and structuring decisions, not generic real estate curiosity.',
+  },
+  {
+    title: 'Decision support before commitment',
+    description: 'Products and services are designed to help buyers tighten criteria, pressure test deals, and avoid thin opportunities before more capital gets committed.',
+  },
+  {
+    title: 'Clear next-step ladder',
+    description: 'Lower-cost products lead into focused reviews, then into recurring support only when deal flow and complexity actually justify it.',
+  },
+];
+
+const processSteps = [
+  'Start with the format that matches your problem: product, service, or ongoing support.',
+  'Use a defined review or intake process so the opportunity, criteria, and goals are clear before moving deeper.',
+  'Move into higher-touch support only when the live deal flow or operating complexity warrants it.',
+];
+
 export default function Home() {
   return (
     <>
@@ -77,6 +98,7 @@ export default function Home() {
       <section className="py-20 sm:py-24 bg-white">
         <div className="site-shell">
           <div className="max-w-3xl mb-12">
+            <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">How the site is structured</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy">
               Choose between products, services, or ongoing support.
             </h2>
@@ -95,6 +117,40 @@ export default function Home() {
                 </Link>
               </div>
             ))}
+          </div>
+
+          <div className="mt-14 grid lg:grid-cols-[1.1fr_0.9fr] gap-8 items-start">
+            <div className="rounded-2xl border border-navy/10 bg-navy/5 p-8">
+              <p className="text-sm font-semibold uppercase tracking-wide text-orange">Why buyers work with this model</p>
+              <div className="mt-6 space-y-5">
+                {trustSignals.map((signal) => (
+                  <div key={signal.title} className="rounded-xl border border-white/70 bg-white p-5">
+                    <h3 className="text-lg font-bold text-navy">{signal.title}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-navy/65">{signal.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="rounded-2xl border border-orange/20 bg-orange/5 p-8">
+              <p className="text-sm font-semibold uppercase tracking-wide text-orange">What to expect</p>
+              <div className="mt-6 space-y-4 text-sm text-navy/75 leading-relaxed">
+                {processSteps.map((step, index) => (
+                  <div key={step} className="flex gap-4">
+                    <span className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-navy text-white text-xs font-semibold">
+                      {index + 1}
+                    </span>
+                    <span>{step}</span>
+                  </div>
+                ))}
+              </div>
+              <Link
+                href="/portfolio"
+                className="inline-flex mt-8 text-sm font-semibold text-orange hover:text-orange/80 transition-colors"
+              >
+                Review portfolio and process notes
+              </Link>
+            </div>
           </div>
         </div>
       </section>
