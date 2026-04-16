@@ -35,6 +35,12 @@ export default function Tier4Page() {
         <div className="site-shell grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-start">
           <div>
             <h2 className="text-3xl font-bold text-navy mb-8">What Tier 4 includes</h2>
+            <div className="rounded-2xl border border-navy/10 bg-navy/5 p-8 mb-8">
+              <h3 className="text-2xl font-bold text-navy">Where this fits in ongoing support</h3>
+              <p className="mt-4 text-navy/65 leading-relaxed">
+                This is hands-on ongoing support for active operators who need a tighter working rhythm, weekly guidance, and priority access around live execution. It is built for people who are beyond one-off reviews and want a more involved relationship around real movement.
+              </p>
+            </div>
             <div className="grid gap-4">
               {[
                 "Weekly calls focused on live priorities and current bottlenecks",

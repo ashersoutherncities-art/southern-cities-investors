@@ -51,9 +51,9 @@ export default function Tier1Page() {
             </div>
 
             <div className="mt-10 rounded-2xl border border-navy/10 bg-navy/5 p-8">
-              <h3 className="text-2xl font-bold text-navy">Why people start here</h3>
+              <h3 className="text-2xl font-bold text-navy">Where this fits in ongoing support</h3>
               <p className="mt-4 text-navy/65 leading-relaxed">
-                Tier 1 is built for buyers who want a more consistent look at workable opportunities before stepping into a deeper monthly relationship. It keeps the first step practical, low-pressure, and easy to expand when timing is right.
+                This is the lightest level of ongoing support. It is built for buyers who want a more consistent look at workable opportunities before stepping into a deeper monthly relationship. It keeps the first step practical, low-pressure, and easy to expand when timing is right.
               </p>
             </div>
           </div>

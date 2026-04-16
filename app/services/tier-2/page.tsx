@@ -51,9 +51,9 @@ export default function Tier2Page() {
             </div>
 
             <div className="mt-10 rounded-2xl border border-navy/10 bg-navy/5 p-8">
-              <h3 className="text-2xl font-bold text-navy">What this changes</h3>
+              <h3 className="text-2xl font-bold text-navy">Where this fits in ongoing support</h3>
               <p className="mt-4 text-navy/65 leading-relaxed">
-                Instead of reacting to every deal with uncertainty, you get a stronger filter around what deserves serious attention. That means cleaner decisions, fewer thin deals, and more confidence when something worth pursuing actually shows up.
+                This is where ongoing support starts to become active deal support. Instead of reacting to every opportunity with uncertainty, you get a stronger filter around what deserves serious attention. That means cleaner decisions, fewer thin deals, and more confidence when something worth pursuing actually shows up.
               </p>
             </div>
           </div>

@@ -51,9 +51,9 @@ export default function Tier3Page() {
             </div>
 
             <div className="mt-10 rounded-2xl border border-navy/10 bg-navy/5 p-8">
-              <h3 className="text-2xl font-bold text-navy">Why this tier matters</h3>
+              <h3 className="text-2xl font-bold text-navy">Where this fits in ongoing support</h3>
               <p className="mt-4 text-navy/65 leading-relaxed">
-                Once your pace increases, the bottleneck is usually not lead volume, it is decision quality and response speed. Tier 3 is built to tighten that middle layer so strong opportunities move faster and weak ones get eliminated sooner.
+                This is the stronger ongoing support layer for investors who already have deal flow and need faster judgment, sharper structuring, and quicker response speed. Once your pace increases, the bottleneck is usually not lead volume, it is decision quality and response speed. This level is built to tighten that middle layer so strong opportunities move faster and weak ones get eliminated sooner.
               </p>
             </div>
           </div>
