@@ -7,7 +7,7 @@ export default function Services() {
     <>
       <section className="bg-navy text-white py-24 sm:py-32">
         <div className="site-shell">
-          <div className="max-w-4xl">
+          <div className="max-w-5xl">
             <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">Products and Services</p>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
               Choose the right product or service for where you are now.
@@ -15,6 +15,23 @@ export default function Services() {
             <p className="mt-6 text-lg sm:text-xl text-white/70 leading-relaxed max-w-3xl">
               Southern Cities Investors offers self-serve digital products, focused investor services, and recurring support for buyers who want clearer decisions and stronger execution.
             </p>
+            <div className="mt-10 flex flex-wrap gap-3">
+              <Link href="#products" className="inline-flex items-center justify-center px-5 py-3 rounded-lg bg-orange text-white font-semibold hover:bg-orange/90 transition-colors">
+                Products
+              </Link>
+              <Link href="#membership" className="inline-flex items-center justify-center px-5 py-3 rounded-lg border border-white/15 text-white/90 hover:border-white/30 hover:text-white transition-colors">
+                Membership
+              </Link>
+              <Link href="#services-list" className="inline-flex items-center justify-center px-5 py-3 rounded-lg border border-white/15 text-white/90 hover:border-white/30 hover:text-white transition-colors">
+                Services
+              </Link>
+              <Link href="#tiers" className="inline-flex items-center justify-center px-5 py-3 rounded-lg border border-white/15 text-white/90 hover:border-white/30 hover:text-white transition-colors">
+                Tiers
+              </Link>
+              <Link href="#addons" className="inline-flex items-center justify-center px-5 py-3 rounded-lg border border-white/15 text-white/90 hover:border-white/30 hover:text-white transition-colors">
+                Add-ons
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -30,7 +47,7 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="py-20 bg-navy/5 border-b border-navy/10">
+      <section id="products" className="py-20 bg-navy/5 border-b border-navy/10">
         <div className="site-shell">
           <div className="max-w-3xl mb-12">
             <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">Products</p>
@@ -73,7 +90,7 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="py-20 bg-white border-b border-navy/10">
+      <section id="membership" className="py-20 bg-white border-b border-navy/10">
         <div className="site-shell">
           <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-8 items-start">
             <div>
@@ -115,7 +132,7 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="py-20 bg-navy/5 border-b border-navy/10">
+      <section id="services-list" className="py-20 bg-navy/5 border-b border-navy/10">
         <div className="site-shell">
           <div className="max-w-3xl mb-12">
             <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">Services</p>
@@ -172,7 +189,7 @@ export default function Services() {
             </p>
           </div>
 
-          <div className="mb-12 grid md:grid-cols-3 gap-6">
+          <div id="addons" className="mb-12 grid md:grid-cols-3 gap-6">
             <div className="rounded-2xl border border-navy/10 bg-white p-6">
               <p className="text-sm font-semibold uppercase tracking-wide text-orange">Add-on</p>
               <h3 className="mt-3 text-xl font-bold text-navy">Construction Oversight</h3>
