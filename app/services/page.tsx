@@ -226,7 +226,6 @@ export default function Services() {
                     Popular operating tier
                   </div>
                 ) : null}
-                <p className="text-xs font-semibold uppercase tracking-wide text-orange">{tier.tag}</p>
                 <h3 className="text-xl font-bold text-navy mt-2">{tier.name}</h3>
                 <p className="text-orange font-semibold text-base mt-2">{tier.price}</p>
                 <p className="text-sm text-navy/60 mt-3">{tier.whoItsFor}</p>
