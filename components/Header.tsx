@@ -78,7 +78,8 @@ export default function Header() {
                 </svg>
               </button>
               {servicesOpen && (
-                <div className="absolute left-0 top-full mt-3 w-[22rem] rounded-xl border border-white/10 bg-navy shadow-2xl overflow-hidden z-50 p-3">
+                <div className="absolute left-0 top-full pt-2 w-[22rem] z-50">
+                  <div className="rounded-xl border border-white/10 bg-navy shadow-2xl overflow-hidden p-3">
                   <Link
                     href="/services"
                     className="block rounded-lg px-4 py-3 text-sm font-semibold text-white hover:bg-white/5 hover:text-orange transition-colors"
@@ -98,6 +99,7 @@ export default function Header() {
                         <div className="mt-1 text-xs leading-relaxed text-white/55">{link.description}</div>
                       </Link>
                     ))}
+                  </div>
                   </div>
                 </div>
               )}
