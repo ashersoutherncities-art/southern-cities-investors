@@ -25,8 +25,8 @@ export default function Services() {
               <Link href="#services-list" className="inline-flex items-center justify-center px-5 py-3 rounded-lg border border-white/15 text-white/90 hover:border-white/30 hover:text-white transition-colors">
                 Services
               </Link>
-              <Link href="#tiers" className="inline-flex items-center justify-center px-5 py-3 rounded-lg border border-white/15 text-white/90 hover:border-white/30 hover:text-white transition-colors">
-                Tiers
+              <Link href="#ongoing-support" className="inline-flex items-center justify-center px-5 py-3 rounded-lg border border-white/15 text-white/90 hover:border-white/30 hover:text-white transition-colors">
+                Ongoing support
               </Link>
               <Link href="#addons" className="inline-flex items-center justify-center px-5 py-3 rounded-lg border border-white/15 text-white/90 hover:border-white/30 hover:text-white transition-colors">
                 Add-ons
@@ -180,12 +180,12 @@ export default function Services() {
         </div>
       </section>
 
-      <section id="tiers" className="py-20 sm:py-24">
+      <section id="ongoing-support" className="py-20 sm:py-24">
         <div className="site-shell">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy">Recurring support tiers</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy">Ongoing support options</h2>
             <p className="mt-4 text-lg text-navy/60">
-              Pick the level of access and involvement that matches your current deal flow.
+              Choose the level of recurring support that fits your current deal flow and pace.
             </p>
           </div>
 
@@ -251,7 +251,7 @@ export default function Services() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-navy mb-6">Choose the path that matches the kind of help you need right now.</h2>
           <p className="text-lg text-navy/60 mb-10 max-w-2xl mx-auto">
-            Start with a product if you want a self-serve first step, choose a service for a live decision, pick a recurring tier for ongoing deal support,
+            Start with a product if you want a self-serve first step, choose a service for a live decision, choose ongoing support if you want recurring help,
             or apply directly if you are looking for a deeper operator or Inner Circle relationship.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

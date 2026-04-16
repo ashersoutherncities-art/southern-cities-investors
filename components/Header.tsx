@@ -18,7 +18,7 @@ const servicesDropdownLinks = [
   { href: "/services#products", label: "Products" },
   { href: "/services#membership", label: "Membership" },
   { href: "/services#services-list", label: "Services" },
-  { href: "/services#tiers", label: "Tiers" },
+  { href: "/services#ongoing-support", label: "Ongoing Support" },
   { href: "/services#addons", label: "Add-ons" },
 ];
 
