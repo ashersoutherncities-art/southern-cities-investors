@@ -14,7 +14,8 @@ export default function CartContent() {
 
   useEffect(() => {
     const fromCookie = getCartItemsFromCookie();
-    const next = sanitizeCartItems(queryCartItems.length ? queryCartItems : fromCookie);
+    const source = queryCartItems.length ? queryCartItems : fromCookie;
+    const next = source.filter((item) => !!CART_PRODUCTS[item]);
     setCartItems(next);
     setCartItemsCookie(next);
   }, [queryCartItems]);
