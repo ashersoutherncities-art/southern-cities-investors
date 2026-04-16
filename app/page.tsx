@@ -79,31 +79,30 @@ const processSteps = [
 
 const proofBlocks = [
   {
-    title: 'What owners usually want answered first',
+    title: 'What owners usually need help deciding',
     points: [
-      'Can you actually buy this property or execute this plan?',
-      'What would you do with it if you controlled it?',
-      'Should I sell now, improve it, or structure something else?',
+      'Whether it makes more sense to sell now or hold for a different plan.',
+      'Whether the property should be cleaned up, improved, or repositioned before any sale decision gets made.',
+      'Whether the best next move is a direct sale, a partnership, or a longer execution path.',
     ],
   },
   {
-    title: 'What this platform can actually do',
+    title: 'What Southern Cities can do on the other side of that decision',
     points: [
-      'Buy directly when speed and certainty matter.',
-      'Evaluate redevelopment or repositioning when the land or building has more upside than a simple sale captures.',
-      'Use construction and operating context to frame a plan instead of giving a generic investor pitch.',
+      'Buy directly when a clean sale is the right answer.',
+      'Evaluate redevelopment or repositioning when the asset has more value than a fast sale captures.',
+      'Use construction and operating capability to frame a real plan around the property.',
     ],
   },
   {
-    title: 'What makes this different from most buyers',
+    title: 'Why owners call us when the property is not simple',
     points: [
-      'We are not forced into one answer just because we only know how to wholesale or make low direct offers.',
-      'We can look at the property through an acquisition, construction, and development lens at the same time.',
-      'That usually produces a clearer recommendation and a cleaner next step for the owner.',
+      'Because not every asset fits into a basic cash-offer box.',
+      'Because land, mixed-condition property, and transitional assets often need a more thoughtful answer.',
+      'Because the right recommendation depends on what can actually be executed after the conversation.',
     ],
   },
 ];
-
 const buyerFit = [
   'Property owners deciding whether to sell, hold, improve, or partner',
   'Landowners with underused or mispositioned sites',
@@ -143,12 +142,12 @@ export default function Home() {
             </div>
 
             <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
-              <p className="text-sm font-semibold uppercase tracking-wide text-orange">What we solve</p>
+              <p className="text-sm font-semibold uppercase tracking-wide text-orange">Where we help most</p>
               <div className="mt-6 space-y-4 text-white/80">
                 {[
-                  'Owners who need to know whether to sell now or hold for a better path.',
-                  'Properties that have more value than a simple low offer captures.',
-                  'Deals that need execution, not just interest.',
+                  'When you are not sure whether to sell, improve, or structure something else.',
+                  'When the property has more potential than a basic off-market offer reflects.',
+                  'When the next step depends on real execution, not just a pitch.',
                 ].map((item) => (
                   <div key={item} className="flex gap-3">
                     <span className="text-orange font-bold">✓</span>
@@ -265,9 +264,9 @@ export default function Home() {
       <section className="py-20 sm:py-24 bg-white border-t border-navy/10">
         <div className="site-shell">
           <div className="max-w-4xl mb-12">
-            <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">Proof and fit</p>
+            <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">Decision clarity</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy">
-              The right owner or investor usually wants three things answered immediately.
+              The first real question is not price. It is which path makes the most sense for the property.
             </h2>
           </div>
 
