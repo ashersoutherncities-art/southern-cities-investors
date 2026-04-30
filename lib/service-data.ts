@@ -1,19 +1,9 @@
-export type StarterOffer = {
+export type EntryPath = {
   key: string;
-  slug: string;
   name: string;
-  price: string;
-  turnaround: string;
-  whoItsFor: string;
-  positioning: string;
   description: string;
-  deliverables: string[];
-  outcomes: string[];
-  upsell: {
-    label: string;
-    description: string;
-    href: string;
-  };
+  href: string;
+  cta: string;
 };
 
 export type ProductOffer = {
@@ -24,121 +14,120 @@ export type ProductOffer = {
   turnaround: string;
   badge: string;
   whoItsFor: string;
-  positioning: string;
   description: string;
   deliverables: string[];
+  included: string[];
+  avoids: string;
+  outcome: string;
   outcomes: string[];
-  upsell: {
-    label: string;
-    description: string;
-    href: string;
-  };
+  cta: string;
+  positioning: string;
+  upsell: { label: string; description: string; href: string; };
 };
 
-export const starterOffers: StarterOffer[] = [
+export type StarterOffer = OneTimeOffer;
+
+export type OneTimeOffer = {
+  key: string;
+  slug: string;
+  name: string;
+  price: string;
+  turnaround: string;
+  whoItsFor: string;
+  description: string;
+  deliverables: string[];
+  included: string[];
+  avoids: string;
+  outcome: string;
+  outcomes: string[];
+  cta: string;
+  positioning: string;
+  upsell: { label: string; description: string; href: string; };
+};
+
+export type RecurringPlan = {
+  key: string;
+  slug: string;
+  name: string;
+  price: string;
+  tag: string;
+  whoItsFor: string;
+  description: string;
+  deliverables: string[];
+  included: string[];
+  avoids: string;
+  outcome: string;
+  outcomes: string[];
+  cta: string;
+  href: string;
+};
+
+export type AddOnOffer = {
+  key: string;
+  name: string;
+  price: string;
+  whoItsFor: string;
+  description: string;
+  deliverables: string[];
+  included: string[];
+  avoids: string;
+  outcome: string;
+  outcomes: string[];
+  cta: string;
+  href: string;
+};
+
+export const entryPaths: EntryPath[] = [
   {
-    key: 'operator-call',
-    slug: 'operator-strategy-call',
-    name: 'Operator Strategy Call',
-    price: '$97',
-    turnaround: '45-minute call + next-step recap',
-    whoItsFor: 'Best for newer investors, stuck buyers, and anyone who needs fast clarity before committing more time or capital.',
-    positioning: 'A focused first step to pressure test your next move before you lose momentum in the wrong market, strategy, or deal type.',
-    description: 'Bring your current roadblock, market question, or deal plan. We will help you identify the cleanest next step and whether you need a deeper review or ongoing support.',
-    deliverables: [
-      '45-minute strategy call focused on your current bottleneck',
-      'Clear recommendation on market, strategy, or next acquisition step',
-      'Simple action recap you can use immediately after the call',
-    ],
-    outcomes: [
-      'Stop second-guessing your next move',
-      'Get a faster yes, no, or not yet decision',
-      'Identify whether Buy Box Review or Tier 2 is the right next move',
-    ],
-    upsell: {
-      label: 'Most common next step: Buy Box Review',
-      description: 'If the issue is strategy and criteria, we tighten the buy box next so you stop chasing the wrong deals.',
-      href: '/services/buy-box-review',
-    },
+    key: 'submit-deal',
+    name: 'Submit a Deal',
+    description: 'For wholesalers, agents, referral partners, and deal sources who want an opportunity reviewed.',
+    href: '/submit-deal',
+    cta: 'Submit a Deal',
   },
   {
-    key: 'buy-box-review',
-    slug: 'buy-box-review',
-    name: 'Buy Box Review',
-    price: '$147',
-    turnaround: 'Review + recommendations within 3 business days',
-    whoItsFor: 'Best for investors who are active enough to look at deals, but still too broad, too reactive, or too inconsistent.',
-    positioning: 'This sharpens your market, property criteria, budget range, and deal standards so your pipeline gets cleaner and your underwriting gets faster.',
-    description: 'We review the market you are targeting, what you are actually equipped to buy, and where your current criteria are leaking time or capital.',
-    deliverables: [
-      'Review of your target market, price band, and strategy fit',
-      'Refined acquisition criteria with clear guardrails',
-      'Clear notes on what to avoid, what to double down on, and what to track',
-    ],
-    outcomes: [
-      'Tighter filters and fewer wasted seller conversations',
-      'Cleaner deal flow that matches your actual capacity',
-      'A stronger setup before Deal Audit, Tier 1, or Tier 2',
-    ],
-    upsell: {
-      label: 'Best upgrade: Tier 2 Deal Analysis',
-      description: 'Once the buy box is clear, Tier 2 helps you pressure test live opportunities with stronger review support.',
-      href: '/services/tier-2',
-    },
+    key: 'property-review',
+    name: 'Start Property Review',
+    description: 'For owners and landowners deciding whether to sell, partner, or improve before sale.',
+    href: '/property-owners',
+    cta: 'Start Property Review',
   },
   {
-    key: 'deal-audit',
-    slug: 'deal-audit',
-    name: 'Deal Audit',
-    price: '$297',
-    turnaround: 'Underwriting review within 48 hours',
-    whoItsFor: 'Best for investors with a live deal in front of them who want an experienced second set of eyes before committing capital.',
-    positioning: 'A fast underwriting sanity check for real deals, not theory. Use it before earnest money, before hard money, or before a bad buy becomes an expensive lesson.',
-    description: 'We look at your numbers, assumptions, rehab scope, and margin story to help you decide whether the opportunity is viable, risky, or worth renegotiating.',
-    deliverables: [
-      'Review of deal assumptions, margin, and likely pressure points',
-      'Notes on rehab, execution, or exit risks that deserve attention',
-      'Clear recommendation: proceed, renegotiate, or walk away',
-    ],
-    outcomes: [
-      'Avoid thin deals disguised as opportunities',
-      'Enter the deal with clearer numbers and better questions',
-      'See whether Tier 2 or Tier 3 makes sense if deeper review or deal-desk support is needed',
-    ],
-    upsell: {
-      label: 'Natural upgrade: Tier 2 or Tier 3',
-      description: 'If you want ongoing review or faster deal support, we move from one live audit into the right long-term working relationship.',
-      href: '/services#tiers',
-    },
+    key: 'investor-intake',
+    name: 'Investor Intake',
+    description: 'For investors and operators who need help evaluating, structuring, packaging, or executing deals.',
+    href: '/contact',
+    cta: 'Apply for Investor Support',
   },
 ];
 
-export const digitalOffers: ProductOffer[] = [
+export const selfServeOffers: ProductOffer[] = [
   {
     key: 'buy-box-toolkit',
     slug: 'buy-box-toolkit',
     name: 'Buy Box Toolkit',
     price: '$29',
     turnaround: 'Instant digital delivery',
-    badge: 'Downloadable templates',
-    whoItsFor: 'Best for early-stage investors and anyone who needs a clearer acquisition filter before paying for live help.',
-    positioning: 'A lightweight digital starter pack that helps you stop chasing random deals and define a cleaner box for what you should actually buy.',
-    description: 'This toolkit packages the core worksheets, prompts, and filters we use to help investors tighten criteria fast. It is a practical first step before a strategy call or buy box review.',
-    deliverables: [
-      'Buy box worksheet for market, property, and budget guardrails',
-      'Lead screening checklist to qualify inbound opportunities faster',
-      'Acquisition scorecard to compare deals side by side',
+    badge: 'Self-serve product',
+    whoItsFor: 'Investors who need a sharper acquisition filter before paying for live review.',
+    description: 'A practical first step for investors who want more discipline before they spend more time or money.',
+    deliverables:
+      [
+        'Buy box worksheet for market, property type, and budget guardrails',
+        'Lead screening checklist for faster first-pass decisions',
+        'Acquisition scorecard to compare opportunities consistently',
+      ],
+    included: [
+      'Buy box worksheet for market, property type, and budget guardrails',
+      'Lead screening checklist for faster first-pass decisions',
+      'Acquisition scorecard to compare opportunities consistently',
     ],
-    outcomes: [
-      'Create faster no-go decisions on weak leads',
-      'Clarify the market and deal type you should focus on',
-      'Prepare for Buy Box Review or Tier 2 with clearer criteria',
-    ],
-    upsell: {
-      label: 'Best next step: Buy Box Review',
-      description: 'Use the toolkit first, then let us pressure test and sharpen the criteria with direct feedback.',
-      href: '/services/buy-box-review',
-    },
+    avoids: 'Chasing random deals that do not fit your real capacity or market.',
+    outcome: 'A cleaner acquisition filter and better screening discipline.',
+    outcomes: ['Create faster no-go decisions on weak leads', 'Clarify the market and deal type you should focus on', 'Prepare for deeper review with stronger filters already in place'],
+    cta: 'Get the Toolkit',
+    positioning: 'A practical first step for investors who want more discipline before they spend more time or money.',
+    upsell: { label: 'Best next step: Buy Box Review', description: 'If your filters still need pressure-testing, move into a direct review.', href: '/services/buy-box-review' },
   },
   {
     key: 'rehab-calculator',
@@ -146,164 +135,372 @@ export const digitalOffers: ProductOffer[] = [
     name: 'Rehab Scope and Margin Calculator',
     price: '$49',
     turnaround: 'Instant digital delivery',
-    badge: 'Template + underwriting tool',
-    whoItsFor: 'Best for investors who can source leads, but need a cleaner way to budget scope, stress margins, and avoid skinny deals.',
-    positioning: 'A practical spreadsheet-based tool for quickly testing rehab assumptions before you spend money, lose earnest money, or overpay for speed.',
-    description: 'We turned the common underwriting checks into a usable calculator with room for rehab, holding costs, margin thresholds, and exit sensitivity.',
-    deliverables: [
+    badge: 'Self-serve product',
+    whoItsFor: 'Investors underwriting rehab opportunities who need a cleaner way to test scope and margin.',
+    description: 'A straightforward tool for investors who want tighter numbers and fewer underwriting blind spots.',
+    deliverables:
+      [
+        'Rehab line-item calculator with margin summary',
+        'Holding and closing cost stress-test tabs',
+        'Decision prompts for proceed, renegotiate, or walk away',
+      ],
+    included: [
       'Rehab line-item calculator with margin summary',
-      'Holding and closing cost stress test tabs',
-      'Simple decision prompts for renegotiate, proceed, or walk',
+      'Holding and closing cost stress-test tabs',
+      'Decision prompts for proceed, renegotiate, or walk away',
     ],
-    outcomes: [
-      'Catch thin-deal assumptions earlier',
-      'Underwrite faster with a repeatable structure',
-      'Bridge naturally into Deal Audit when a live deal appears',
-    ],
-    upsell: {
-      label: 'Best next step: Deal Audit',
-      description: 'When the deal gets real, add an experienced human review on top of the calculator.',
-      href: '/services/deal-audit',
-    },
+    avoids: 'Underestimating scope, overpaying for speed, or forcing thin deals to work.',
+    outcome: 'Faster, more grounded underwriting before a live review is needed.',
+    outcomes: ['Catch thin-deal assumptions earlier', 'Underwrite with a repeatable structure', 'Move into live review with stronger numbers already tested'],
+    cta: 'Access the Calculator',
+    positioning: 'A straightforward tool for investors who want tighter numbers and fewer underwriting blind spots.',
+    upsell: { label: 'Best next step: Deal Audit', description: 'When the deal is real, add a live underwriting review on top of the calculator.', href: '/services/deal-audit' },
   },
   {
     key: 'deal-breakdown-vault',
     slug: 'deal-breakdown-vault',
     name: 'Deal Breakdown Vault',
     price: '$79',
-    turnaround: 'Instant access to current library',
-    badge: 'Narrated deal lessons',
-    whoItsFor: 'Best for people who learn well from examples and want short, premium-feeling deal education before jumping into higher-touch support.',
-    positioning: 'An entry-level educational product built around narrated deal breakdowns, buy-box mistakes, and clearer decision-making for real investors.',
-    description: 'Instead of generic course fluff, this vault focuses on short lessons that help you think better about real estate decisions and move forward with more confidence.',
-    deliverables: [
-      'Short-form narrated deal breakdown videos',
-      'Lessons on buy-box mistakes, margin traps, and execution logic',
-      'Practical notes that point to the right next offer',
+    turnaround: 'Instant access',
+    badge: 'Self-serve product',
+    whoItsFor: 'Investors who learn best from examples and want better judgment before moving into live support.',
+    description: 'A serious example-based learning tool, not a hype-driven course funnel.',
+    deliverables:
+      [
+        'Narrated deal breakdown examples',
+        'Lessons on buy box mistakes, margin traps, and execution logic',
+        'Notes that help point to the right next support level',
+      ],
+    included: [
+      'Narrated deal breakdown examples',
+      'Lessons on buy box mistakes, margin traps, and execution logic',
+      'Notes that help point to the right next support level',
     ],
-    outcomes: [
-      'Build confidence before a call or review offer',
-      'Understand how experienced investors think through deals and risk',
-      'Create a natural path into Strategy Call, Deal Audit, or membership',
-    ],
-    upsell: {
-      label: 'Best next step: Investor Essentials Membership',
-      description: 'If you want fresh training and templates monthly, the membership is the clean upgrade.',
-      href: '/services/investor-essentials-membership',
-    },
+    avoids: 'Repeating common judgment mistakes or relying on vague internet advice.',
+    outcome: 'Stronger pattern recognition and more confident decision-making.',
+    outcomes: ['Learn from examples instead of vague theory', 'Build judgment before a live deal appears', 'Create a better bridge into higher-touch support'],
+    cta: 'Access the Vault',
+    positioning: 'A serious example-based learning tool, not a hype-driven course funnel.',
+    upsell: { label: 'Best next step: Operator Strategy Call', description: 'Move from examples into a focused conversation about your own next move.', href: '/services/operator-strategy-call' },
   },
 ];
 
-export const membershipOffers: ProductOffer[] = [
+export const oneTimeOffers: OneTimeOffer[] = [
   {
-    key: 'investor-essentials-membership',
-    slug: 'investor-essentials-membership',
-    name: 'Investor Essentials Membership',
-    price: '$59/month',
-    turnaround: 'Monthly recurring access',
-    badge: 'Entry-level membership',
-    whoItsFor: 'Best for investors who are not ready for a full recurring tier yet, but want consistent templates, training, and next-step guidance.',
-    positioning: 'A practical monthly membership for investors who want to stay sharp, build confidence, and keep momentum between deals.',
-    description: 'This membership combines templates, narrated deal lessons, and monthly implementation prompts that prepare you for strategy calls, audits, and Tier 2.',
-    deliverables: [
-      'Monthly narrated educational deal breakdown',
-      'Fresh template, scorecard, or worksheet drop each month',
-      'Member-only notes that point to the smartest next move',
+    key: 'operator-call',
+    slug: 'operator-strategy-call',
+    name: 'Operator Strategy Call',
+    price: '$97',
+    turnaround: '45-minute call plus recap',
+    whoItsFor: 'Investors or operators who need a direct conversation to pressure-test the next move.',
+    description: 'A focused first step when the issue is judgment, not just information.',
+    deliverables:
+      [
+        'Focused strategy call around your current bottleneck or decision',
+        'Direct recommendation on market, approach, or next step',
+        'Simple follow-up recap you can act on immediately',
+      ],
+    included: [
+      'Focused strategy call around your current bottleneck or decision',
+      'Direct recommendation on market, approach, or next step',
+      'Simple follow-up recap you can act on immediately',
     ],
-    outcomes: [
-      'Stay engaged with a lower-friction paid relationship',
-      'Build confidence before moving into deeper services',
-      'Create a smoother path into Strategy Call, Deal Audit, and Tier 2',
+    avoids: 'Losing momentum while circling the same question without a decision framework.',
+    outcome: 'Clearer next steps and a better sense of whether deeper support is needed.',
+    outcomes: ['Stop circling the same decision', 'Get a direct recommendation on the next move', 'Know whether deeper review is actually necessary'],
+    cta: 'Book Strategy Call',
+    positioning: 'A focused first step when the issue is judgment, not just information.',
+    upsell: { label: 'Common next step: Buy Box Review', description: 'If the real issue is strategy and acquisition criteria, refine the box next.', href: '/services/buy-box-review' },
+  },
+  {
+    key: 'buy-box-review',
+    slug: 'buy-box-review',
+    name: 'Buy Box Review',
+    price: '$147',
+    turnaround: 'Review within 3 business days',
+    whoItsFor: 'Investors whose criteria are too broad, too reactive, or not aligned with their actual capacity.',
+    description: 'For investors who want to stop being busy and start being more selective.',
+    deliverables:
+      [
+        'Review of your target market, price band, and strategy fit',
+        'Refined acquisition criteria with clearer guardrails',
+        'Notes on what to avoid, what to tighten, and what to track',
+      ],
+    included: [
+      'Review of your target market, price band, and strategy fit',
+      'Refined acquisition criteria with clearer guardrails',
+      'Notes on what to avoid, what to tighten, and what to track',
     ],
-    upsell: {
-      label: 'Best next step: Tier 2 Deal Analysis',
-      description: 'Once you are ready for live deal help, Tier 2 is the natural next step.',
-      href: '/services/tier-2',
-    },
+    avoids: 'Wasting time on deals that were never a real fit in the first place.',
+    outcome: 'A sharper buy box and cleaner deal flow.',
+    outcomes: ['Tighter filters and fewer wasted conversations', 'Better alignment between criteria and actual capacity', 'A stronger setup before live deal review'],
+    cta: 'Request Buy Box Review',
+    positioning: 'For investors who want to stop being busy and start being more selective.',
+    upsell: { label: 'Best upgrade: Deal Analysis Support', description: 'Once the buy box is clearer, recurring review support becomes more useful.', href: '/contact' },
+  },
+  {
+    key: 'deal-audit',
+    slug: 'deal-audit',
+    name: 'Deal Audit',
+    price: '$297',
+    turnaround: 'Review within 48 hours',
+    whoItsFor: 'Investors with a live opportunity who want an experienced second set of eyes before committing.',
+    description: 'A fast, serious underwriting review for investors making real decisions.',
+    deliverables:
+      [
+        'Review of assumptions, margin, and major pressure points',
+        'Notes on rehab, execution, financing, or exit risk',
+        'A direct recommendation to proceed, renegotiate, or walk away',
+      ],
+    included: [
+      'Review of assumptions, margin, and major pressure points',
+      'Notes on rehab, execution, financing, or exit risk',
+      'A direct recommendation to proceed, renegotiate, or walk away',
+    ],
+    avoids: 'Mistaking a live deal for a good deal just because it is in front of you now.',
+    outcome: 'Better go, no-go, or renegotiation judgment on active opportunities.',
+    outcomes: ['Avoid thin deals disguised as opportunities', 'See the pressure points more clearly', 'Make a cleaner decision on whether to move, renegotiate, or walk'],
+    cta: 'Request Deal Audit',
+    positioning: 'A fast, serious underwriting review for investors making real decisions.',
+    upsell: { label: 'Natural next step: Deal Desk', description: 'If you need recurring help instead of one-off review, move into a stronger ongoing support layer.', href: '/contact' },
   },
 ];
 
-export const tierSummaries = [
+export const recurringPlans: RecurringPlan[] = [
   {
-    key: 'tier-1',
-    name: 'Tier 1: Deal Flow Access',
+    key: 'deal-flow-access',
+    slug: 'tier-1',
+    name: 'Deal Flow Access',
     price: '$99-$299/month',
-    tag: 'A lower-friction entry point',
-    whoItsFor: 'You want curated off-market opportunities, basic deal summaries, and market visibility without jumping straight into high-touch support.',
-    deliverables: [
-      'Access to off-market deal flow',
-      'Basic deal summaries that help you assess fit faster',
-      'Ongoing market insight to keep you close to live opportunities',
+    tag: 'Entry recurring support',
+    whoItsFor: 'Investors who want better visibility into opportunities without starting with high-touch support.',
+    description: 'A lower-friction recurring layer for buyers who want cleaner market awareness before deeper involvement.',
+    deliverables:
+      [
+        'Curated opportunity visibility',
+        'Basic deal summaries',
+        'Market awareness that keeps you close to live activity',
+      ],
+    included: [
+      'Curated opportunity visibility',
+      'Basic deal summaries',
+      'Market awareness that keeps you close to live activity',
     ],
-    cta: 'See Tier 1 details',
-    href: '/services/tier-1',
-  },
-  {
-    key: 'tier-2',
-    name: 'Tier 2: Deal Analysis',
-    price: '$500-$1,000/month',
-    tag: 'For active buyers making real decisions',
-    whoItsFor: 'You have deals coming in and want experienced review before you commit time, earnest money, or capital.',
-    deliverables: [
-      'Deal submission and review support',
-      'ARV validation and rehab reality checks',
-      'Go, no-go, or renegotiate guidance on live opportunities',
-    ],
-    cta: 'See Tier 2 details',
-    href: '/services/tier-2',
-  },
-  {
-    key: 'tier-3',
-    name: 'Tier 3: Deal Desk',
-    price: '$1,500-$3,000/month',
-    tag: 'For investors who need a sharper operating edge',
-    whoItsFor: 'You want faster access, more reviews, and practical guidance around structuring, buyers, and lenders as deal volume increases.',
-    deliverables: [
-      'Unlimited deal reviews',
-      'Structuring guidance and quick access when time matters',
-      'Lender and buyer direction to help keep deals moving',
-    ],
-    cta: 'See Tier 3 details',
-    href: '/services/tier-3',
-  },
-  {
-    key: 'tier-4',
-    name: 'Tier 4: Operator',
-    price: '$3,000-$7,500/month',
-    tag: 'Hands-on support for active operators',
-    whoItsFor: 'You want weekly touchpoints, execution guidance, and priority support while actively building or tightening your operation.',
-    deliverables: [
-      'Weekly calls and hands-on execution guidance',
-      'Priority access when deals or decisions get time-sensitive',
-      'Support designed to help you move with more confidence and less drift',
-    ],
-    cta: 'Apply for Tier 4',
+    avoids: 'Operating in a vacuum or relying only on random inbound leads.',
+    outcome: 'Better market awareness and a cleaner entry point into recurring support.',
+    outcomes: ['Stay closer to live opportunities', 'See more of the market without a full high-touch relationship', 'Create a smoother ramp into deeper support when needed'],
+    cta: 'Apply for Deal Flow Access',
     href: '/contact',
   },
   {
-    key: 'tier-5',
-    name: 'Tier 5: Inner Circle',
-    price: '$5,000-$10,000/month + backend',
-    tag: 'Private, high-touch relationship',
-    whoItsFor: 'You want a deeper working relationship centered around partnership, joint-venture opportunities, and profit participation.',
-    deliverables: [
-      'Private deal partnership conversations',
-      'Selective JV opportunities',
-      'Profit participation structure based on backend alignment',
+    key: 'deal-analysis-support',
+    slug: 'tier-2',
+    name: 'Deal Analysis Support',
+    price: '$500-$1,000/month',
+    tag: 'Recurring deal review',
+    whoItsFor: 'Investors who have opportunities coming in and want structured monthly review support.',
+    description: 'Monthly support for investors who want recurring deal judgment instead of one-off reactions.',
+    deliverables:
+      [
+        'A defined number of deal reviews per month',
+        'ARV, rehab, and margin pressure-testing on live opportunities',
+        'Go, no-go, or renegotiation guidance',
+      ],
+    included: [
+      'A defined number of deal reviews per month',
+      'ARV, rehab, and margin pressure-testing on live opportunities',
+      'Go, no-go, or renegotiation guidance',
     ],
-    cta: 'Apply for Inner Circle',
+    avoids: 'Making repeated underwriting mistakes on active deals.',
+    outcome: 'Stronger recurring deal judgment and better underwriting discipline.',
+    outcomes: ['Improve recurring underwriting decisions', 'Get defined deal reviews each month', 'Reduce repeated mistakes on live opportunities'],
+    cta: 'Apply for Deal Analysis Support',
+    href: '/contact',
+  },
+  {
+    key: 'deal-desk',
+    slug: 'tier-3',
+    name: 'Deal Desk',
+    price: '$1,500-$3,000/month',
+    tag: 'More active support',
+    whoItsFor: 'Active investors who need faster review, more deal handling, and stronger support around packaging and structure.',
+    description: 'A more active support layer for investors who need recurring review plus faster decision support.',
+    deliverables:
+      [
+        'More frequent deal reviews per month',
+        'Buy box or underwriting reviews as needed',
+        'Packaging and decision support when opportunities get time-sensitive',
+      ],
+    included: [
+      'More frequent deal reviews per month',
+      'Buy box or underwriting reviews as needed',
+      'Packaging and decision support when opportunities get time-sensitive',
+    ],
+    avoids: 'Review bottlenecks and weak presentation when deal volume increases.',
+    outcome: 'Faster, stronger deal handling with more operating support behind it.',
+    outcomes: ['Handle more volume without weaker decisions', 'Get faster support when timing matters', 'Package and structure opportunities more clearly'],
+    cta: 'Apply for Deal Desk',
+    href: '/contact',
+  },
+  {
+    key: 'operator-support',
+    slug: 'tier-4',
+    name: 'Operator Support',
+    price: '$3,000-$7,500/month',
+    tag: 'Hands-on operator layer',
+    whoItsFor: 'Investors actively operating projects who need underwriting support, buy box refinement, and project-level check-ins.',
+    description: 'Hands-on support for active operators who need more than deal review alone.',
+    deliverables:
+      [
+        'Recurring deal reviews per month',
+        'Buy box or underwriting reviews as strategy evolves',
+        'Active project check-ins tied to live execution',
+      ],
+    included: [
+      'Recurring deal reviews per month',
+      'Buy box or underwriting reviews as strategy evolves',
+      'Active project check-ins tied to live execution',
+    ],
+    avoids: 'Execution drift, weak decisions under pressure, and project-level blind spots.',
+    outcome: 'Better operating consistency and better judgment during live execution.',
+    outcomes: ['Improve decisions during active execution', 'Reduce drift on live projects', 'Keep strategy and project oversight closer together'],
+    cta: 'Apply for Operator Support',
+    href: '/contact',
+  },
+  {
+    key: 'private-partner-circle',
+    slug: 'tier-5',
+    name: 'Private Partner Circle',
+    price: '$5,000-$10,000/month plus backend as applicable',
+    tag: 'Selective private relationship',
+    whoItsFor: 'Serious operators and capital relationships looking for a deeper, more selective working structure.',
+    description: 'A selective private relationship for serious operators and high-trust strategic discussions.',
+    deliverables:
+      [
+        'Private strategic support conversations',
+        'Selective discussion around partnership or shared opportunities',
+        'Higher-trust collaboration where fit and alignment justify it',
+      ],
+    included: [
+      'Private strategic support conversations',
+      'Selective discussion around partnership or shared opportunities',
+      'Higher-trust collaboration where fit and alignment justify it',
+    ],
+    avoids: 'High-stakes partnership conversations with weak fit or unclear alignment.',
+    outcome: 'A more selective, private working relationship for the right opportunities.',
+    outcomes: ['Create better fit before high-stakes collaboration', 'Keep strategic discussions private and selective', 'Build a stronger relationship where alignment is real'],
+    cta: 'Apply for Private Partner Circle',
     href: '/contact',
   },
 ];
+
+export const addOnOffers: AddOnOffer[] = [
+  {
+    key: 'construction-oversight',
+    name: 'Construction Oversight',
+    price: '$1K-$3K/month',
+    whoItsFor: 'Investors with active projects that need more eyes on scope, progress, budget, and contractor execution.',
+    description: 'Execution support for investors who need tighter control over active project movement.',
+    deliverables:
+      [
+        'Oversight support tied to live execution',
+        'Scope and budget review',
+        'Feedback on contractor and project drift',
+      ],
+    included: [
+      'Oversight support tied to live execution',
+      'Scope and budget review',
+      'Feedback on contractor and project drift',
+    ],
+    avoids: 'Losing margin through weak scope control or unmanaged execution drift.',
+    outcome: 'Better visibility and tighter control during active execution.',
+    outcomes: ['Catch scope and execution drift earlier', 'Keep budget and progress under closer review', 'Bring more control into active project execution'],
+    cta: 'Request Construction Oversight',
+    href: '/contact',
+  },
+  {
+    key: 'full-deal-packaging',
+    name: 'Full Deal Packaging',
+    price: '$2K-$5K per deal',
+    whoItsFor: 'Investors who need a cleaner, more credible presentation for lenders, buyers, or partners.',
+    description: 'Packaging support for opportunities that need stronger presentation before they move forward.',
+    deliverables:
+      [
+        'Deal packaging support',
+        'Clearer underwriting presentation',
+        'Organized materials for next-step conversations',
+      ],
+    included: [
+      'Deal packaging support',
+      'Clearer underwriting presentation',
+      'Organized materials for next-step conversations',
+    ],
+    avoids: 'Weak deal presentation that creates confusion or undermines credibility.',
+    outcome: 'A stronger package for moving the opportunity forward.',
+    outcomes: ['Present opportunities more clearly', 'Improve lender, buyer, or partner-facing materials', 'Move the deal forward with stronger credibility'],
+    cta: 'Request Deal Packaging',
+    href: '/contact',
+  },
+  {
+    key: 'disposition-support',
+    name: 'Disposition Support',
+    price: 'Flat fee or percentage',
+    whoItsFor: 'Investors or operators preparing to sell, assign, or position a deal for exit.',
+    description: 'Support for preparing a cleaner, more credible exit process.',
+    deliverables:
+      [
+        'Disposition planning support',
+        'Positioning and packaging help',
+        'Guidance around buyer-facing presentation',
+      ],
+    included: [
+      'Disposition planning support',
+      'Positioning and packaging help',
+      'Guidance around buyer-facing presentation',
+    ],
+    avoids: 'A weak or rushed exit process that leaves value on the table.',
+    outcome: 'Better exit positioning and a cleaner disposition process.',
+    outcomes: ['Avoid a weak or rushed exit', 'Position the deal more credibly for buyers', 'Create a cleaner sale or assignment process'],
+    cta: 'Request Disposition Support',
+    href: '/contact',
+  },
+];
+
+export function getSelfServeOfferBySlug(slug: string) {
+  return selfServeOffers.find((offer) => offer.slug === slug);
+}
+
+export function getOneTimeOfferBySlug(slug: string) {
+  return oneTimeOffers.find((offer) => offer.slug === slug);
+}
+
+export function getRecurringPlanBySlug(slug: string) {
+  return recurringPlans.find((offer) => offer.slug === slug);
+}
+
+
+export const starterOffers = oneTimeOffers;
+export const digitalOffers = selfServeOffers;
+export const membershipOffers = [];
+export const tierSummaries = recurringPlans.map((plan) => ({
+  key: plan.key,
+  name: plan.name,
+  price: plan.price,
+  tag: plan.tag,
+  whoItsFor: plan.whoItsFor,
+  deliverables: plan.included,
+  cta: plan.cta,
+  href: plan.href,
+}));
 
 export function getStarterOfferBySlug(slug: string) {
-  return starterOffers.find((offer) => offer.slug === slug);
+  return oneTimeOffers.find((offer) => offer.slug === slug);
 }
 
 export function getDigitalOfferBySlug(slug: string) {
-  return digitalOffers.find((offer) => offer.slug === slug);
+  return selfServeOffers.find((offer) => offer.slug === slug);
 }
 
 export function getMembershipOfferBySlug(slug: string) {
-  return membershipOffers.find((offer) => offer.slug === slug);
+  return undefined;
 }
