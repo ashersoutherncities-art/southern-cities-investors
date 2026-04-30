@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "About | Southern Cities Investors",
   description:
-    "Learn about Darius Walton and Southern Cities Investors -- Charlotte, NC-based real estate acquisitions firm focused on deep discount properties.",
+    "Learn about Southern Cities Investors, a North Carolina-based real estate acquisition, evaluation, partnership, and investor support platform.",
 };
 
 export default function AboutPage() {
@@ -17,7 +17,7 @@ export default function AboutPage() {
             About Us
           </p>
           <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">
-            Built on Discipline, Driven by Data
+            Built for Serious Real Estate Decisions
           </h1>
           <p className="mt-6 text-lg text-white/70 max-w-2xl">
             Southern Cities Investors is a division of Southern Cities
@@ -46,11 +46,7 @@ export default function AboutPage() {
                   to acquisitions and portfolio management.
                 </p>
                 <p>
-                  Based in Charlotte, NC, Darius has built expertise across 30+
-                  real estate markets, developing a deep understanding of
-                  local market dynamics, pricing inefficiencies, and value
-                  creation opportunities that institutional buyers and retail
-                  investors consistently overlook.
+                  Based in Charlotte, NC, Darius operates across North Carolina and Southern markets with a focus on practical underwriting, execution reality, and opportunities that need more than a generic one-size-fits-all answer.
                 </p>
                 <p>
                   Under his leadership, Southern Cities Investors focuses
@@ -76,7 +72,7 @@ export default function AboutPage() {
                 {
                   label: "Focus",
                   value:
-                    "Deep discount acquisitions via off-market sourcing",
+                    "Property review, acquisition, partnerships, and investor support",
                 },
                 {
                   label: "Parent Company",

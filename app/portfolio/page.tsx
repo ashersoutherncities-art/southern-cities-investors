@@ -2,76 +2,57 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Portfolio and Deal Profile | Southern Cities Investors",
+  title: "Representative Deal Logic | Southern Cities Investors",
   description:
-    "Representative acquisition profiles, operating criteria, and review standards for Southern Cities Investors.",
+    "Representative examples showing how Southern Cities Investors thinks about basis, scope, exit pressure, and opportunity fit.",
 };
 
-const caseStudies = [
+const examples = [
   {
-    title: "Case Study 01: Single-Family Value-Add",
-    market: "North Carolina infill market",
-    badge: "Representative case study",
-    dealType: "SFR",
-    motif: "Linear scope",
-    accent: "from-orange/30 via-orange/10 to-transparent",
-    summary:
-      "Representative profile for a cosmetic-to-moderate rehab acquisition where the deal only works if basis discipline, scope control, and resale assumptions stay realistic.",
-    focus: [
-      "Buy at a meaningful discount to repaired value",
-      "Stress rehab, holding, and fee stack before greenlighting",
-      "Avoid deals that only work on optimistic resale assumptions",
+    title: "Example 01: Distressed single-family acquisition",
+    setup: "A dated or distressed house where the opportunity only makes sense if basis, rehab scope, and resale assumptions stay disciplined.",
+    numbers: [
+      { label: "Illustrative repaired value", value: "$230K" },
+      { label: "Illustrative rehab range", value: "$45K-$60K" },
+      { label: "Illustrative gross margin target", value: "Protected after hold, fees, and friction" },
     ],
-    lenses: ["Basis discipline", "Scope control", "Exit realism", "Margin durability"],
-    marginNote: "Strong deals in this category are filtered through basis, scope, and resale discipline before they ever feel exciting.",
+    lessons: [
+      "If the spread disappears when rehab and resale get treated honestly, it is not a strong deal.",
+      "The point is not just buying under list. It is buying at a basis that can survive reality.",
+    ],
   },
   {
-    title: "Case Study 02: Small Multifamily Repositioning",
-    market: "Neighborhood-scale multifamily",
-    badge: "Representative case study",
-    dealType: "Multifamily",
-    motif: "Layered unit economics",
-    accent: "from-navy/30 via-orange/10 to-transparent",
-    summary:
-      "Representative profile for a smaller multifamily opportunity where the edge comes from stronger basis, tighter renovation sequencing, and cleaner operating assumptions, not excitement.",
-    focus: [
-      "Prioritize basis discipline over story-driven upside",
-      "Look at rent lift, turnover friction, and execution drag honestly",
-      "Use underwriting to separate workable deals from attractive distractions",
+    title: "Example 02: Small multifamily repositioning",
+    setup: "A smaller multifamily opportunity where the story sounds good, but the real question is whether lease-up, turnover, and renovation timing still leave room.",
+    numbers: [
+      { label: "Illustrative unit count", value: "8-20 units" },
+      { label: "Key pressure points", value: "Turnover, capex, rent lift, timeline" },
+      { label: "Main underwriting test", value: "Can the deal survive slower execution?" },
     ],
-    lenses: ["Rent lift realism", "Turnover friction", "Renovation sequence", "Execution drag"],
-    marginNote: "The right multifamily opportunity survives slower lease-up, real friction, and more conservative operating assumptions.",
+    lessons: [
+      "Deals that only work on perfect rent growth are usually thinner than they look.",
+      "Execution drag matters just as much as entry price in this category.",
+    ],
   },
   {
-    title: "Case Study 03: Land or Transitional Asset Review",
-    market: "Growth corridor / secondary market",
-    badge: "Representative case study",
-    dealType: "Land",
-    motif: "Exit path discipline",
-    accent: "from-orange/25 via-navy/10 to-transparent",
-    summary:
-      "Representative profile for land or transitional opportunities where value gets created by saying no to weak entitlement stories and filtering hard for realistic exit paths.",
-    focus: [
-      "Pressure test entitlement and exit assumptions early",
-      "Stay conservative on timeline and basis",
-      "Focus on what a real buyer will pay, not theoretical upside",
+    title: "Example 03: Land or transitional site",
+    setup: "A site with upside on paper where entitlement, timeline, buyer depth, or repositioning complexity can change the answer completely.",
+    numbers: [
+      { label: "Illustrative upside question", value: "What is the believable exit, not the best-case exit?" },
+      { label: "Main risk lens", value: "Timeline, capital, and entitlement friction" },
+      { label: "Decision threshold", value: "Does the path justify the complexity?" },
     ],
-    lenses: ["Timeline realism", "Entitlement risk", "Buyer depth", "Exit clarity"],
-    marginNote: "The goal is not theoretical upside. It is a believable path from acquisition to exit with enough room for risk.",
+    lessons: [
+      "Land value is easy to overstate when execution burden gets ignored.",
+      "The right path may be pass, structure differently, or improve before sale instead of buying immediately.",
+    ],
   },
 ];
 
-const operatingStandards = [
-  "Clear acquisition criteria before live offers start going out.",
-  "Review for basis, rehab pressure, holding drag, and margin durability.",
-  "Use products for self-serve prep, services for live decisions, and recurring support only when deal flow justifies it.",
-  "Keep positioning grounded in disciplined buying and execution, not inflated promises.",
-];
-
-const notes = [
-  "These are representative case profiles built to show the underwriting lens and decision standard applied to opportunities that fit the model.",
-  "They are included to make the site more concrete for serious buyers, not to imply every deal performs the same way.",
-  "Actual outcomes always depend on basis, scope, financing, timeline, market conditions, and execution quality.",
+const proofNotes = [
+  "These are representative examples meant to show the decision lens, not promise identical outcomes.",
+  "Actual decisions depend on title, scope, financing, market conditions, timing, and execution capacity.",
+  "Nothing on this page is investment advice, a securities offering, or a guarantee of results.",
 ];
 
 export default function PortfolioPage() {
@@ -79,130 +60,67 @@ export default function PortfolioPage() {
     <>
       <section className="bg-navy text-white py-20 sm:py-24">
         <div className="site-shell">
-          <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">
-            Portfolio and deal profile
-          </p>
+          <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">Representative Examples</p>
           <h1 className="text-4xl sm:text-5xl font-bold tracking-tight max-w-4xl">
-            A clearer view of what Southern Cities Investors is built to evaluate and support.
+            Tangible examples of how opportunities are judged before time and capital move.
           </h1>
           <p className="mt-6 text-lg text-white/70 max-w-3xl">
-            This page is designed to show how opportunities are framed, how decisions are pressure tested, and what kind of acquisition profiles fit the model best.
+            This page is here to make the platform more concrete. The point is not hype. The point is to show what gets pressure tested, what assumptions matter, and how opportunity fit is judged.
           </p>
         </div>
       </section>
 
       <section className="py-20 sm:py-24 bg-white border-b border-navy/10">
-        <div className="site-shell grid lg:grid-cols-[1.05fr_0.95fr] gap-8 items-start">
-          <div>
-            <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">What this page is for</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy">This is a representative proof page, not a vanity gallery.</h2>
-            <p className="mt-4 text-lg text-navy/60 leading-relaxed">
-              The strongest signal for the right buyer is not hype. It is seeing how opportunities are filtered, how margins are protected, and what standards get applied before time and capital are committed.
-            </p>
-          </div>
-
-          <div className="rounded-2xl border border-orange/20 bg-orange/5 p-8">
-            <p className="text-sm font-semibold uppercase tracking-wide text-orange">Operating standards</p>
-            <div className="mt-6 space-y-4 text-sm text-navy/75 leading-relaxed">
-              {operatingStandards.map((item) => (
-                <div key={item} className="flex gap-3">
-                  <span className="text-orange font-bold">✓</span>
-                  <span>{item}</span>
-                </div>
-              ))}
-            </div>
-          </div>
+        <div className="site-shell max-w-4xl">
+          <h2 className="text-3xl font-bold text-navy">Representative examples and underwriting logic</h2>
+          <p className="mt-4 text-lg text-navy/60 leading-relaxed">
+            Good proof is not a generic gallery. It is showing the logic behind the decision. These examples show how basis, scope, margin, timeline, and execution burden shape the answer.
+          </p>
         </div>
       </section>
 
       <section className="py-20 sm:py-24 bg-navy/5 border-b border-navy/10">
-        <div className="site-shell">
-          <div className="max-w-3xl mb-12">
-            <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">Case studies</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy">Representative case studies that show how opportunities are judged.</h2>
-            <p className="mt-4 text-lg text-navy/60">
-              These case studies are designed to make the platform more tangible for serious buyers. The point is not hype. The point is deal logic, margin discipline, and fit.
-            </p>
-          </div>
-
-          <div className="grid gap-8">
-            {caseStudies.map((study) => (
-              <div key={study.title} className="rounded-[2rem] border border-navy/10 bg-white shadow-sm overflow-hidden">
-                <div className={`h-40 bg-gradient-to-br ${study.accent} border-b border-navy/10 relative`}>
-                  <div className="absolute inset-0 opacity-70">
-                    <div className="absolute top-6 left-8 h-20 w-20 rounded-3xl border border-navy/10 bg-white/40 backdrop-blur-sm" />
-                    <div className="absolute top-10 left-16 h-20 w-28 rounded-[2rem] border border-white/40 bg-navy/10" />
-                    <div className="absolute bottom-6 right-10 h-16 w-36 rounded-full border border-orange/30 bg-orange/10" />
-                  </div>
-                  <div className="relative z-10 h-full flex items-end justify-between gap-6 px-8 pb-7">
-                    <div>
-                      <p className="text-xs font-semibold uppercase tracking-[0.24em] text-navy/50">{study.badge}</p>
-                      <h3 className="mt-3 text-3xl font-bold text-navy">{study.title}</h3>
-                      <p className="mt-2 text-sm font-medium text-navy/55 uppercase tracking-wide">{study.market}</p>
-                    </div>
-                    <div className="shrink-0 rounded-2xl border border-white/60 bg-white/70 px-4 py-3 text-right backdrop-blur-sm">
-                      <p className="text-[11px] uppercase tracking-[0.22em] text-navy/45">Case study focus</p>
-                      <p className="mt-1 text-lg font-bold text-navy">{study.dealType}</p>
-                      <p className="text-xs text-navy/55 mt-1">{study.motif}</p>
-                    </div>
+        <div className="site-shell space-y-8">
+          {examples.map((example) => (
+            <div key={example.title} className="rounded-2xl border border-navy/10 bg-white p-8 shadow-sm">
+              <div className="grid lg:grid-cols-[1fr_0.95fr] gap-8 items-start">
+                <div>
+                  <p className="text-sm font-semibold uppercase tracking-wide text-orange">Representative example</p>
+                  <h3 className="mt-3 text-3xl font-bold text-navy">{example.title}</h3>
+                  <p className="mt-4 text-navy/65 leading-relaxed">{example.setup}</p>
+                  <div className="mt-6 space-y-4 text-sm text-navy/70 leading-relaxed">
+                    {example.lessons.map((lesson) => (
+                      <div key={lesson} className="flex gap-3">
+                        <span className="text-orange font-bold">✓</span>
+                        <span>{lesson}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
 
-                <div className="p-8">
-                  <div className="grid xl:grid-cols-[0.95fr_1.05fr] gap-8 items-start">
-                    <div>
-                      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-orange">Scenario</p>
-                      <p className="mt-3 text-sm text-navy/65 leading-relaxed">{study.summary}</p>
-
-                      <div className="mt-6 rounded-2xl border border-navy/10 bg-navy/5 p-5">
-                        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-orange">What had to be true</p>
-                        <div className="mt-4 space-y-3 text-sm text-navy/72">
-                          {study.focus.map((item) => (
-                            <div key={item} className="flex gap-3">
-                              <span className="text-orange font-bold">✓</span>
-                              <span>{item}</span>
-                            </div>
-                          ))}
-                        </div>
+                <div className="rounded-2xl border border-orange/20 bg-orange/5 p-6">
+                  <p className="text-sm font-semibold uppercase tracking-wide text-orange">What the review is checking</p>
+                  <div className="mt-5 space-y-4">
+                    {example.numbers.map((item) => (
+                      <div key={item.label} className="border-b border-orange/20 pb-4 last:border-b-0 last:pb-0">
+                        <p className="text-xs font-semibold uppercase tracking-wide text-navy/45">{item.label}</p>
+                        <p className="mt-1 text-sm font-medium text-navy">{item.value}</p>
                       </div>
-                    </div>
-
-                    <div className="rounded-3xl border border-navy/10 bg-navy text-white p-6 shadow-inner">
-                      <div className="flex items-center justify-between gap-4">
-                        <p className="text-sm font-semibold uppercase tracking-wide text-orange">Underwriting lens</p>
-                        <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] uppercase tracking-[0.2em] text-white/55">
-                          What matters most
-                        </span>
-                      </div>
-
-                      <div className="mt-6 grid sm:grid-cols-2 gap-4">
-                        {study.lenses.map((lens) => (
-                          <div key={lens} className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                            <p className="text-xs uppercase tracking-wide text-white/50">Key filter</p>
-                            <p className="mt-2 text-xl font-bold">{lens}</p>
-                          </div>
-                        ))}
-                      </div>
-
-                      <div className="mt-5 rounded-2xl border border-orange/20 bg-orange/10 p-5">
-                        <p className="text-xs uppercase tracking-wide text-orange">Margin lens</p>
-                        <p className="mt-2 text-sm text-white/82 leading-relaxed">{study.marginNote}</p>
-                      </div>
-                    </div>
+                    ))}
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </section>
 
       <section className="py-20 sm:py-24 bg-white">
         <div className="site-shell grid lg:grid-cols-[0.95fr_1.05fr] gap-8 items-start">
           <div className="rounded-2xl border border-navy/10 bg-white p-8 shadow-sm">
-            <p className="text-sm font-semibold uppercase tracking-wide text-orange">Notes on interpretation</p>
+            <p className="text-sm font-semibold uppercase tracking-wide text-orange">Compliance note</p>
             <div className="mt-5 space-y-4 text-sm text-navy/70 leading-relaxed">
-              {notes.map((note) => (
+              {proofNotes.map((note) => (
                 <div key={note} className="flex gap-3">
                   <span className="text-orange font-bold">•</span>
                   <span>{note}</span>
@@ -212,23 +130,17 @@ export default function PortfolioPage() {
           </div>
 
           <div className="rounded-2xl border border-navy/10 bg-navy text-white p-8">
-            <p className="text-sm font-semibold uppercase tracking-wide text-orange">For qualified conversations</p>
-            <h2 className="mt-3 text-3xl font-bold">Need a more detailed conversation?</h2>
+            <p className="text-sm font-semibold uppercase tracking-wide text-orange">Route the conversation correctly</p>
+            <h2 className="mt-3 text-3xl font-bold">Choose the path that fits the opportunity.</h2>
             <p className="mt-4 text-white/70 leading-relaxed">
-              Buyers, partners, and operators who want to discuss fit, deal profile, or working structure can use the investor intake to start the right conversation.
+              Property owners should start with property review. Deal sources should submit the opportunity. Investors and operators who need deeper review, support, or structure should apply for investor support.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center px-6 py-3 bg-orange hover:bg-orange/90 text-white font-semibold rounded-lg transition-colors"
-              >
-                Apply for investor intake
+              <Link href="/property-owners" className="inline-flex items-center justify-center px-6 py-3 bg-orange hover:bg-orange/90 text-white font-semibold rounded-lg transition-colors">
+                Start Property Review
               </Link>
-              <Link
-                href="/services"
-                className="inline-flex items-center justify-center px-6 py-3 border border-white/15 text-white hover:border-white/30 font-semibold rounded-lg transition-colors"
-              >
-                Review products and services
+              <Link href="/submit-deal" className="inline-flex items-center justify-center px-6 py-3 border border-white/15 text-white hover:border-white/30 font-semibold rounded-lg transition-colors">
+                Submit a Deal
               </Link>
             </div>
           </div>

@@ -17,7 +17,7 @@ export default function PartnersPage() {
             Partners
           </p>
           <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">
-            Built for Serious Operators
+            Built for Serious Capital and Deal Relationships
           </h1>
           <p className="mt-6 text-lg text-white/70 max-w-2xl">
             We work with lenders, JV partners, and wholesalers who share our
@@ -153,7 +153,7 @@ export default function PartnersPage() {
             href="/contact"
             className="inline-flex items-center justify-center mt-8 px-8 py-3.5 bg-orange hover:bg-orange-dark text-white font-semibold rounded-lg transition-colors"
           >
-            Get in Touch
+            Apply for Investor Support
           </Link>
         </div>
       </section>

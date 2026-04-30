@@ -46,12 +46,12 @@ export default function ContactPage() {
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.error || 'Failed to submit investor intake');
+        throw new Error(data.error || 'Failed to submit investor support application');
       }
 
       setSubmitted(true);
     } catch (err: any) {
-      setError(err.message || 'Failed to submit investor intake');
+      setError(err.message || 'Failed to submit investor support application');
     } finally {
       setSubmitting(false);
     }
@@ -70,13 +70,13 @@ export default function ContactPage() {
       <section className="bg-navy text-white py-20 sm:py-24">
         <div className="site-shell">
           <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">
-            Investor Intake
+            Investor Support
           </p>
           <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">
-            Apply to work with Southern Cities Investors
+            Apply for investor support
           </h1>
           <p className="mt-6 text-lg text-white/70 max-w-3xl">
-            This intake is for investors and operators who want the right level of support, from deal flow access and analysis to deal-desk help, operator support, and private Inner Circle conversations.
+            This intake is for investors and operators who need deeper review, deal evaluation support, partnership discussion, or a more hands-on working relationship.
           </p>
           <div className="mt-8 grid sm:grid-cols-3 gap-4 max-w-4xl">
             <div className="rounded-xl border border-white/10 bg-white/5 p-4">
@@ -110,9 +110,9 @@ export default function ContactPage() {
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="rounded-2xl border border-orange/20 bg-orange/5 p-6">
-                    <p className="text-sm font-semibold uppercase tracking-wide text-orange">Private application</p>
+                    <p className="text-sm font-semibold uppercase tracking-wide text-orange">Private review</p>
                     <p className="mt-2 text-sm text-navy/70 leading-relaxed">
-                      Tier 4 Operator, Tier 5 Inner Circle, and add-on requests are reviewed manually so we can match the right level of support before moving forward.
+                      Investor support requests are reviewed manually so we can determine the right fit, level of involvement, and next step before moving forward.
                     </p>
                   </div>
                   <div>
@@ -254,7 +254,7 @@ export default function ContactPage() {
                     disabled={submitting}
                     className="w-full sm:w-auto px-8 py-3.5 bg-orange hover:bg-orange-dark text-white font-semibold rounded-lg transition-colors disabled:opacity-50"
                   >
-                    {submitting ? 'Submitting...' : 'Submit Investor Intake'}
+                    {submitting ? 'Submitting...' : 'Submit Investor Support'}
                   </button>
                 </form>
               )}

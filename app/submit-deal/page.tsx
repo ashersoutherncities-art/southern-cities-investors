@@ -12,21 +12,16 @@ const assetTypes = [
   "Other",
 ];
 
-const dealSources = [
+const submitterRoles = [
   "Wholesaler",
-  "Direct-to-Seller",
   "Agent / Broker",
-  "Auction / Foreclosure",
-  "Bird Dog / Referral",
+  "Direct-to-Seller Operator",
+  "Bird Dog / Referral Partner",
+  "Owner",
   "Other",
 ];
 
-const occupancyOptions = [
-  "Vacant",
-  "Owner-Occupied",
-  "Tenant-Occupied",
-  "Unknown",
-];
+const occupancyOptions = ["Vacant", "Owner-Occupied", "Tenant-Occupied", "Unknown"];
 
 const dealStructures = [
   "Assignment",
@@ -35,6 +30,27 @@ const dealStructures = [
   "Subject-To",
   "Seller Finance",
   "Other / Flexible",
+];
+
+const reviewPoints = [
+  "Property type, location, and realistic market fit",
+  "Asking price, estimated rehab, and margin pressure",
+  "Seller situation, deal structure, and timeline friction",
+  "Whether the opportunity looks like a direct buy, a pass, or needs more work before it is real",
+];
+
+const fitGuidelines = [
+  "Single-family, small multifamily, land, and select commercial opportunities",
+  "Deals where the basis, rehab scope, and exit logic can still hold up under conservative review",
+  "Situations with a credible path to title clarity, access, and execution",
+  "Submissions with enough information to evaluate whether the opportunity is actually actionable",
+];
+
+const nonFitGuidelines = [
+  "Deals that only work on inflated ARV or unrealistic rent assumptions",
+  "Opportunities with unresolved title, legal, environmental, or access issues and no path to resolution",
+  "Situations where the spread disappears once scope, holding costs, or market friction are treated honestly",
+  "Incomplete submissions with no meaningful numbers, context, or path forward",
 ];
 
 export default function SubmitDealPage() {
@@ -60,7 +76,6 @@ export default function SubmitDealPage() {
     occupancy: "",
     sellerSituation: "",
     dealStructure: "",
-    dealSource: "",
     timeline: "",
     notes: "",
   });
@@ -108,103 +123,87 @@ export default function SubmitDealPage() {
     <>
       <section className="bg-navy text-white py-20 sm:py-24">
         <div className="site-shell">
-          <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">
-            Deal Submission Portal
-          </p>
-          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">
-            Submit a deal for review
-          </h1>
+          <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">Deal Submission</p>
+          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">Submit a deal for review.</h1>
           <p className="mt-6 text-lg text-white/70 max-w-3xl">
-            Whether you are a wholesaler, agent, bird dog, or direct seller, submit your
-            deal here. If it meets our buy box, we move fast.
+            This path is for wholesalers, agents, operators, referral partners, and owners who want Southern Cities Investors to review whether an opportunity looks actionable, mispriced, thin, or worth a deeper conversation.
           </p>
+          <div className="mt-8 flex flex-col sm:flex-row gap-4">
+            <Link href="#deal-form" className="inline-flex items-center justify-center px-8 py-3.5 bg-orange hover:bg-orange-dark text-white font-semibold rounded-lg transition-colors">
+              Submit a Deal
+            </Link>
+            <Link href="/contact" className="inline-flex items-center justify-center px-8 py-3.5 border border-white/20 hover:border-white/40 text-white font-semibold rounded-lg transition-colors">
+              Apply for Investor Support
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* Buy Box */}
       <section className="py-16 bg-white border-b border-navy/10">
-        <div className="site-shell">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-2xl font-bold text-navy mb-8 text-center">Our Buy Box</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-navy/5 rounded-2xl p-8">
-                <h3 className="text-lg font-bold text-navy mb-4">What we buy</h3>
-                <ul className="space-y-3 text-navy/70">
-                  <li>Single-family, small multifamily, and land</li>
-                  <li>3+ beds, 1+ baths preferred</li>
-                  <li>1,000+ square feet</li>
-                  <li>Cities with 15,000+ population</li>
-                  <li>Typically at 65% of ARV or below</li>
-                  <li>Markets with strong resale demand</li>
-                  <li>Vacant or occupant-flexible</li>
-                  <li>Any condition</li>
-                </ul>
-              </div>
-              <div className="bg-navy/5 rounded-2xl p-8">
-                <h3 className="text-lg font-bold text-navy mb-4">What we do not buy</h3>
-                <ul className="space-y-3 text-navy/70">
-                  <li>Mobile homes on leased land</li>
-                  <li>Properties with unresolvable title or environmental issues</li>
-                  <li>Markets under 15,000 population</li>
-                  <li>Deals that do not meet minimum spread requirements</li>
-                  <li>Commercial zoning unless intentional</li>
-                  <li>Flood zone without viable insurance economics</li>
-                </ul>
-              </div>
+        <div className="site-shell grid lg:grid-cols-[1fr_1fr] gap-8 items-start">
+          <div>
+            <h2 className="text-2xl sm:text-3xl font-bold text-navy">What happens after you submit</h2>
+            <div className="mt-6 space-y-4 text-sm text-navy/70 leading-relaxed">
+              {reviewPoints.map((item) => (
+                <div key={item} className="flex gap-3">
+                  <span className="text-orange font-bold">✓</span>
+                  <span>{item}</span>
+                </div>
+              ))}
             </div>
+          </div>
 
-            <div className="mt-8 bg-orange/5 border border-orange/20 rounded-2xl p-8">
-              <h3 className="text-lg font-bold text-navy mb-4">Acquisition pricing by asset value</h3>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div>
-                  <p className="text-sm text-navy/50 mb-1">ARV under $150k</p>
-                  <p className="text-2xl font-bold text-navy">50-55%</p>
-                  <p className="text-xs text-navy/50 mt-1">of ARV</p>
+          <div className="rounded-2xl border border-orange/20 bg-orange/5 p-8">
+            <p className="text-sm font-semibold uppercase tracking-wide text-orange">Important note on criteria</p>
+            <p className="mt-4 text-sm text-navy/75 leading-relaxed">
+              We do not use one public formula to approve or reject every deal. The real review depends on basis, rehab scope, timeline, liquidity, exit path, and execution risk. If a submission looks interesting but incomplete, the next step may be clarification, not a yes.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-navy/5 border-b border-navy/10">
+        <div className="site-shell grid md:grid-cols-2 gap-8">
+          <div className="rounded-2xl border border-navy/10 bg-white p-8 shadow-sm">
+            <h3 className="text-xl font-bold text-navy">Usually a better fit</h3>
+            <div className="mt-6 space-y-4 text-sm text-navy/70 leading-relaxed">
+              {fitGuidelines.map((item) => (
+                <div key={item} className="flex gap-3">
+                  <span className="text-orange font-bold">✓</span>
+                  <span>{item}</span>
                 </div>
-                <div>
-                  <p className="text-sm text-navy/50 mb-1">ARV $150k-$225k</p>
-                  <p className="text-2xl font-bold text-navy">55-60%</p>
-                  <p className="text-xs text-navy/50 mt-1">of ARV</p>
+              ))}
+            </div>
+          </div>
+          <div className="rounded-2xl border border-navy/10 bg-white p-8 shadow-sm">
+            <h3 className="text-xl font-bold text-navy">Usually not enough on its own</h3>
+            <div className="mt-6 space-y-4 text-sm text-navy/70 leading-relaxed">
+              {nonFitGuidelines.map((item) => (
+                <div key={item} className="flex gap-3">
+                  <span className="text-orange font-bold">✓</span>
+                  <span>{item}</span>
                 </div>
-                <div>
-                  <p className="text-sm text-navy/50 mb-1">ARV $225k-$325k</p>
-                  <p className="text-2xl font-bold text-navy">60-65%</p>
-                  <p className="text-xs text-navy/50 mt-1">of ARV</p>
-                </div>
-                <div>
-                  <p className="text-sm text-navy/50 mb-1">ARV $325k+</p>
-                  <p className="text-2xl font-bold text-navy">Up to 65%</p>
-                  <p className="text-xs text-navy/50 mt-1">of ARV</p>
-                </div>
-              </div>
-              <p className="text-xs text-navy/45 mt-6">
-                Smaller square footage properties (under 1,100 sf) typically require deeper discounts.
-                Final pricing depends on rehab scope, market velocity, and exit strategy.
-              </p>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Deal Submission Form */}
-      <section className="py-20 sm:py-24">
+      <section id="deal-form" className="py-20 sm:py-24">
         <div className="site-shell">
           <div className="max-w-4xl mx-auto">
             {submitted ? (
               <div className="bg-navy/[0.03] rounded-xl p-12 text-center">
-                <h2 className="text-2xl font-bold text-navy mb-4">Deal Received</h2>
+                <h2 className="text-2xl font-bold text-navy mb-4">Deal received</h2>
                 <p className="text-navy/60 leading-relaxed mb-6">
-                  We review every submission against our buy box. If it fits, expect a response within 24 hours.
+                  Your submission is in review. If it looks aligned, we will follow up with the next step or request whatever is missing.
                 </p>
-                <Link href="/" className="text-orange font-semibold hover:underline">
-                  Back to Home
-                </Link>
+                <Link href="/" className="text-orange font-semibold hover:underline">Back to home</Link>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-10">
-                {/* Submitter Info */}
                 <div>
-                  <h3 className="text-xl font-bold text-navy mb-6 pb-3 border-b border-navy/10">Your Information</h3>
+                  <h3 className="text-xl font-bold text-navy mb-6 pb-3 border-b border-navy/10">Your information</h3>
                   <div className="grid sm:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="submitterName" className={labelClass}>Full Name</label>
@@ -214,7 +213,7 @@ export default function SubmitDealPage() {
                       <label htmlFor="submitterRole" className={labelClass}>Your Role</label>
                       <select id="submitterRole" name="submitterRole" value={formData.submitterRole} onChange={handleChange} required className={inputClass}>
                         <option value="">Select your role</option>
-                        {dealSources.map((s) => (<option key={s} value={s}>{s}</option>))}
+                        {submitterRoles.map((role) => (<option key={role} value={role}>{role}</option>))}
                       </select>
                     </div>
                     <div>
@@ -228,9 +227,8 @@ export default function SubmitDealPage() {
                   </div>
                 </div>
 
-                {/* Property Info */}
                 <div>
-                  <h3 className="text-xl font-bold text-navy mb-6 pb-3 border-b border-navy/10">Property Details</h3>
+                  <h3 className="text-xl font-bold text-navy mb-6 pb-3 border-b border-navy/10">Property details</h3>
                   <div className="grid sm:grid-cols-2 gap-6">
                     <div className="sm:col-span-2">
                       <label htmlFor="propertyAddress" className={labelClass}>Property Address</label>
@@ -252,7 +250,7 @@ export default function SubmitDealPage() {
                       <label htmlFor="assetType" className={labelClass}>Asset Type</label>
                       <select id="assetType" name="assetType" value={formData.assetType} onChange={handleChange} required className={inputClass}>
                         <option value="">Select type</option>
-                        {assetTypes.map((t) => (<option key={t} value={t}>{t}</option>))}
+                        {assetTypes.map((type) => (<option key={type} value={type}>{type}</option>))}
                       </select>
                     </div>
                     <div>
@@ -279,15 +277,14 @@ export default function SubmitDealPage() {
                       <label htmlFor="occupancy" className={labelClass}>Occupancy</label>
                       <select id="occupancy" name="occupancy" value={formData.occupancy} onChange={handleChange} className={inputClass}>
                         <option value="">Select</option>
-                        {occupancyOptions.map((o) => (<option key={o} value={o}>{o}</option>))}
+                        {occupancyOptions.map((option) => (<option key={option} value={option}>{option}</option>))}
                       </select>
                     </div>
                   </div>
                 </div>
 
-                {/* Deal Numbers */}
                 <div>
-                  <h3 className="text-xl font-bold text-navy mb-6 pb-3 border-b border-navy/10">Deal Numbers</h3>
+                  <h3 className="text-xl font-bold text-navy mb-6 pb-3 border-b border-navy/10">Deal numbers</h3>
                   <div className="grid sm:grid-cols-3 gap-6">
                     <div>
                       <label htmlFor="askingPrice" className={labelClass}>Asking Price</label>
@@ -304,47 +301,39 @@ export default function SubmitDealPage() {
                   </div>
                 </div>
 
-                {/* Deal Structure */}
                 <div>
-                  <h3 className="text-xl font-bold text-navy mb-6 pb-3 border-b border-navy/10">Deal Structure & Context</h3>
+                  <h3 className="text-xl font-bold text-navy mb-6 pb-3 border-b border-navy/10">Deal structure and context</h3>
                   <div className="grid sm:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="dealStructure" className={labelClass}>Deal Structure</label>
                       <select id="dealStructure" name="dealStructure" value={formData.dealStructure} onChange={handleChange} className={inputClass}>
                         <option value="">Select</option>
-                        {dealStructures.map((d) => (<option key={d} value={d}>{d}</option>))}
+                        {dealStructures.map((structure) => (<option key={structure} value={structure}>{structure}</option>))}
                       </select>
-                    </div>
-                    <div>
-                      <label htmlFor="dealSource" className={labelClass}>How did you source this?</label>
-                      <select id="dealSource" name="dealSource" value={formData.dealSource} onChange={handleChange} className={inputClass}>
-                        <option value="">Select</option>
-                        {dealSources.map((s) => (<option key={s} value={s}>{s}</option>))}
-                      </select>
-                    </div>
-                    <div>
-                      <label htmlFor="sellerSituation" className={labelClass}>Seller Situation</label>
-                      <input type="text" id="sellerSituation" name="sellerSituation" value={formData.sellerSituation} onChange={handleChange} className={inputClass} placeholder="Probate, pre-foreclosure, absentee, etc." />
                     </div>
                     <div>
                       <label htmlFor="timeline" className={labelClass}>Timeline / Urgency</label>
                       <input type="text" id="timeline" name="timeline" value={formData.timeline} onChange={handleChange} className={inputClass} placeholder="Under contract, need to close in 14 days, etc." />
                     </div>
+                    <div>
+                      <label htmlFor="sellerSituation" className={labelClass}>Seller Situation</label>
+                      <input type="text" id="sellerSituation" name="sellerSituation" value={formData.sellerSituation} onChange={handleChange} className={inputClass} placeholder="Probate, inherited, pre-foreclosure, vacancy, etc." />
+                    </div>
                     <div className="sm:col-span-2">
                       <label htmlFor="notes" className={labelClass}>Additional Notes</label>
-                      <textarea id="notes" name="notes" value={formData.notes} onChange={handleChange} rows={4} className={`${inputClass} resize-vertical`} placeholder="Anything else we should know about this deal -- comps, condition, access, photos, etc." />
+                      <textarea id="notes" name="notes" value={formData.notes} onChange={handleChange} rows={4} className={`${inputClass} resize-vertical`} placeholder="Comps, condition, access, photos, known issues, or anything else that affects review." />
                     </div>
                   </div>
                 </div>
 
-                {error && (
-                  <div className="p-4 bg-red-50 text-red-700 rounded-lg text-sm">
-                    {error}
-                  </div>
-                )}
+                <div className="rounded-2xl border border-orange/20 bg-orange/5 p-6 text-sm text-navy/75 leading-relaxed">
+                  Submission review is not an offer to purchase, a lending commitment, investment advice, or a securities offering. Partnership, backend participation, and deeper working structures are reviewed privately and only if the opportunity and fit justify it.
+                </div>
+
+                {error && <div className="p-4 bg-red-50 text-red-700 rounded-lg text-sm">{error}</div>}
 
                 <button type="submit" disabled={submitting} className="w-full sm:w-auto px-10 py-4 bg-orange hover:bg-orange-dark text-white font-semibold rounded-lg transition-colors text-lg disabled:opacity-50">
-                  {submitting ? 'Submitting...' : 'Submit Deal for Review'}
+                  {submitting ? 'Submitting...' : 'Submit a Deal'}
                 </button>
               </form>
             )}
