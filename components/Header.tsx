@@ -6,38 +6,28 @@ import { Suspense, useState } from "react";
 import CartNavLink from "@/components/CartNavLink";
 
 const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/submit-deal", label: "Submit a Deal" },
-  { href: "/strategy", label: "Strategy" },
-  { href: "/portfolio", label: "Portfolio" },
-  { href: "/contact", label: "Apply" },
+  { href: '/', label: 'Home' },
+  { href: '/property-owners', label: 'Property Owners' },
+  { href: '/submit-deal', label: 'Submit a Deal' },
+  { href: '/portfolio', label: 'Portfolio' },
+  { href: '/contact', label: 'Investor Support' },
 ];
 
 const servicesDropdownLinks = [
   {
-    href: "/services#products",
-    label: "Products",
-    description: "Templates, tools, and digital resources you can buy and use right away.",
+    href: '/services',
+    label: 'Investor Support',
+    description: 'A cleaner path for buyers and operators who need review, analysis, or support.',
   },
   {
-    href: "/services#membership",
-    label: "Membership",
-    description: "Recurring educational access for investors who want consistent reps and resources.",
+    href: '/property-owners',
+    label: 'Property Owners',
+    description: 'Seller-facing path for owners and landowners deciding whether to sell, partner, or improve.',
   },
   {
-    href: "/services#services-list",
-    label: "Services",
-    description: "Focused help for live deals, reviews, and decision support.",
-  },
-  {
-    href: "/services#ongoing-support",
-    label: "Ongoing Support",
-    description: "Recurring support options for buyers and operators who need more involvement.",
-  },
-  {
-    href: "/services#addons",
-    label: "Add-ons",
-    description: "Extra support layers for packaging, oversight, and disposition help.",
+    href: '/submit-deal',
+    label: 'Submit a Deal',
+    description: 'For wholesalers, agents, operators, and deal sources bringing opportunities for review.',
   },
 ];
 

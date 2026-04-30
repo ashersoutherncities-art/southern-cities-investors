@@ -15,8 +15,7 @@ export default function Footer() {
               className="h-16 w-auto mb-4"
             />
             <p className="text-white/60 text-sm leading-relaxed mt-4">
-              A division of Southern Cities Enterprises. Acquiring properties at
-              deep discounts through off-market sourcing and creative finance.
+              A division of Southern Cities Enterprises. A real estate evaluation, acquisition, partnership, and investor support platform focused on North Carolina and Southern markets.
             </p>
           </div>
 
@@ -26,10 +25,10 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2">
               {[
-                { href: "/services", label: "Services" },
-                { href: "/strategy", label: "Strategy" },
-                { href: "/portfolio", label: "Portfolio" },
-                { href: "/contact", label: "Contact" },
+                { href: '/property-owners', label: 'Property Owners' },
+                { href: '/submit-deal', label: 'Submit a Deal' },
+                { href: '/services', label: 'Investor Support' },
+                { href: '/portfolio', label: 'Portfolio' },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -47,13 +46,12 @@ export default function Footer() {
             <h4 className="text-sm font-semibold uppercase tracking-wider text-white/40 mb-4">
               Contact
             </h4>
-            <p className="text-sm text-white/60">Serving North Carolina statewide</p>
-            <Link
-              href="/contact"
-              className="inline-block mt-4 text-sm font-medium text-orange hover:text-orange-light transition-colors"
-            >
-              Get in Touch
-            </Link>
+            <p className="text-sm text-white/60">Serving North Carolina and Southern markets</p>
+            <div className="mt-4 space-y-2">
+              <Link href="/property-owners" className="block text-sm font-medium text-orange hover:text-orange-light transition-colors">Start Property Review</Link>
+              <Link href="/submit-deal" className="block text-sm font-medium text-orange hover:text-orange-light transition-colors">Submit a Deal</Link>
+              <Link href="/contact" className="block text-sm font-medium text-orange hover:text-orange-light transition-colors">Apply for Investor Support</Link>
+            </div>
           </div>
         </div>
 

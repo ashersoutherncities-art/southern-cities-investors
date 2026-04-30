@@ -8,11 +8,11 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://southerncitiesinvestors.com"),
-  title: "Southern Cities Investors | Deep Discount Real Estate Acquisitions",
+  title: "Southern Cities Investors | Property Review, Deal Submission, and Investor Support",
   description:
-    "Southern Cities Investors acquires properties at deep discounts across North Carolina through off-market sourcing and creative finance.",
+    "Southern Cities Investors helps owners, landowners, investors, wholesalers, agents, and operators determine whether a property should be sold, partnered on, improved, submitted, or reviewed as an investment opportunity.",
   keywords:
-    "real estate acquisitions, off-market properties, deep discount real estate, North Carolina investors, private lending, JV partners, wholesale deals",
+    "property review, real estate partnerships, investor support, deal submission, North Carolina real estate, landowners, wholesalers, operators",
   icons: {
     icon: [
       { url: "/favicon.ico" },
@@ -22,9 +22,9 @@ export const metadata: Metadata = {
     shortcut: ["/favicon.ico"],
   },
   openGraph: {
-    title: "Southern Cities Investors | Deep Discount Real Estate Acquisitions",
+    title: "Southern Cities Investors | Property Review, Deal Submission, and Investor Support",
     description:
-      "Southern Cities Investors acquires properties at deep discounts across North Carolina through off-market sourcing and creative finance.",
+      "Southern Cities Investors helps owners, landowners, investors, wholesalers, agents, and operators determine whether a property should be sold, partnered on, improved, submitted, or reviewed as an investment opportunity.",
     url: "https://southerncitiesinvestors.com",
     siteName: "Southern Cities Investors",
     images: [
@@ -40,9 +40,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Southern Cities Investors | Deep Discount Real Estate Acquisitions",
+    title: "Southern Cities Investors | Property Review, Deal Submission, and Investor Support",
     description:
-      "Southern Cities Investors acquires properties at deep discounts across North Carolina through off-market sourcing and creative finance.",
+      "Southern Cities Investors helps owners, landowners, investors, wholesalers, agents, and operators determine whether a property should be sold, partnered on, improved, submitted, or reviewed as an investment opportunity.",
     images: ["/logos/sc-investors-02.svg"],
   },
 };
