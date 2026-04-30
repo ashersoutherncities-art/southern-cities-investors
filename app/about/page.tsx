@@ -10,51 +10,31 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      {/* Hero */}
       <section className="bg-navy text-white py-20 sm:py-24">
         <div className="site-shell">
-          <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">
-            About Us
-          </p>
-          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">
-            Built for Serious Real Estate Decisions
-          </h1>
-          <p className="mt-6 text-lg text-white/70 max-w-2xl">
-            Southern Cities Investors is a division of Southern Cities
-            Enterprises, led by Darius Walton out of Charlotte, North Carolina.
+          <p className="text-orange font-semibold text-sm uppercase tracking-wider mb-4">About Us</p>
+          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">Built for serious real estate decisions in North Carolina and Southern markets.</h1>
+          <p className="mt-6 text-lg text-white/70 max-w-3xl">
+            Southern Cities Investors is a real estate acquisition, evaluation, partnership, and investor support platform focused on helping owners, landowners, investors, wholesalers, agents, and operators determine the right path for a property or opportunity.
           </p>
         </div>
       </section>
 
-      {/* Principal */}
       <section className="py-20 sm:py-24">
         <div className="site-shell">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <h2 className="text-3xl font-bold text-navy mb-6">
-                Darius Walton
-              </h2>
-              <p className="text-sm font-semibold text-orange uppercase tracking-wider mb-6">
-                Principal / Managing Director
-              </p>
+              <h2 className="text-3xl font-bold text-navy mb-6">Darius Walton</h2>
+              <p className="text-sm font-semibold text-orange uppercase tracking-wider mb-6">Principal / Managing Director</p>
               <div className="space-y-4 text-navy/70 leading-relaxed">
                 <p>
-                  Darius Walton holds a Master&apos;s degree in Real Estate
-                  Finance and Development from North Carolina State University.
-                  His academic foundation in real estate finance, combined with
-                  hands-on operational experience, drives a disciplined approach
-                  to acquisitions and portfolio management.
+                  Darius Walton holds a Master&apos;s degree in Real Estate Finance and Development from North Carolina State University. His academic foundation in real estate finance, combined with hands-on operating experience, shapes a disciplined approach to property review, underwriting, and execution.
                 </p>
                 <p>
-                  Based in Charlotte, NC, Darius operates across North Carolina and Southern markets with a focus on practical underwriting, execution reality, and opportunities that need more than a generic one-size-fits-all answer.
+                  Based in Charlotte, North Carolina, Darius operates across North Carolina and Southern markets with a focus on practical deal judgment, execution reality, and opportunities that need more than a one-size-fits-all answer.
                 </p>
                 <p>
-                  Under his leadership, Southern Cities Investors focuses
-                  exclusively on acquiring properties at significant discounts
-                  to market value through off-market sourcing, direct seller
-                  engagement, and creative deal structuring. The firm&apos;s buy
-                  criteria are non-negotiable: every deal must meet strict
-                  discount thresholds before capital is deployed.
+                  Southern Cities Investors is built around a simple principle: not every property should be sold the same way. Some opportunities make sense as direct purchases. Some should be partnered on. Some may justify improvement, repositioning, or a different structure before any final decision is made.
                 </p>
               </div>
             </div>
@@ -64,28 +44,21 @@ export default function AboutPage() {
               {[
                 {
                   label: "Education",
-                  value:
-                    "M.S. Real Estate Finance & Development, NC State University",
+                  value: "M.S. Real Estate Finance and Development, NC State University",
                 },
                 { label: "Headquarters", value: "Charlotte, North Carolina" },
-                { label: "Market Coverage", value: "30+ markets nationally" },
+                { label: "Market Focus", value: "North Carolina and Southern markets" },
                 {
-                  label: "Focus",
-                  value:
-                    "Property review, acquisition, partnerships, and investor support",
+                  label: "Platform Focus",
+                  value: "Property review, acquisition, partnerships, deal evaluation, and investor support",
                 },
                 {
                   label: "Parent Company",
                   value: "Southern Cities Enterprises",
                 },
               ].map((item) => (
-                <div
-                  key={item.label}
-                  className="border-b border-navy/10 pb-4 last:border-0 last:pb-0"
-                >
-                  <p className="text-sm font-semibold text-navy/40 uppercase tracking-wider">
-                    {item.label}
-                  </p>
+                <div key={item.label} className="border-b border-navy/10 pb-4 last:border-0 last:pb-0">
+                  <p className="text-sm font-semibold text-navy/40 uppercase tracking-wider">{item.label}</p>
                   <p className="mt-1 text-navy font-medium">{item.value}</p>
                 </div>
               ))}
@@ -94,59 +67,53 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Philosophy */}
       <section className="py-20 sm:py-24 bg-navy/[0.03]">
         <div className="site-shell">
-          <h2 className="text-3xl font-bold text-navy mb-12 text-center">
-            Our Operating Philosophy
-          </h2>
+          <h2 className="text-3xl font-bold text-navy mb-12 text-center">How we think</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                title: "Buy Right",
+                title: "Start with fit",
                 description:
-                  "The return is made at acquisition. We never stretch on price or rationalize a thin deal. If it does not meet our criteria, we pass.",
+                  "We do not force every property or opportunity into the same outcome. The right answer depends on basis, timing, risk, complexity, and what can actually be executed.",
               },
               {
-                title: "Underwrite Conservatively",
+                title: "Underwrite honestly",
                 description:
-                  "Every deal is stress-tested against downside scenarios. We underwrite to reality, not pro forma optimism.",
+                  "We care about what still works once repair scope, financing, timeline, title, and exit pressure are treated realistically.",
               },
               {
-                title: "Execute with Speed",
+                title: "Keep the path clear",
                 description:
-                  "Off-market opportunities reward speed and certainty of close. We structure clean offers and close on schedule.",
+                  "Owners, deal sources, and investors should not be funneled through the same message. Clear routing creates better decisions and better trust.",
               },
             ].map((item) => (
               <div key={item.title} className="bg-white rounded-xl p-8 border border-navy/10">
-                <h3 className="text-xl font-bold text-navy mb-3">
-                  {item.title}
-                </h3>
-                <p className="text-navy/60 leading-relaxed">
-                  {item.description}
-                </p>
+                <h3 className="text-xl font-bold text-navy mb-3">{item.title}</h3>
+                <p className="text-navy/60 leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA */}
       <section className="py-20 sm:py-24">
         <div className="site-shell text-center">
-          <h2 className="text-3xl font-bold text-navy">
-            Interested in Working Together?
-          </h2>
+          <h2 className="text-3xl font-bold text-navy">Start with the right conversation.</h2>
           <p className="mt-4 text-lg text-navy/60 max-w-2xl mx-auto">
-            We partner with lenders, JV equity partners, and wholesalers who
-            share our commitment to disciplined investing.
+            Whether you are deciding what to do with property, submitting an opportunity, or looking for deeper investor support, the goal is to route you into the right path first.
           </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center justify-center mt-8 px-8 py-3.5 bg-orange hover:bg-orange-dark text-white font-semibold rounded-lg transition-colors"
-          >
-            Connect With Us
-          </Link>
+          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/property-owners" className="inline-flex items-center justify-center px-8 py-3.5 bg-orange hover:bg-orange-dark text-white font-semibold rounded-lg transition-colors">
+              Start Property Review
+            </Link>
+            <Link href="/submit-deal" className="inline-flex items-center justify-center px-8 py-3.5 border border-navy/15 text-navy hover:border-orange/50 hover:text-orange font-semibold rounded-lg transition-colors">
+              Submit a Deal
+            </Link>
+            <Link href="/contact" className="inline-flex items-center justify-center px-8 py-3.5 border border-navy/15 text-navy hover:border-orange/50 hover:text-orange font-semibold rounded-lg transition-colors">
+              Apply for Investor Support
+            </Link>
+          </div>
         </div>
       </section>
     </>
