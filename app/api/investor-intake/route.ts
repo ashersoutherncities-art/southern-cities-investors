@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { captureLead } from '@/lib/fulfillment';
+import { getSupabaseAdmin } from '@/lib/supabase-admin';
 
 const REQUIRED_FIELDS = ['name', 'email', 'inquiry'];
 
@@ -13,20 +13,30 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    await captureLead({
+    // Intake must confirm persistence before telling the visitor it was received.
+    // Keep the shared best-effort checkout/fulfillment helper unchanged.
+    const { error } = await getSupabaseAdmin().from('email_captures').upsert({
       email: body.email,
-      name: body.name,
-      phone: body.phone,
+      name: body.name || null,
+      phone: body.phone || null,
       source: 'investor_intake',
       tags: ['investor-intake', 'contact'],
-      interestedIn: [body.inquiry].filter(Boolean),
+      interested_in: [body.inquiry].filter(Boolean),
       metadata: {
         capital: body.capital || null,
         timeline: body.timeline || null,
         experience: body.experience || null,
         message: body.message || null,
       },
-    });
+      updated_at: new Date().toISOString(),
+    }, { onConflict: 'email' });
+
+    if (error) {
+      return NextResponse.json(
+        { error: 'We could not save your inquiry. Please try again.' },
+        { status: 500 }
+      );
+    }
 
     return NextResponse.json({
       success: true,
@@ -41,7 +51,7 @@ export async function POST(request: NextRequest) {
     });
   } catch (error) {
     return NextResponse.json(
-      { error: error instanceof Error ? error.message : 'Failed to process investor intake' },
+      { error: 'We could not save your inquiry. Please try again.' },
       { status: 500 }
     );
   }
